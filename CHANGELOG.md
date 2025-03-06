@@ -1,5 +1,26 @@
 # Changelog
 
+## v3.0.0
+
+[compare changes](https://github.com/kiki-kanri/kikiutils-nuxt/compare/v2.0.2...v3.0.0)
+
+### 💅 Refactors
+
+- ⚠️ Enforce camelCase naming for all variables, classes, methods, types, etc., ignoring abbreviations ([aa271f5](https://github.com/kiki-kanri/kikiutils-nuxt/commit/aa271f5))
+- Specify interface type for settings when using defu to modify or merge module configurations ([6e9f71b](https://github.com/kiki-kanri/kikiutils-nuxt/commit/6e9f71b))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([ddf877d](https://github.com/kiki-kanri/kikiutils-nuxt/commit/ddf877d))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Enforce camelCase naming for all variables, classes, methods, types, etc., ignoring abbreviations ([aa271f5](https://github.com/kiki-kanri/kikiutils-nuxt/commit/aa271f5))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v2.0.2
 
 [compare changes](https://github.com/kiki-kanri/kikiutils-nuxt/compare/v2.0.1...v2.0.2)
