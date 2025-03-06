@@ -169,7 +169,7 @@ export interface ModuleOptions {
     /**
      * @default true
      */
-    importAllComposablesDirTSFiles?: boolean;
+    importAllComposablesDirTsFiles?: boolean;
 
     /**
      * @default true

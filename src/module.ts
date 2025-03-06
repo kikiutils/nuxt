@@ -65,7 +65,7 @@ export default defineNuxtModule<ModuleOptions>({
             scrollbar: false,
         },
         enabledVitePlugins: { removeConsole: true },
-        importAllComposablesDirTSFiles: true,
+        importAllComposablesDirTsFiles: true,
         loadGlobalUtilsTypes: true,
         removeConsoleOptions: {
             includes: [
@@ -95,7 +95,7 @@ export default defineNuxtModule<ModuleOptions>({
 
         // Composables
         setupComposables(moduleOptions, resolver);
-        if (options.importAllComposablesDirTSFiles) addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
+        if (options.importAllComposablesDirTsFiles) addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
 
         // Modules
         await setupColorMode(moduleOptions, nuxt);
