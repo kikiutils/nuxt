@@ -1,5 +1,8 @@
+import type { ModuleOptions as ElementPlusModuleOptions } from '@element-plus/nuxt';
 import { installModule } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
+import type { ModuleOptions as ColorModeModuleOptions } from '@nuxtjs/color-mode';
+import type { ModuleOptions as GoogleFontsModuleOptions } from '@nuxtjs/google-fonts';
 import { defu } from 'defu';
 
 import type { RequiredModuleOptions } from '../types/options';
@@ -7,7 +10,7 @@ import type { RequiredModuleOptions } from '../types/options';
 export async function setupColorMode({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
     if (!enabledModules || !enabledModules.colorMode) return;
     // @ts-expect-error Ignore this error.
-    nuxt.options.colorMode = defu(
+    nuxt.options.colorMode = defu<ColorModeModuleOptions, Partial<ColorModeModuleOptions>[]>(
         // @ts-expect-error Ignore this error.
         nuxt.options.colorMode,
         {
@@ -21,21 +24,20 @@ export async function setupColorMode({ enabledModules }: RequiredModuleOptions, 
 
 export async function setupElementPlus({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
     if (!enabledModules || !enabledModules.elementPlus) return;
-    // @ts-expect-error Ignore this error.
-    nuxt.options.elementPlus = defu(nuxt.options.elementPlus, { themes: ['dark'] });
+    nuxt.options.elementPlus = defu<ElementPlusModuleOptions, Partial<ElementPlusModuleOptions>[]>(nuxt.options.elementPlus, { themes: ['dark'] });
     await installModule('@element-plus/nuxt', {}, nuxt);
 }
 
 export async function setupGoogleFonts({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
     if (!enabledModules || !enabledModules.googleFonts) return;
     // @ts-expect-error Ignore this error.
-    nuxt.options.googleFonts = defu(
+    nuxt.options.googleFonts = defu<GoogleFontsModuleOptions, GoogleFontsModuleOptions[]>(
         // @ts-expect-error Ignore this error.
         nuxt.options.googleFonts,
         {
             display: 'swap',
             download: false,
-            families: { 'Noto+Sans+TC': true },
+            families: { 'Noto Sans TC': true },
         },
     );
 
