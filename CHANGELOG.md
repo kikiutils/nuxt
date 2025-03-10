@@ -20,7 +20,7 @@
 
 ### ❤️ Contributors
 
-- kiki-kanri <a470666@gmail.com>
+- kiki-kanri
 
 ## v3.0.0
 
