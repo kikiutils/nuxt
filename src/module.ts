@@ -108,7 +108,7 @@ export default defineNuxtModule<ModuleOptions>({
         await setupVueuse(moduleOptions, nuxt);
 
         // Options
-        setupOptions(nuxt);
+        setupOptions(moduleOptions, nuxt);
 
         // Plugins
         setupPlugins(moduleOptions, resolver);

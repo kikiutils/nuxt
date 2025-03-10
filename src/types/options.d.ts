@@ -1,7 +1,11 @@
-import type { RequiredDeep } from 'type-fest';
+import type { Nuxt } from '@nuxt/schema';
+import type {
+    Except,
+    RequiredDeep,
+} from 'type-fest';
 import type removeConsole from 'vite-plugin-remove-console';
 
-export type RequiredModuleOptions = RequiredDeep<ModuleOptions>;
+export type RequiredModuleOptions = RequiredDeep<Except<ModuleOptions, 'nuxtOptions'>> & { nuxtOptions: ModuleOptions['nuxtOptions'] };
 
 export interface ModuleOptions {
     elementPlus?: {
@@ -175,6 +179,7 @@ export interface ModuleOptions {
      * @default true
      */
     loadGlobalUtilsTypes?: boolean;
+    nuxtOptions?: Pick<Nuxt['options'], 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>;
 
     /**
      * @default { includes: ['error', 'info', 'log', 'warn'] }

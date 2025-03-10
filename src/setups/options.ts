@@ -4,26 +4,28 @@ import removeConsole from 'vite-plugin-remove-console';
 
 import type { RequiredModuleOptions } from '../types/options';
 
-export function setupOptions({ options }: Nuxt) {
-    options.devtools = defu(options.devtools, { enabled: false });
-    options.experimental = defu(
-        options.experimental,
+export function setupOptions({ nuxtOptions: moduleNuxtOptions }: RequiredModuleOptions, { options: nuxtOptions }: Nuxt) {
+    nuxtOptions.devtools = defu(moduleNuxtOptions?.devtools, { enabled: false }, nuxtOptions.devtools);
+    nuxtOptions.experimental = defu(
+        moduleNuxtOptions?.experimental,
         {
             headNext: true,
             inlineSSRStyles: false,
         },
+        nuxtOptions.experimental,
     );
 
-    options.nitro = defu(
-        options.nitro,
+    nuxtOptions.nitro = defu(
+        moduleNuxtOptions?.nitro,
         {
             compressPublicAssets: true,
             minify: true,
         },
+        nuxtOptions.nitro,
     );
 
-    options.typescript = defu(
-        options.typescript,
+    nuxtOptions.typescript = defu(
+        moduleNuxtOptions?.typescript,
         {
             tsConfig: {
                 compilerOptions: {
@@ -34,10 +36,11 @@ export function setupOptions({ options }: Nuxt) {
             },
             typeCheck: true,
         },
+        nuxtOptions.typescript,
     );
 
-    options.vite = defu(
-        options.vite,
+    nuxtOptions.vite = defu(
+        moduleNuxtOptions?.vite,
         {
             build: {
                 assetsInlineLimit: 0,
@@ -52,6 +55,7 @@ export function setupOptions({ options }: Nuxt) {
                 },
             },
         },
+        nuxtOptions.vite,
     );
 }
 
