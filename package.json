@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kiki-kanri/kikiutils-nuxt.git"
+    "url": "git+https://github.com/kikiutils/nuxt.git"
   },
   "exports": {
     ".": {

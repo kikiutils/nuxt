@@ -35,7 +35,7 @@ That's it! You're ready to use this package in your project.
 [npm-downloads-href]: https://npmjs.com/package/@kikiutils/nuxt
 [npm-downloads-src]: https://img.shields.io/npm/dm/@kikiutils/nuxt.svg?style=flat&colorA=18181B&colorB=28CF8D
 
-[license-href]: https://github.com/kiki-kanri/kikiutils-nuxt/blob/main/LICENSE
+[license-href]: https://github.com/kikiutils/nuxt/blob/main/LICENSE
 [license-src]: https://img.shields.io/npm/l/@kikiutils/nuxt.svg?style=flat&colorA=18181B&colorB=28CF8D
 
 [nuxt-href]: https://nuxt.com
