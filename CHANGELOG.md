@@ -1,5 +1,27 @@
 # Changelog
 
+## v4.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v3.0.0...v4.0.0)
+
+### 💅 Refactors
+
+- ⚠️ Change some nuxt options to use `module options` instead ([88c3689](https://github.com/kikiutils/nuxt/commit/88c3689))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([33587c0](https://github.com/kikiutils/nuxt/commit/33587c0))
+- Update repository URL ([4a5b959](https://github.com/kikiutils/nuxt/commit/4a5b959))
+- Update pnpm lock file ([8845684](https://github.com/kikiutils/nuxt/commit/8845684))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Change some nuxt options to use `module options` instead ([88c3689](https://github.com/kikiutils/nuxt/commit/88c3689))
+
+### ❤️ Contributors
+
+- kiki-kanri <a470666@gmail.com>
+
 ## v3.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v2.0.2...v3.0.0)
