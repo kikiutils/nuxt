@@ -11,15 +11,6 @@ export type RequiredModuleOptions =
 
 export interface ModuleOptions {
     elementPlus?: {
-        enabledStyles?:
-          | false
-          | {
-              /**
-               * @default true
-               */
-              reboot?: boolean;
-          };
-
         enabledUtils?:
           | false
           | {
@@ -119,29 +110,14 @@ export interface ModuleOptions {
       | false
       | {
           /**
-           * @default false
-           */
-          font?: boolean;
-
-          /**
            * @default true
            */
           reboot?: boolean;
-
-          /**
-           * @default false
-           */
-          scrollbar?: boolean;
       };
 
     enabledUtils?:
       | false
       | {
-          /**
-           * @default false
-           */
-          axios?: boolean;
-
           /**
            * @default false
            */

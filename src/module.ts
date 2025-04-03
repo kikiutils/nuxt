@@ -16,11 +16,11 @@ import {
     setupUnocss,
     setupVueuse,
 } from './setups/modules';
+import { setupOptions } from './setups/options';
 import {
-    setupOptions,
+    setupPlugins,
     setupVitePlugins,
-} from './setups/options';
-import { setupPlugins } from './setups/plugins';
+} from './setups/plugins';
 import { setupServerUtils } from './setups/server/utils';
 import { setupStyles } from './setups/styles';
 import { setupUtils } from './setups/utils';
@@ -31,10 +31,7 @@ import type {
 
 export default defineNuxtModule<ModuleOptions>({
     defaults: {
-        elementPlus: {
-            enabledStyles: { reboot: true },
-            enabledUtils: { form: true },
-        },
+        elementPlus: { enabledUtils: { form: true } },
         enabled: true,
         enabledModules: {
             colorMode: false,
@@ -53,16 +50,12 @@ export default defineNuxtModule<ModuleOptions>({
             hash: false,
             string: false,
         },
-        enabledStyles: {
-            font: false,
-            reboot: true,
-            scrollbar: false,
-        },
+        enabledStyles: { reboot: true },
         enabledUtils: {
-            axios: false,
             clipboard: false,
             datetime: false,
             hash: false,
+            string: false,
         },
         enabledVitePlugins: { removeConsole: true },
         importAllComposablesDirTsFiles: true,
@@ -82,12 +75,9 @@ export default defineNuxtModule<ModuleOptions>({
         const moduleOptions = options as RequiredModuleOptions;
         const resolver = createResolver(import.meta.url);
 
-        // Add packages to vite optimizeDeps
+        // Ensure vite optimizeDeps is defined
         nuxt.options.vite.optimizeDeps ??= {};
         nuxt.options.vite.optimizeDeps.include ??= [];
-        if (moduleOptions.enabledUtils && moduleOptions.enabledUtils.clipboard) {
-            nuxt.options.vite.optimizeDeps.include.push('copy-to-clipboard');
-        }
 
         // Composables
         if (options.importAllComposablesDirTsFiles) addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
@@ -115,7 +105,7 @@ export default defineNuxtModule<ModuleOptions>({
         setupStyles(moduleOptions, nuxt, resolver);
 
         // Utils
-        setupUtils(moduleOptions, resolver);
+        setupUtils(moduleOptions, nuxt, resolver);
         if (options.importAllUtilsDirTsFiles) addImportsDir(`${nuxt.options.rootDir}/utils/**/*.ts`);
 
         // Utils types

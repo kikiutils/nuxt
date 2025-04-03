@@ -2,4 +2,4 @@
     <div>Nuxt module playground!</div>
 </template>
 
-<script setup></script>
+<script lang="ts" setup></script>

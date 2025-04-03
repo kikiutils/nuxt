@@ -1,6 +1,5 @@
 import type { Nuxt } from '@nuxt/schema';
 import { defu } from 'defu';
-import removeConsole from 'vite-plugin-remove-console';
 
 import type { RequiredModuleOptions } from '../types/options';
 
@@ -9,15 +8,7 @@ export function setupOptions(
     { options: nuxtOptions }: Nuxt,
 ) {
     nuxtOptions.devtools = defu(moduleNuxtOptions?.devtools, { enabled: false }, nuxtOptions.devtools);
-    nuxtOptions.experimental = defu(
-        moduleNuxtOptions?.experimental,
-        {
-            headNext: true,
-            inlineSSRStyles: false,
-        },
-        nuxtOptions.experimental,
-    );
-
+    nuxtOptions.experimental = defu(moduleNuxtOptions?.experimental, { headNext: true }, nuxtOptions.experimental);
     nuxtOptions.nitro = defu(
         moduleNuxtOptions?.nitro,
         {
@@ -60,16 +51,4 @@ export function setupOptions(
         },
         nuxtOptions.vite,
     );
-}
-
-export function setupVitePlugins(
-    {
-        enabledVitePlugins,
-        removeConsoleOptions,
-    }: RequiredModuleOptions,
-    nuxt: Nuxt,
-) {
-    if (!enabledVitePlugins || enabledVitePlugins?.removeConsole === false) return;
-    nuxt.options.vite.plugins ||= [];
-    nuxt.options.vite.plugins.push(removeConsole(removeConsoleOptions));
 }
