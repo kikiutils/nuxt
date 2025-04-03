@@ -68,14 +68,7 @@ export default defineNuxtModule<ModuleOptions>({
         importAllComposablesDirTsFiles: true,
         importAllUtilsDirTsFiles: true,
         loadGlobalUtilsTypes: true,
-        removeConsoleOptions: {
-            includes: [
-                'error',
-                'info',
-                'log',
-                'warn',
-            ],
-        },
+        removeConsoleOptions: { includes: ['log'] },
         unocss: { enabledReset: { tailwind: true } },
     },
     meta: {

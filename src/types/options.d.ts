@@ -189,7 +189,7 @@ export interface ModuleOptions {
     nuxtOptions?: Pick<Nuxt['options'], 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>;
 
     /**
-     * @default { includes: ['error', 'info', 'log', 'warn'] }
+     * @default { includes: ['log'] }
      */
     removeConsoleOptions?: Parameters<typeof removeConsole>[0];
     unocss?: {
