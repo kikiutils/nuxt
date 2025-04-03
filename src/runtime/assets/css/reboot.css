@@ -4,6 +4,19 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+body {
+    font-synthesis: none;
+    text-size-adjust: 100%;
+    touch-action: manipulation;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
