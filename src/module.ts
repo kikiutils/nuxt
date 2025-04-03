@@ -13,8 +13,8 @@ import {
     setupPurgecss,
     setupRobots,
     setupSecurity,
-    setupUnocss,
-    setupVueuse,
+    setupUnoCss,
+    setupVueUse,
 } from './setups/modules';
 import { setupOptions } from './setups/options';
 import {
@@ -40,8 +40,8 @@ export default defineNuxtModule<ModuleOptions>({
             purgecss: false,
             robots: false,
             security: false,
-            unocss: true,
-            vueuse: true,
+            unoCss: true,
+            vueUse: true,
         },
         enabledPlugins: { eventHandlers: { dragAndDrop: true } },
         enabledServerUtils: {
@@ -62,7 +62,7 @@ export default defineNuxtModule<ModuleOptions>({
         importAllUtilsDirTsFiles: true,
         loadGlobalUtilsTypes: true,
         removeConsoleOptions: { includes: ['log'] },
-        unocss: { enabledReset: { tailwind: true } },
+        unoCss: { enabledReset: { tailwind: true } },
     },
     meta: {
         configKey: 'kikiutilsNuxt',
@@ -89,8 +89,8 @@ export default defineNuxtModule<ModuleOptions>({
         await setupPurgecss(moduleOptions, nuxt);
         await setupRobots(moduleOptions, nuxt);
         await setupSecurity(moduleOptions, nuxt);
-        await setupUnocss(moduleOptions, nuxt);
-        await setupVueuse(moduleOptions, nuxt);
+        await setupUnoCss(moduleOptions, nuxt);
+        await setupVueUse(moduleOptions, nuxt);
 
         // Options
         setupOptions(moduleOptions, nuxt);

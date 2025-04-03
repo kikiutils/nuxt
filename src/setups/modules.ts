@@ -68,7 +68,7 @@ export async function setupPurgecss({ enabledModules }: RequiredModuleOptions, n
         ],
     };
 
-    if (enabledModules.unocss) {
+    if (enabledModules.unoCss) {
         safelistOptions.standard.push(
             /!$/,
             /--unocss--/,
@@ -100,19 +100,19 @@ export async function setupSecurity({ enabledModules }: RequiredModuleOptions, n
     await installModule('nuxt-security', {}, nuxt);
 }
 
-export async function setupUnocss(
+export async function setupUnoCss(
     {
         enabledModules,
-        unocss,
+        unoCss,
     }: RequiredModuleOptions,
     nuxt: Nuxt,
 ) {
-    if (!enabledModules || !enabledModules.unocss) return;
-    if (unocss.enabledReset && unocss.enabledReset.tailwind) nuxt.options.css.push('@unocss/reset/tailwind.css');
+    if (!enabledModules || !enabledModules.unoCss) return;
+    if (unoCss.enabledReset && unoCss.enabledReset.tailwind) nuxt.options.css.push('@unocss/reset/tailwind.css');
     await installModule('@unocss/nuxt', {}, nuxt);
 }
 
-export async function setupVueuse({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
-    if (!enabledModules || !enabledModules.vueuse) return;
+export async function setupVueUse({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
+    if (!enabledModules || !enabledModules.vueUse) return;
     await installModule('@vueuse/nuxt', {}, nuxt);
 }

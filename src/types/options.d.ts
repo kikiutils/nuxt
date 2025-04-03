@@ -61,12 +61,12 @@ export interface ModuleOptions {
           /**
            * @default true
            */
-          unocss?: boolean;
+          unoCss?: boolean;
 
           /**
            * @default true
            */
-          vueuse?: boolean;
+          vueUse?: boolean;
       };
 
     enabledPlugins?:
@@ -168,7 +168,7 @@ export interface ModuleOptions {
      * @default { includes: ['log'] }
      */
     removeConsoleOptions?: Parameters<typeof removeConsole>[0];
-    unocss?: {
+    unoCss?: {
         enabledReset?:
           | false
           | {
