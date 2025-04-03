@@ -91,7 +91,9 @@ export default defineNuxtModule<ModuleOptions>({
         // Add packages to vite optimizeDeps
         nuxt.options.vite.optimizeDeps ??= {};
         nuxt.options.vite.optimizeDeps.include ??= [];
-        if (moduleOptions.enabledComposables && moduleOptions.enabledComposables.clipboard) nuxt.options.vite.optimizeDeps.include.push('copy-to-clipboard');
+        if (moduleOptions.enabledComposables && moduleOptions.enabledComposables.clipboard) {
+            nuxt.options.vite.optimizeDeps.include.push('copy-to-clipboard');
+        }
 
         // Composables
         setupComposables(moduleOptions, resolver);
@@ -123,7 +125,9 @@ export default defineNuxtModule<ModuleOptions>({
         if (moduleOptions.loadGlobalUtilsTypes) {
             addTypeTemplate({
                 filename: 'types/global-utils.d.ts',
-                getContents: () => `export type {} from '@kikiutils/types';\nexport type {} from '@kikiutils/types/vue';`,
+                getContents() {
+                    return `export type {} from '@kikiutils/types';\nexport type {} from '@kikiutils/types/vue';`;
+                },
             });
         }
 

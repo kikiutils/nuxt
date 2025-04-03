@@ -24,7 +24,11 @@ export async function setupColorMode({ enabledModules }: RequiredModuleOptions, 
 
 export async function setupElementPlus({ enabledModules }: RequiredModuleOptions, nuxt: Nuxt) {
     if (!enabledModules || !enabledModules.elementPlus) return;
-    nuxt.options.elementPlus = defu<ElementPlusModuleOptions, Partial<ElementPlusModuleOptions>[]>(nuxt.options.elementPlus, { themes: ['dark'] });
+    nuxt.options.elementPlus = defu<ElementPlusModuleOptions, Partial<ElementPlusModuleOptions>[]>(
+        nuxt.options.elementPlus,
+        { themes: ['dark'] },
+    );
+
     await installModule('@element-plus/nuxt', {}, nuxt);
 }
 

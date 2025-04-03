@@ -1,13 +1,13 @@
 .el-table .cell {
-	line-height: unset !important;
+    line-height: unset !important;
 }
 
 .el-table .cell .el-switch {
-	height: unset;
+    height: unset;
 }
 
 .el-table .cell:has(> .el-switch) {
-	align-items: center;
-	display: flex;
-	justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

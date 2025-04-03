@@ -4,7 +4,10 @@ import removeConsole from 'vite-plugin-remove-console';
 
 import type { RequiredModuleOptions } from '../types/options';
 
-export function setupOptions({ nuxtOptions: moduleNuxtOptions }: RequiredModuleOptions, { options: nuxtOptions }: Nuxt) {
+export function setupOptions(
+    { nuxtOptions: moduleNuxtOptions }: RequiredModuleOptions,
+    { options: nuxtOptions }: Nuxt,
+) {
     nuxtOptions.devtools = defu(moduleNuxtOptions?.devtools, { enabled: false }, nuxtOptions.devtools);
     nuxtOptions.experimental = defu(
         moduleNuxtOptions?.experimental,

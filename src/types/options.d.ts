@@ -5,7 +5,9 @@ import type {
 } from 'type-fest';
 import type removeConsole from 'vite-plugin-remove-console';
 
-export type RequiredModuleOptions = RequiredDeep<Except<ModuleOptions, 'nuxtOptions'>> & { nuxtOptions: ModuleOptions['nuxtOptions'] };
+export type RequiredModuleOptions =
+  & RequiredDeep<Except<ModuleOptions, 'nuxtOptions'>>
+  & { nuxtOptions: ModuleOptions['nuxtOptions'] };
 
 export interface ModuleOptions {
     elementPlus?: {
