@@ -65,6 +65,7 @@ export default defineNuxtModule<ModuleOptions>({
         unoCss: { enabledResets: { tailwind: true } },
     },
     meta: {
+        compatibility: { nuxt: '>=3.13.0' },
         configKey: 'kikiutilsNuxt',
         name: '@kikiutils/nuxt',
     },
