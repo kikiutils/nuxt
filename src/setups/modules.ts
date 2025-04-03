@@ -108,7 +108,7 @@ export async function setupUnoCss(
     nuxt: Nuxt,
 ) {
     if (!enabledModules || !enabledModules.unoCss) return;
-    if (unoCss.enabledReset && unoCss.enabledReset.tailwind) nuxt.options.css.push('@unocss/reset/tailwind.css');
+    if (unoCss.enabledResets && unoCss.enabledResets.tailwind) nuxt.options.css.push('@unocss/reset/tailwind.css');
     await installModule('@unocss/nuxt', {}, nuxt);
 }
 

@@ -169,7 +169,7 @@ export interface ModuleOptions {
      */
     removeConsoleOptions?: Parameters<typeof removeConsole>[0];
     unoCss?: {
-        enabledReset?:
+        enabledResets?:
           | false
           | {
               /**

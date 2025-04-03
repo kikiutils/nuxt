@@ -62,7 +62,7 @@ export default defineNuxtModule<ModuleOptions>({
         importAllUtilsDirTsFiles: true,
         loadGlobalUtilsTypes: true,
         removeConsoleOptions: { includes: ['log'] },
-        unoCss: { enabledReset: { tailwind: true } },
+        unoCss: { enabledResets: { tailwind: true } },
     },
     meta: {
         configKey: 'kikiutilsNuxt',
