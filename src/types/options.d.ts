@@ -11,15 +11,6 @@ export type RequiredModuleOptions =
 
 export interface ModuleOptions {
     elementPlus?: {
-        enabledComposables?:
-          | false
-          | {
-              /**
-               * @default true
-               */
-              form?: boolean;
-          };
-
         enabledStyles?:
           | false
           | {
@@ -28,41 +19,21 @@ export interface ModuleOptions {
                */
               reboot?: boolean;
           };
+
+        enabledUtils?:
+          | false
+          | {
+              /**
+               * @default true
+               */
+              form?: boolean;
+          };
     };
 
     /**
      * @default true
      */
     enabled?: boolean;
-    enabledComposables?:
-      | false
-      | {
-          /**
-           * @default false
-           */
-          axios?: boolean;
-
-          /**
-           * @default false
-           */
-          clipboard?: boolean;
-
-          /**
-           * @default false
-           */
-          datetime?: boolean;
-
-          /**
-           * @default false
-           */
-          hash?: boolean;
-
-          /**
-           * @default false
-           */
-          string?: boolean;
-      };
-
     enabledModules?:
       | false
       | {
@@ -161,6 +132,35 @@ export interface ModuleOptions {
            * @default false
            */
           scrollbar?: boolean;
+      };
+
+    enabledUtils?:
+      | false
+      | {
+          /**
+           * @default false
+           */
+          axios?: boolean;
+
+          /**
+           * @default false
+           */
+          clipboard?: boolean;
+
+          /**
+           * @default false
+           */
+          datetime?: boolean;
+
+          /**
+           * @default false
+           */
+          hash?: boolean;
+
+          /**
+           * @default false
+           */
+          string?: boolean;
       };
 
     enabledVitePlugins?:
