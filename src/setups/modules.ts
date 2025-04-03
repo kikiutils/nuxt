@@ -41,7 +41,6 @@ export async function setupGoogleFonts({ enabledModules }: RequiredModuleOptions
         {
             display: 'swap',
             download: false,
-            families: { 'Noto Sans TC': true },
         },
     );
 
