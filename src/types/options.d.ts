@@ -180,6 +180,11 @@ export interface ModuleOptions {
     /**
      * @default true
      */
+    importAllUtilsDirTsFiles?: boolean;
+
+    /**
+     * @default true
+     */
     loadGlobalUtilsTypes?: boolean;
     nuxtOptions?: Pick<Nuxt['options'], 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>;
 

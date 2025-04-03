@@ -66,6 +66,7 @@ export default defineNuxtModule<ModuleOptions>({
         },
         enabledVitePlugins: { removeConsole: true },
         importAllComposablesDirTsFiles: true,
+        importAllUtilsDirTsFiles: true,
         loadGlobalUtilsTypes: true,
         removeConsoleOptions: {
             includes: [
@@ -120,6 +121,9 @@ export default defineNuxtModule<ModuleOptions>({
 
         // Styles
         setupStyles(moduleOptions, nuxt, resolver);
+
+        // Utils
+        if (options.importAllUtilsDirTsFiles) addImportsDir(`${nuxt.options.rootDir}/utils/**/*.ts`);
 
         // Utils types
         if (moduleOptions.loadGlobalUtilsTypes) {
