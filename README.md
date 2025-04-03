@@ -11,22 +11,25 @@
 
 To be completed.
 
-## Environment Requirements
+## Requirements
 
-- Node.js version 18 or higher
-- Nuxt version 3.13 or higher
+- **Node.js** `>= 18.12.1`
+- **Nuxt** `>= 3.13.0`
 
 ## Installation
 
-Add dependency (example using pnpm).
+Using [pnpm](https://pnpm.io):
 
 ```bash
 pnpm add @kikiutils/nuxt
 ```
 
-You can also use yarn, npm, or bun to add the dependency.
+You can also use `yarn`, `npm`, or `bun`.
 
-That's it! You're ready to use this package in your project.
+> [!NOTE]
+> This package is modular. It does not install all dependencies by default.
+>
+> If a utility depends on a third-party package (e.g. `date-fns`), you must install it manually.
 
 <!-- Badges -->
 [npm-version-href]: https://npmjs.com/package/@kikiutils/nuxt
