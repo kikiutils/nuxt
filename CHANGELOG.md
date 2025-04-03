@@ -1,5 +1,61 @@
 # Changelog
 
+## v5.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v4.0.0...v5.0.0)
+
+### 🚀 Enhancements
+
+- Add `importAllUtilsDirTsFiles` option and functionality ([c484119](https://github.com/kikiutils/nuxt/commit/c484119))
+- Add more reboot styles ([454b864](https://github.com/kikiutils/nuxt/commit/454b864))
+
+### 💅 Refactors
+
+- ⚠️ Move all `composables` to `utils` ([543c8f1](https://github.com/kikiutils/nuxt/commit/543c8f1))
+- ⚠️ Update `createElFormItemRule` to remove default message and only handle defaults for `required`, `trigger`, and `type` ([90706c9](https://github.com/kikiutils/nuxt/commit/90706c9))
+- ⚠️ Change all utils exports to use export * ([e7c3de9](https://github.com/kikiutils/nuxt/commit/e7c3de9))
+- ⚠️ Change `removeConsole` default include option to `['log']` ([8cf6535](https://github.com/kikiutils/nuxt/commit/8cf6535))
+- ⚠️ Rename `unocss` to `unoCss` and `vueuse` to `vueUse` ([ad9e2cd](https://github.com/kikiutils/nuxt/commit/ad9e2cd))
+- ⚠️ Rename `unoCss.enabledReset` option to `unoCss.enabledResets` ([17e7e03](https://github.com/kikiutils/nuxt/commit/17e7e03))
+
+### 📖 Documentation
+
+- Update README ([0a63e71](https://github.com/kikiutils/nuxt/commit/0a63e71))
+
+### 🏡 Chore
+
+- Update CHANGELOG ([a1b2064](https://github.com/kikiutils/nuxt/commit/a1b2064))
+- Set `hideAuthorEmail` arg in changelog command ([da5f46e](https://github.com/kikiutils/nuxt/commit/da5f46e))
+- Upgrade dependencies ([6f3c483](https://github.com/kikiutils/nuxt/commit/6f3c483))
+- ⚠️ Upgrade dependencies ([e18122c](https://github.com/kikiutils/nuxt/commit/e18122c))
+- Format and lint code ([a15aa52](https://github.com/kikiutils/nuxt/commit/a15aa52))
+- ⚠️ Remove `axios` composables ([02e1b0b](https://github.com/kikiutils/nuxt/commit/02e1b0b))
+- ⚠️ Remove default Google Font families setting ([fc89db0](https://github.com/kikiutils/nuxt/commit/fc89db0))
+- Clean up and organize code ([e10a261](https://github.com/kikiutils/nuxt/commit/e10a261))
+- Set module nuxt compatibility meta ([e962992](https://github.com/kikiutils/nuxt/commit/e962992))
+- Update eslint config ([4fa6f29](https://github.com/kikiutils/nuxt/commit/4fa6f29))
+
+### 🎨 Styles
+
+- ⚠️ Remove font, scrollbar, element-plus/reboot CSS, and line-height in reboot ([4bfc13f](https://github.com/kikiutils/nuxt/commit/4bfc13f))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Move all `composables` to `utils` ([543c8f1](https://github.com/kikiutils/nuxt/commit/543c8f1))
+- ⚠️ Update `createElFormItemRule` to remove default message and only handle defaults for `required`, `trigger`, and `type` ([90706c9](https://github.com/kikiutils/nuxt/commit/90706c9))
+- ⚠️ Change all utils exports to use export * ([e7c3de9](https://github.com/kikiutils/nuxt/commit/e7c3de9))
+- ⚠️ Change `removeConsole` default include option to `['log']` ([8cf6535](https://github.com/kikiutils/nuxt/commit/8cf6535))
+- ⚠️ Rename `unocss` to `unoCss` and `vueuse` to `vueUse` ([ad9e2cd](https://github.com/kikiutils/nuxt/commit/ad9e2cd))
+- ⚠️ Rename `unoCss.enabledReset` option to `unoCss.enabledResets` ([17e7e03](https://github.com/kikiutils/nuxt/commit/17e7e03))
+- ⚠️ Upgrade dependencies ([e18122c](https://github.com/kikiutils/nuxt/commit/e18122c))
+- ⚠️ Remove `axios` composables ([02e1b0b](https://github.com/kikiutils/nuxt/commit/02e1b0b))
+- ⚠️ Remove default Google Font families setting ([fc89db0](https://github.com/kikiutils/nuxt/commit/fc89db0))
+- ⚠️ Remove font, scrollbar, element-plus/reboot CSS, and line-height in reboot ([4bfc13f](https://github.com/kikiutils/nuxt/commit/4bfc13f))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v4.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v3.0.0...v4.0.0)
