@@ -25,6 +25,15 @@ export interface ModuleOptions {
      * @default true
      */
     enabled?: boolean;
+    enabledComposables?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          scroll?: boolean;
+      };
+
     enabledModules?:
       | false
       | {

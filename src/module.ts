@@ -6,6 +6,7 @@ import {
     useLogger,
 } from '@nuxt/kit';
 
+import { setupComposables } from './setups/composables';
 import {
     setupColorMode,
     setupElementPlus,
@@ -33,6 +34,7 @@ export default defineNuxtModule<ModuleOptions>({
     defaults: {
         elementPlus: { enabledUtils: { form: true } },
         enabled: true,
+        enabledComposables: { scroll: true },
         enabledModules: {
             colorMode: false,
             elementPlus: false,
@@ -81,6 +83,7 @@ export default defineNuxtModule<ModuleOptions>({
         nuxt.options.vite.optimizeDeps.include ??= [];
 
         // Composables
+        setupComposables(moduleOptions, resolver);
         if (options.importAllComposablesDirTsFiles) addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
 
         // Modules
