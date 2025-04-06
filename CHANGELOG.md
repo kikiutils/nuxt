@@ -1,5 +1,29 @@
 # Changelog
 
+## v6.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v5.0.0...v6.0.0)
+
+### 🚀 Enhancements
+
+- Add `useScrollMemory` composable and related options ([10ebd72](https://github.com/kikiutils/nuxt/commit/10ebd72))
+
+### 📦 Build
+
+- ⚠️ Drop CJS output and configure package as ESM in response to @nuxt/module-builder update ([7910ae9](https://github.com/kikiutils/nuxt/commit/7910ae9))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([27d5a3c](https://github.com/kikiutils/nuxt/commit/27d5a3c))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Drop CJS output and configure package as ESM in response to @nuxt/module-builder update ([7910ae9](https://github.com/kikiutils/nuxt/commit/7910ae9))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v5.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v4.0.0...v5.0.0)
