@@ -1,5 +1,6 @@
 {
   "name": "@kikiutils/nuxt",
+  "type": "module",
   "version": "5.0.0",
   "description": "Nuxt module.",
   "author": "kiki-kanri",
@@ -10,12 +11,10 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
     }
   },
-  "types": "./dist/types.d.ts",
   "files": [
     "./dist"
   ],
