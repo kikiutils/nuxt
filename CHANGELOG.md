@@ -1,5 +1,18 @@
 # Changelog
 
+## v6.0.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.1...v6.0.2)
+
+### 🏡 Chore
+
+- Set `sideEffects` to false in package.json ([f0faa23](https://github.com/kikiutils/nuxt/commit/f0faa23))
+- Remove `prettier` field from package.json ([d3d5d04](https://github.com/kikiutils/nuxt/commit/d3d5d04))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v6.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.0...v6.0.1)
