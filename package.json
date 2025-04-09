@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/kikiutils/nuxt.git"
   },
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/types.d.mts",
