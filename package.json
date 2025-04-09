@@ -58,7 +58,6 @@
     "nuxt-purgecss": "^2.0.0",
     "typescript": "^5.8.3"
   },
-  "prettier": "@kikiutils/prettierrc",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
