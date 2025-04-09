@@ -1,5 +1,18 @@
 # Changelog
 
+## v6.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.0...v6.0.1)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([de684dd](https://github.com/kikiutils/nuxt/commit/de684dd))
+- Remove `@kikiutils/prettierrc` devDependencies ([1721957](https://github.com/kikiutils/nuxt/commit/1721957))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v6.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v5.0.0...v6.0.0)
