@@ -1,5 +1,22 @@
 # Changelog
 
+## v6.0.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.2...v6.0.3)
+
+### 🩹 Fixes
+
+- Make fields in `nuxtOptions` type optional ([d78bece](https://github.com/kikiutils/nuxt/commit/d78bece))
+
+### 🏡 Chore
+
+- Set `compilerOptions.allowSyntheticDefaultImports` to false in default typescript config ([049c7d1](https://github.com/kikiutils/nuxt/commit/049c7d1))
+- Upgrade dependencies ([428be7f](https://github.com/kikiutils/nuxt/commit/428be7f))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v6.0.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.1...v6.0.2)
