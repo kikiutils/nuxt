@@ -23,6 +23,7 @@ export function setupOptions(
         {
             tsConfig: {
                 compilerOptions: {
+                    allowSyntheticDefaultImports: false,
                     noUncheckedIndexedAccess: true,
                     noUnusedLocals: true,
                     noUnusedParameters: true,
