@@ -171,7 +171,7 @@ export interface ModuleOptions {
      * @default true
      */
     loadGlobalUtilsTypes?: boolean;
-    nuxtOptions?: Pick<Nuxt['options'], 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>;
+    nuxtOptions?: Partial<Pick<Nuxt['options'], 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>>;
 
     /**
      * @default { includes: ['log'] }
