@@ -34,7 +34,7 @@
     "release": "pnpm run lint && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish"
   },
   "dependencies": {
-    "@kikiutils/types": "^4.1.0",
+    "@kikiutils/types": "^5.0.0",
     "@nuxt/kit": "^3.16.2",
     "@unocss/nuxt": "^66.0.0",
     "@vueuse/nuxt": "^13.1.0",
