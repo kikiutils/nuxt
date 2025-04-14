@@ -1,5 +1,17 @@
 # Changelog
 
+## v6.0.4
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.3...v6.0.4)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([90cdc5e](https://github.com/kikiutils/nuxt/commit/90cdc5e))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v6.0.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.2...v6.0.3)
