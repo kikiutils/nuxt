@@ -3,6 +3,13 @@ import { defu } from 'defu';
 
 import type { RequiredModuleOptions } from '../types/options';
 
+function extractPackageName(id: string) {
+    const parts = id.split('node_modules/').pop()?.split('/');
+    if (!parts) return;
+    if (parts[0]?.startsWith('@')) return `${parts[0]}/${parts[1]}`;
+    return parts[0];
+}
+
 export function setupOptions(
     { nuxtOptions: moduleNuxtOptions }: RequiredModuleOptions,
     { options: nuxtOptions }: Nuxt,
@@ -42,9 +49,10 @@ export function setupOptions(
                 rollupOptions: {
                     output: {
                         manualChunks(id: string) {
-                            if (id.endsWith('.css')) return;
-                            const moduleName = id.match(/\.pnpm\/@?([^@]+)@/)?.[1];
-                            return moduleName?.includes('nuxt') ? 'nuxt' : moduleName;
+                            if (!id.includes('node_modules') || id.endsWith('.css')) return;
+                            const packageName = extractPackageName(id);
+                            if (!packageName) return;
+                            return packageName?.includes('nuxt') ? 'nuxt' : packageName;
                         },
                     },
                 },
