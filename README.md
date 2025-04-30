@@ -33,13 +33,13 @@ You can also use `yarn`, `npm`, or `bun`.
 
 <!-- Badges -->
 [npm-version-href]: https://npmjs.com/package/package-name
-[npm-version-src]: https://img.shields.io/npm/v/package-name/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-src]: https://img.shields.io/npm/v/package-name/latest.svg?colorA=18181b&colorB=28cf8d&style=flat
 
 [npm-downloads-href]: https://npmjs.com/package/package-name
-[npm-downloads-src]: https://img.shields.io/npm/dm/package-name.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-src]: https://img.shields.io/npm/dm/package-name.svg?colorA=18181b&colorB=28cf8d&style=flat
 
 [codecov-href]: https://codecov.io/gh/author-or-organization/repo-name
-[codecov-src]: https://codecov.io/gh/author-or-organization/repo-name/graph/badge.svg?token=RNU7FNG8HD
+[codecov-src]: https://codecov.io/gh/author-or-organization/repo-name/graph/badge.svg?token=
 
 [license-href]: https://github.com/author-or-organization/repo-name/blob/main/LICENSE
-[license-src]: https://img.shields.io/npm/l/package-name.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-src]: https://img.shields.io/github/license/author-or-organization%2Frepo-name?colorA=18181b&colorB=28cf8d&style=flat
