@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(realpath "$(dirname "$(readlink -f "$0")")")" || exit 1
+
 git config --replace-all core.filemode true
 find . -name node_modules -prune -o \( -type f -exec chmod 600 {} + \)
 find . -name node_modules -prune -o \( -type d -exec chmod 700 {} + \)
