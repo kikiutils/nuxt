@@ -28,8 +28,8 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint && stylelint './**/*.{css,scss,vue}' -i ./.gitignore",
+    "lint:fix": "eslint --fix && stylelint './**/*.{css,scss,vue}' -i ./.gitignore --fix",
     "prepack": "pnpm run build",
     "release": "pnpm run lint && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish"
   },
@@ -49,6 +49,7 @@
     "@kikiutils/changelogen": "^0.8.0",
     "@kikiutils/eslint-config": "^1.0.1",
     "@kikiutils/node": "^8.0.2",
+    "@kikiutils/stylelint-config": "^0.1.0",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^3.17.1",
     "@nuxtjs/color-mode": "^3.5.2",

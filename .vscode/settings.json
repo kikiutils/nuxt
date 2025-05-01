@@ -1,6 +1,8 @@
 {
+  "css.validate": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
     "source.organizeImports": "never"
   },
   "editor.formatOnSave": false,
@@ -39,5 +41,21 @@
     "xml",
     "yaml"
   ],
-  "prettier.enable": false
+  "prettier.enable": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.snippet": [
+    "css",
+    "html",
+    "postcss",
+    "scss",
+    "vue"
+  ],
+  "stylelint.validate": [
+    "css",
+    "html",
+    "postcss",
+    "scss",
+    "vue"
+  ]
 }
