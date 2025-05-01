@@ -34,27 +34,27 @@
     "release": "pnpm run lint && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish"
   },
   "dependencies": {
-    "@kikiutils/types": "^5.0.0",
-    "@nuxt/kit": "^3.16.2",
+    "@kikiutils/types": "^5.2.0",
+    "@nuxt/kit": "^3.17.1",
     "@unocss/nuxt": "^66.0.0",
     "@vueuse/nuxt": "^13.1.0",
     "defu": "^6.1.4",
-    "sass": "^1.86.3",
-    "type-fest": "^4.39.1",
+    "sass": "^1.87.0",
+    "type-fest": "^4.40.1",
     "vite-plugin-remove-console": "^2.2.0",
-    "vue-tsc": "^2.2.8"
+    "vue-tsc": "^2.2.10"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.1.1",
     "@kikiutils/changelogen": "^0.8.0",
-    "@kikiutils/eslint-config": "^0.12.2",
-    "@kikiutils/node": "^8.0.1",
+    "@kikiutils/eslint-config": "^1.0.1",
+    "@kikiutils/node": "^8.0.2",
     "@nuxt/module-builder": "^1.0.1",
-    "@nuxt/schema": "^3.16.2",
+    "@nuxt/schema": "^3.17.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "copy-to-clipboard": "^3.3.3",
-    "element-plus": "^2.9.7",
+    "element-plus": "^2.9.9",
     "nuxt-purgecss": "^2.0.0",
     "typescript": "^5.8.3"
   },
@@ -62,6 +62,7 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
+      "unrs-resolver",
       "vue-demi"
     ]
   }
