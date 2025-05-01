@@ -42,4 +42,4 @@ You can also use `yarn`, `npm`, or `bun`.
 [codecov-src]: https://codecov.io/gh/author-or-organization/repo-name/graph/badge.svg?token=
 
 [license-href]: https://github.com/author-or-organization/repo-name/blob/main/LICENSE
-[license-src]: https://img.shields.io/github/license/author-or-organization%2Frepo-name?colorA=18181b&colorB=28cf8d&style=flat
+[license-src]: https://img.shields.io/github/license/author-or-organization/repo-name?colorA=18181b&colorB=28cf8d&style=flat
