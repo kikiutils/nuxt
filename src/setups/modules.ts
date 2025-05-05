@@ -27,8 +27,13 @@ async function setupElementPlus(nuxt: Nuxt) {
     await installModule('@element-plus/nuxt', {}, nuxt);
 }
 
+async function setupRobots(nuxt: Nuxt) {
+    await installModule('@nuxtjs/robots', {}, nuxt);
+}
+
 export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     if (!resolvedModuleOptions.enabledModules) return;
     if (resolvedModuleOptions.enabledModules.colorMode) await setupColorMode(nuxt);
     if (resolvedModuleOptions.enabledModules.elementPlus) await setupElementPlus(nuxt);
+    if (resolvedModuleOptions.enabledModules.robots) await setupRobots(nuxt);
 }

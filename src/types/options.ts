@@ -20,5 +20,10 @@ export interface UserModuleOptions {
            * @default false
            */
           elementPlus?: boolean;
+
+          /**
+           * @default true
+           */
+          robots?: boolean;
       };
 }
