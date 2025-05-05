@@ -8,4 +8,12 @@ export interface UserModuleOptions {
      * @default true
      */
     enabled?: boolean;
+    enabledModules?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          colorMode?: boolean;
+      };
 }
