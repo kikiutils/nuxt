@@ -39,6 +39,11 @@ export interface UserModuleOptions {
           /**
            * @default true
            */
+          unpluginFonts?: boolean;
+
+          /**
+           * @default true
+           */
           vueUse?: boolean;
       };
 
@@ -51,5 +56,18 @@ export interface UserModuleOptions {
                */
               tailwind?: boolean;
           };
+    };
+
+    unpluginFonts?: {
+        google?: {
+            /**
+             * @default true
+             */
+            addPreconnectLink?: boolean;
+            /**
+             * @default true
+             */
+            disableDeferAndAutoAddPreloadLink?: boolean;
+        };
     };
 }

@@ -43,6 +43,41 @@ async function setupUnoCss(resolvedModuleOptions: ResolvedModuleOptions, nuxt: N
     await installModule('@unocss/nuxt', {}, nuxt);
 }
 
+async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
+    nuxt.options.app.head.link ??= [];
+
+    if (resolvedModuleOptions.unpluginFonts.google.addPreconnectLink) {
+        nuxt.options.app.head.link.push({
+            crossorigin: '',
+            href: 'https://fonts.googleapis.com',
+            rel: 'preconnect',
+        });
+    }
+
+    if (
+        resolvedModuleOptions.unpluginFonts.google.disableDeferAndAutoAddPreloadLink
+        && nuxt.options.unfonts?.google?.families.length
+    ) {
+        const urlSearchParams = new URLSearchParams({ display: 'swap' });
+        nuxt.options.unfonts.google.families.forEach((family) => {
+            if (typeof family === 'string') urlSearchParams.append('family', family);
+            else {
+                family.defer = false;
+                if (family.styles) urlSearchParams.append('family', `${family.name}:${family.styles}`);
+                else urlSearchParams.append('family', family.name);
+            }
+        });
+
+        nuxt.options.app.head.link.push({
+            as: 'style',
+            href: `https://fonts.googleapis.com/css2?${decodeURIComponent(urlSearchParams.toString())}`,
+            rel: 'preload',
+        });
+    }
+
+    await installModule('unplugin-fonts/nuxt', {}, nuxt);
+}
+
 async function setupVueUse(nuxt: Nuxt) {
     await installModule('@vueuse/nuxt', {}, nuxt);
 }
@@ -54,5 +89,6 @@ export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions,
     if (resolvedModuleOptions.enabledModules.robots) await setupRobots(nuxt);
     if (resolvedModuleOptions.enabledModules.security) await setupSecurity(nuxt);
     if (resolvedModuleOptions.enabledModules.unoCss) await setupUnoCss(resolvedModuleOptions, nuxt);
+    if (resolvedModuleOptions.enabledModules.unpluginFonts) await setupUnpluginFonts(resolvedModuleOptions, nuxt);
     if (resolvedModuleOptions.enabledModules.vueUse) await setupVueUse(nuxt);
 }

@@ -20,9 +20,16 @@ export default defineNuxtModule<UserModuleOptions>({
             robots: true,
             security: false,
             unoCss: true,
+            unpluginFonts: true,
             vueUse: true,
         },
         unoCss: { enabledResets: { tailwind: true } },
+        unpluginFonts: {
+            google: {
+                addPreconnectLink: true,
+                disableDeferAndAutoAddPreloadLink: true,
+            },
+        },
     } satisfies ResolvedModuleOptions,
     meta: {
         compatibility: { nuxt: '>=3.13.0' },
