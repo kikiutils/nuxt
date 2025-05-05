@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/kikiutils/nuxt.git"
   },
+  "keywords": [],
   "sideEffects": false,
   "exports": {
     ".": {
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "build": "nuxt-module-build build",
-    "bumplog": "changelogen --bump",
+    "bumplog": "changelogen --bump --hideAuthorEmail",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
