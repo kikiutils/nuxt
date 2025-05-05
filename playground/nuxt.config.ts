@@ -4,6 +4,7 @@ export default defineNuxtConfig({
         enabledModules: {
             colorMode: true,
             elementPlus: true,
+            security: true,
         },
     },
     modules: ['../src/module'],

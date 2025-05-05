@@ -7,6 +7,15 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "@nuxtjs/color-mode": "^3.5.2",
+    "nuxt": "latest",
+    "nuxt-security": "^2.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "vue-demi"
+    ]
   }
 }
