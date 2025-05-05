@@ -30,5 +30,10 @@ export interface UserModuleOptions {
            * @default false
            */
           security?: boolean;
+
+          /**
+           * @default true
+           */
+          vueUse?: boolean;
       };
 }

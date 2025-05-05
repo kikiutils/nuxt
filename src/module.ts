@@ -19,6 +19,7 @@ export default defineNuxtModule<UserModuleOptions>({
             elementPlus: false,
             robots: true,
             security: false,
+            vueUse: true,
         },
     } satisfies ResolvedModuleOptions,
     meta: {

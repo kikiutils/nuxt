@@ -35,10 +35,15 @@ async function setupSecurity(nuxt: Nuxt) {
     await installModule('nuxt-security', {}, nuxt);
 }
 
+async function setupVueUse(nuxt: Nuxt) {
+    await installModule('@vueuse/nuxt', {}, nuxt);
+}
+
 export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     if (!resolvedModuleOptions.enabledModules) return;
     if (resolvedModuleOptions.enabledModules.colorMode) await setupColorMode(nuxt);
     if (resolvedModuleOptions.enabledModules.elementPlus) await setupElementPlus(nuxt);
     if (resolvedModuleOptions.enabledModules.robots) await setupRobots(nuxt);
     if (resolvedModuleOptions.enabledModules.security) await setupSecurity(nuxt);
+    if (resolvedModuleOptions.enabledModules.vueUse) await setupVueUse(nuxt);
 }
