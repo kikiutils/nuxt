@@ -41,6 +41,15 @@ export interface UserModuleOptions {
           vueUse?: boolean;
       };
 
+    enabledPlugins?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          preventDragFileDrop?: boolean;
+      };
+
     enabledStyles?:
       | false
       | {

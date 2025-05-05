@@ -5,6 +5,7 @@ import {
 } from '@nuxt/kit';
 
 import { setupModules } from './setups/modules';
+import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
 import type {
     ResolvedModuleOptions,
@@ -24,6 +25,7 @@ export default defineNuxtModule<UserModuleOptions>({
             unpluginFonts: true,
             vueUse: true,
         },
+        enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
@@ -47,6 +49,9 @@ export default defineNuxtModule<UserModuleOptions>({
 
         // Modules
         await setupModules(options, nuxt);
+
+        // Plugins
+        setupPlugins(options, nuxt, resolver);
 
         // Styles
         setupStyles(options, nuxt, resolver);
