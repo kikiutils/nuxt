@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.17.1",
+    "type-fest": "^4.40.1",
     "vue-tsc": "^2.2.10"
   },
   "devDependencies": {
