@@ -44,6 +44,7 @@
     "vue-tsc": "^2.2.10"
   },
   "devDependencies": {
+    "@element-plus/nuxt": "^1.1.1",
     "@kikiutils/changelogen": "^0.8.0",
     "@kikiutils/eslint-config": "^1.0.1",
     "@kikiutils/stylelint-config": "^0.1.0",

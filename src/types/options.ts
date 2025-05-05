@@ -12,8 +12,13 @@ export interface UserModuleOptions {
       | false
       | {
           /**
-           * @default true
+           * @default false
            */
           colorMode?: boolean;
+
+          /**
+           * @default false
+           */
+          elementPlus?: boolean;
       };
 }

@@ -14,7 +14,10 @@ export default defineNuxtModule<UserModuleOptions>({
     // Default configuration options of the Nuxt module
     defaults: {
         enabled: true,
-        enabledModules: { colorMode: false },
+        enabledModules: {
+            colorMode: false,
+            elementPlus: false,
+        },
     } satisfies ResolvedModuleOptions,
     meta: {
         compatibility: { nuxt: '>=3.13.0' },
