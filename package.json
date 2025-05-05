@@ -31,33 +31,25 @@
     "lint": "eslint && stylelint './**/*.{css,scss,vue}' -i ./.gitignore",
     "lint:fix": "eslint --fix && stylelint './**/*.{css,scss,vue}' -i ./.gitignore --fix",
     "prepack": "pnpm run build",
-    "release": "pnpm run lint && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish"
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@kikiutils/types": "^5.2.0",
     "@nuxt/kit": "^3.17.1",
-    "@unocss/nuxt": "^66.0.0",
-    "@vueuse/nuxt": "^13.1.0",
-    "defu": "^6.1.4",
-    "sass": "^1.87.0",
-    "type-fest": "^4.40.1",
-    "vite-plugin-remove-console": "^2.2.0",
     "vue-tsc": "^2.2.10"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.1.1",
     "@kikiutils/changelogen": "^0.8.0",
     "@kikiutils/eslint-config": "^1.0.1",
-    "@kikiutils/node": "^8.0.2",
     "@kikiutils/stylelint-config": "^0.1.0",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^3.17.1",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "copy-to-clipboard": "^3.3.3",
-    "element-plus": "^2.9.9",
-    "nuxt-purgecss": "^2.0.0",
-    "typescript": "^5.8.3"
+    "@nuxt/test-utils": "^3.18.0",
+    "nuxt": "^3.17.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
