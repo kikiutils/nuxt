@@ -18,6 +18,7 @@ export default defineNuxtModule<UserModuleOptions>({
             colorMode: false,
             elementPlus: false,
             robots: true,
+            security: false,
         },
     } satisfies ResolvedModuleOptions,
     meta: {

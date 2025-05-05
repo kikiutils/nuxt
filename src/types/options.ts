@@ -25,5 +25,10 @@ export interface UserModuleOptions {
            * @default true
            */
           robots?: boolean;
+
+          /**
+           * @default false
+           */
+          security?: boolean;
       };
 }
