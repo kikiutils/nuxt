@@ -15,32 +15,26 @@ export interface UserModuleOptions {
            * @default false
            */
           colorMode?: boolean;
-
           /**
            * @default false
            */
           elementPlus?: boolean;
-
           /**
            * @default true
            */
           robots?: boolean;
-
           /**
            * @default false
            */
           security?: boolean;
-
           /**
            * @default true
            */
           unoCss?: boolean;
-
           /**
            * @default true
            */
           unpluginFonts?: boolean;
-
           /**
            * @default true
            */
