@@ -19,8 +19,10 @@ export default defineNuxtModule<UserModuleOptions>({
             elementPlus: false,
             robots: true,
             security: false,
+            unoCss: true,
             vueUse: true,
         },
+        unoCss: { enabledResets: { tailwind: true } },
     } satisfies ResolvedModuleOptions,
     meta: {
         compatibility: { nuxt: '>=3.13.0' },

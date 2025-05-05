@@ -34,6 +34,22 @@ export interface UserModuleOptions {
           /**
            * @default true
            */
+          unoCss?: boolean;
+
+          /**
+           * @default true
+           */
           vueUse?: boolean;
       };
+
+    unoCss?: {
+        enabledResets?:
+          | false
+          | {
+              /**
+               * @default true
+               */
+              tailwind?: boolean;
+          };
+    };
 }

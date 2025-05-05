@@ -53,6 +53,7 @@
     "@nuxt/test-utils": "^3.18.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/robots": "^5.2.10",
+    "@unocss/nuxt": "^66.1.0",
     "@vueuse/nuxt": "^13.1.0",
     "nuxt": "^3.17.1",
     "typescript": "^5.8.3",
