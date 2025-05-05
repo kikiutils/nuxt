@@ -41,6 +41,15 @@ export interface UserModuleOptions {
           vueUse?: boolean;
       };
 
+    enabledStyles?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          reboot?: boolean;
+      };
+
     unoCss?: {
         enabledResets?:
           | false

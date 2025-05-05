@@ -5,6 +5,7 @@ import {
 } from '@nuxt/kit';
 
 import { setupModules } from './setups/modules';
+import { setupStyles } from './setups/styles';
 import type {
     ResolvedModuleOptions,
     UserModuleOptions,
@@ -23,6 +24,7 @@ export default defineNuxtModule<UserModuleOptions>({
             unpluginFonts: true,
             vueUse: true,
         },
+        enabledStyles: { reboot: true },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
             google: {
@@ -45,6 +47,9 @@ export default defineNuxtModule<UserModuleOptions>({
 
         // Modules
         await setupModules(options, nuxt);
+
+        // Styles
+        setupStyles(options, nuxt, resolver);
 
         logger.success('@kikiutils/nuxt initialized successfully.');
     },
