@@ -4,6 +4,7 @@ import {
     useLogger,
 } from '@nuxt/kit';
 
+import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupModules } from './setups/modules';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
@@ -15,6 +16,23 @@ import type {
 export default defineNuxtModule<UserModuleOptions>({
     // Default configuration options of the Nuxt module
     defaults: {
+        autoImportUtils: {
+            '@kikiutils/shared': {
+                clipboard: true,
+                datetime: false,
+                enhancedLocalStorage: false,
+                enum: false,
+                general: true,
+                hash: false,
+                math: false,
+                number: false,
+                random: false,
+                string: false,
+                url: true,
+                vue: true,
+                web: true,
+            },
+        },
         enabled: true,
         enabledModules: {
             colorMode: false,
@@ -46,6 +64,9 @@ export default defineNuxtModule<UserModuleOptions>({
         if (!options.enabled) return logger.info('@kikiutils/nuxt is disabled.');
         logger.info('Initializing @kikiutils/nuxt...');
         const resolver = createResolver(import.meta.url);
+
+        // AutoImportUtils
+        await setupAutoImportUtils(options);
 
         // Modules
         await setupModules(options, nuxt);

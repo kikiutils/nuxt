@@ -4,6 +4,67 @@ export type ResolvedModuleOptions = RequiredDeep<UserModuleOptions>;
 
 // Module options TypeScript interface definition
 export interface UserModuleOptions {
+    autoImportUtils?:
+      | false
+      | {
+          '@kikiutils/shared'?:
+            | false
+            | {
+                /**
+                 * @default true
+                 */
+                clipboard?: boolean;
+                /**
+                 * @default false
+                 */
+                datetime?: boolean;
+                /**
+                 * @default false
+                 */
+                enhancedLocalStorage?: boolean;
+                /**
+                 * @default false
+                 */
+                enum?: boolean;
+                /**
+                 * @default true
+                 */
+                general?: boolean;
+                /**
+                 * @default false
+                 */
+                hash?: boolean;
+                /**
+                 * @default false
+                 */
+                math?: boolean;
+                /**
+                 * @default false
+                 */
+                number?: boolean;
+                /**
+                 * @default false
+                 */
+                random?: boolean;
+                /**
+                 * @default false
+                 */
+                string?: boolean;
+                /**
+                 * @default true
+                 */
+                url?: boolean;
+                /**
+                 * @default true
+                 */
+                vue?: boolean;
+                /**
+                 * @default true
+                 */
+                web?: boolean;
+            };
+      };
+
     /**
      * @default true
      */

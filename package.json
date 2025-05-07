@@ -40,6 +40,7 @@
   "dependencies": {
     "@nuxt/kit": "^3.17.1",
     "defu": "^6.1.4",
+    "mlly": "^1.7.4",
     "type-fest": "^4.40.1",
     "vue-tsc": "^2.2.10"
   },
@@ -47,6 +48,7 @@
     "@element-plus/nuxt": "^1.1.1",
     "@kikiutils/changelogen": "^0.8.0",
     "@kikiutils/eslint-config": "^1.0.1",
+    "@kikiutils/shared": "^9.3.1",
     "@kikiutils/stylelint-config": "^0.1.0",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^3.17.1",
