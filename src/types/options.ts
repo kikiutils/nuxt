@@ -143,6 +143,15 @@ export interface UserModuleOptions {
           reboot?: boolean;
       };
 
+    globalTypeImports?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          '@kikiutils/types/vue'?: boolean;
+      };
+
     nuxtConfigOverrides?: Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>>;
     unoCss?: {
         enabledResets?:

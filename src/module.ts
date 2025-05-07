@@ -6,6 +6,7 @@ import {
 } from '@nuxt/kit';
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
+import { setupGlobalTypeImports } from './setups/global-type-imports';
 import { setupModules } from './setups/modules';
 import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
 import { setupPlugins } from './setups/plugins';
@@ -52,6 +53,7 @@ export default defineNuxtModule<UserModuleOptions>({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
+        globalTypeImports: { '@kikiutils/types/vue': true },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
             google: {
@@ -82,8 +84,8 @@ export default defineNuxtModule<UserModuleOptions>({
             if (options.deepScanAutoImportDirs.utils) addImportsDir(`${nuxt.options.rootDir}/utils/**/*.ts`);
         }
 
-        // Setups
         await setupAutoImportUtils(options);
+        setupGlobalTypeImports(options);
         await setupModules(options, nuxt);
         setupNuxtConfigOverrides(options, nuxt);
         setupPlugins(options, resolver);
