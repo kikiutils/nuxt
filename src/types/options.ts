@@ -1,6 +1,9 @@
+import type { NuxtOptions } from '@nuxt/schema';
 import type { RequiredDeep } from 'type-fest';
 
-export type ResolvedModuleOptions = RequiredDeep<UserModuleOptions>;
+export type ResolvedModuleOptions =
+  & Pick<UserModuleOptions, 'nuxtConfigOverrides'>
+  & RequiredDeep<Omit<UserModuleOptions, 'nuxtConfigOverrides'>>;
 
 // Module options TypeScript interface definition
 export interface UserModuleOptions {
@@ -120,6 +123,7 @@ export interface UserModuleOptions {
           reboot?: boolean;
       };
 
+    nuxtConfigOverrides?: Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>>;
     unoCss?: {
         enabledResets?:
           | false

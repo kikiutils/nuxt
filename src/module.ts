@@ -6,6 +6,7 @@ import {
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupModules } from './setups/modules';
+import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
 import type {
@@ -68,6 +69,7 @@ export default defineNuxtModule<UserModuleOptions>({
         // Setups
         await setupAutoImportUtils(options);
         await setupModules(options, nuxt);
+        setupNuxtConfigOverrides(options, nuxt);
         setupPlugins(options, nuxt, resolver);
         setupStyles(options, nuxt, resolver);
 
