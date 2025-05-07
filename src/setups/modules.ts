@@ -83,11 +83,16 @@ async function setupVueUse(nuxt: Nuxt) {
 
 export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     if (!resolvedModuleOptions.enabledModules) return;
-    if (resolvedModuleOptions.enabledModules.colorMode) await setupColorMode(nuxt);
-    if (resolvedModuleOptions.enabledModules.elementPlus) await setupElementPlus(nuxt);
-    if (resolvedModuleOptions.enabledModules.robots) await setupRobots(nuxt);
-    if (resolvedModuleOptions.enabledModules.security) await setupSecurity(nuxt);
-    if (resolvedModuleOptions.enabledModules.unoCss) await setupUnoCss(resolvedModuleOptions, nuxt);
-    if (resolvedModuleOptions.enabledModules.unpluginFonts) await setupUnpluginFonts(resolvedModuleOptions, nuxt);
-    if (resolvedModuleOptions.enabledModules.vueUse) await setupVueUse(nuxt);
+    const promises = [];
+    if (resolvedModuleOptions.enabledModules.colorMode) promises.push(setupColorMode(nuxt));
+    if (resolvedModuleOptions.enabledModules.elementPlus) promises.push(setupElementPlus(nuxt));
+    if (resolvedModuleOptions.enabledModules.robots) promises.push(setupRobots(nuxt));
+    if (resolvedModuleOptions.enabledModules.security) promises.push(setupSecurity(nuxt));
+    if (resolvedModuleOptions.enabledModules.unoCss) promises.push(setupUnoCss(resolvedModuleOptions, nuxt));
+    if (resolvedModuleOptions.enabledModules.unpluginFonts) {
+        promises.push(setupUnpluginFonts(resolvedModuleOptions, nuxt));
+    }
+
+    if (resolvedModuleOptions.enabledModules.vueUse) promises.push(setupVueUse(nuxt));
+    await Promise.all(promises);
 }
