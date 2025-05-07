@@ -69,6 +69,26 @@ export interface UserModuleOptions {
       };
 
     /**
+     * Deep scan and auto-import `.ts` files from selected directories.
+     */
+    deepScanAutoImportDirs?:
+      | false
+      | {
+          /**
+           * @default true
+           */
+          composables?: boolean;
+          /**
+           * @default true
+           */
+          globals?: boolean;
+          /**
+           * @default true
+           */
+          utils?: boolean;
+      };
+
+    /**
      * @default true
      */
     enabled?: boolean;

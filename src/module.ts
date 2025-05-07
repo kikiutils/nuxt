@@ -1,4 +1,5 @@
 import {
+    addImportsDir,
     createResolver,
     defineNuxtModule,
     useLogger,
@@ -34,6 +35,11 @@ export default defineNuxtModule<UserModuleOptions>({
                 web: true,
             },
         },
+        deepScanAutoImportDirs: {
+            composables: true,
+            globals: true,
+            utils: true,
+        },
         enabled: true,
         enabledModules: {
             colorMode: false,
@@ -65,6 +71,16 @@ export default defineNuxtModule<UserModuleOptions>({
         if (!options.enabled) return logger.info('@kikiutils/nuxt is disabled.');
         logger.info('Initializing @kikiutils/nuxt...');
         const resolver = createResolver(import.meta.url);
+
+        // Deep scan auto imports
+        if (options.deepScanAutoImportDirs) {
+            if (options.deepScanAutoImportDirs.composables) {
+                addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
+            }
+
+            if (options.deepScanAutoImportDirs.globals) addImportsDir(`${nuxt.options.rootDir}/globals/**/*.ts`);
+            if (options.deepScanAutoImportDirs.utils) addImportsDir(`${nuxt.options.rootDir}/utils/**/*.ts`);
+        }
 
         // Setups
         await setupAutoImportUtils(options);
