@@ -1,13 +1,12 @@
 import type { ModuleOptions as ElementPlusModuleOptions } from '@element-plus/nuxt';
 import { installModule } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
-import type { ModuleOptions as ColorModeModuleOptions } from '@nuxtjs/color-mode';
 import { defu } from 'defu';
 
 import type { ResolvedModuleOptions } from '../types/options';
 
 async function setupColorMode(nuxt: Nuxt) {
-    nuxt.options.colorMode = defu<ColorModeModuleOptions, Partial<ColorModeModuleOptions>[]>(
+    nuxt.options.colorMode = defu(
         nuxt.options.colorMode,
         {
             classSuffix: '',

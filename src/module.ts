@@ -70,7 +70,7 @@ export default defineNuxtModule<UserModuleOptions>({
         await setupAutoImportUtils(options);
         await setupModules(options, nuxt);
         setupNuxtConfigOverrides(options, nuxt);
-        setupPlugins(options, nuxt, resolver);
+        setupPlugins(options, resolver);
         setupStyles(options, nuxt, resolver);
 
         logger.success('@kikiutils/nuxt initialized successfully.');
