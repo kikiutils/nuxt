@@ -10,11 +10,21 @@ function extractPackageName(id: string) {
     return parts[0];
 }
 
-export function setupNuxtConfigOverrides({ nuxtConfigOverrides }: ResolvedModuleOptions, nuxt: Nuxt) {
-    nuxt.options.devtools = defu(nuxtConfigOverrides?.devtools, { enabled: false }, nuxt.options.devtools);
-    nuxt.options.experimental = defu(nuxtConfigOverrides?.experimental, { headNext: true }, nuxt.options.experimental);
+export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
+    nuxt.options.devtools = defu(
+        resolvedModuleOptions.nuxtConfigOverrides?.devtools,
+        { enabled: false },
+        nuxt.options.devtools,
+    );
+
+    nuxt.options.experimental = defu(
+        resolvedModuleOptions.nuxtConfigOverrides?.experimental,
+        { headNext: true },
+        nuxt.options.experimental,
+    );
+
     nuxt.options.nitro = defu(
-        nuxtConfigOverrides?.nitro,
+        resolvedModuleOptions.nuxtConfigOverrides?.nitro,
         {
             compressPublicAssets: true,
             minify: true,
@@ -36,7 +46,7 @@ export function setupNuxtConfigOverrides({ nuxtConfigOverrides }: ResolvedModule
     );
 
     nuxt.options.typescript = defu(
-        nuxtConfigOverrides?.typescript,
+        resolvedModuleOptions.nuxtConfigOverrides?.typescript,
         {
             tsConfig: {
                 compilerOptions: {
@@ -55,7 +65,7 @@ export function setupNuxtConfigOverrides({ nuxtConfigOverrides }: ResolvedModule
     );
 
     nuxt.options.vite = defu(
-        nuxtConfigOverrides?.vite,
+        resolvedModuleOptions.nuxtConfigOverrides?.vite,
         {
             build: {
                 assetsInlineLimit: 0,
