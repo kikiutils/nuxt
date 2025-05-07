@@ -65,16 +65,10 @@ export default defineNuxtModule<UserModuleOptions>({
         logger.info('Initializing @kikiutils/nuxt...');
         const resolver = createResolver(import.meta.url);
 
-        // AutoImportUtils
+        // Setups
         await setupAutoImportUtils(options);
-
-        // Modules
         await setupModules(options, nuxt);
-
-        // Plugins
         setupPlugins(options, nuxt, resolver);
-
-        // Styles
         setupStyles(options, nuxt, resolver);
 
         logger.success('@kikiutils/nuxt initialized successfully.');
