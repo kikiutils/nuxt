@@ -1,11 +1,11 @@
 import {
-    addImportsDir,
     createResolver,
     defineNuxtModule,
     useLogger,
 } from '@nuxt/kit';
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
+import { setupDeepScanAutoImports } from './setups/deep-scan-auto-imports';
 import { setupGlobalTypeImports } from './setups/global-type-imports';
 import { setupModules } from './setups/modules';
 import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
@@ -74,17 +74,8 @@ export default defineNuxtModule<UserModuleOptions>({
         logger.info('Initializing @kikiutils/nuxt...');
         const resolver = createResolver(import.meta.url);
 
-        // Deep scan auto imports
-        if (options.deepScanAutoImportDirs) {
-            if (options.deepScanAutoImportDirs.composables) {
-                addImportsDir(`${nuxt.options.rootDir}/composables/**/*.ts`);
-            }
-
-            if (options.deepScanAutoImportDirs.globals) addImportsDir(`${nuxt.options.rootDir}/globals/**/*.ts`);
-            if (options.deepScanAutoImportDirs.utils) addImportsDir(`${nuxt.options.rootDir}/utils/**/*.ts`);
-        }
-
         await setupAutoImportUtils(options);
+        setupDeepScanAutoImports(options, nuxt);
         setupGlobalTypeImports(options);
         await setupModules(options, nuxt);
         setupNuxtConfigOverrides(options, nuxt);
