@@ -74,11 +74,11 @@ export default defineNuxtModule<UserModuleOptions>({
         logger.info('Initializing @kikiutils/nuxt...');
         const resolver = createResolver(import.meta.url);
 
+        setupNuxtConfigOverrides(options, nuxt);
+        setupGlobalTypeImports(options);
         await setupAutoImportUtils(options);
         setupDeepScanAutoImports(options, nuxt);
-        setupGlobalTypeImports(options);
         await setupModules(options, nuxt);
-        setupNuxtConfigOverrides(options, nuxt);
         setupPlugins(options, resolver);
         setupStyles(options, nuxt, resolver);
 
