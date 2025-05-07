@@ -1,5 +1,97 @@
 # Changelog
 
+## v7.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.4...v7.0.0)
+
+### 🚀 Enhancements
+
+- Initialize module `setup` ([f31be89](https://github.com/kikiutils/nuxt/commit/f31be89))
+- Add feature to configure and install `@nuxtjs/color-mode` module ([c24f6dd](https://github.com/kikiutils/nuxt/commit/c24f6dd))
+- Add feature to configure and install `@element-plus/nuxt` module ([ec71a3d](https://github.com/kikiutils/nuxt/commit/ec71a3d))
+- Add feature to configure and install `@nuxtjs/robots` module ([ae3d756](https://github.com/kikiutils/nuxt/commit/ae3d756))
+- Add feature to configure and install `nuxt-security` module ([d1a56c5](https://github.com/kikiutils/nuxt/commit/d1a56c5))
+- Add feature to configure and install `@vueuse/nuxt` module ([427c3e4](https://github.com/kikiutils/nuxt/commit/427c3e4))
+- Add feature to configure and install `@unocss/nuxt` module ([52f428f](https://github.com/kikiutils/nuxt/commit/52f428f))
+- Add feature to configure and install `unplugin-fonts` module ([782eb75](https://github.com/kikiutils/nuxt/commit/782eb75))
+- Add `setupStyles` and reboot css ([cc6f660](https://github.com/kikiutils/nuxt/commit/cc6f660))
+- Add `setupPlugins` and reboot css ([f7614ce](https://github.com/kikiutils/nuxt/commit/f7614ce))
+- Add `autoImportUtils` option to control global utility imports ([f16c52f](https://github.com/kikiutils/nuxt/commit/f16c52f))
+- Add `nuxtConfigOverrides` to customize internal Nuxt config defaults ([209f705](https://github.com/kikiutils/nuxt/commit/209f705))
+- Add `deepScanAutoImportDirs` option and related functionally ([ba8fa80](https://github.com/kikiutils/nuxt/commit/ba8fa80))
+- Add `globalTypeImports` option to enable global type injection ([eaf7bcb](https://github.com/kikiutils/nuxt/commit/eaf7bcb))
+
+### 🔥 Performance
+
+- Optimize default Vite build `manualChunks` behavior ([3e5e942](https://github.com/kikiutils/nuxt/commit/3e5e942))
+- Run `setupAutoImportUtils` and `setupModules` in parallel with Promise.all ([0c2e2bd](https://github.com/kikiutils/nuxt/commit/0c2e2bd))
+
+### 🩹 Fixes
+
+- Resolve type error ([63d6e34](https://github.com/kikiutils/nuxt/commit/63d6e34))
+- Correct invalid ESLint configuration ([0d64316](https://github.com/kikiutils/nuxt/commit/0d64316))
+
+### 💅 Refactors
+
+- Restructure project based on Nuxt module template ([449cd43](https://github.com/kikiutils/nuxt/commit/449cd43))
+- Change first param of `setupNuxtConfigOverrides` to `resolvedModuleOptions` ([0645b49](https://github.com/kikiutils/nuxt/commit/0645b49))
+- Extract deep scan auto-import logic into a separate function ([fdcbc6f](https://github.com/kikiutils/nuxt/commit/fdcbc6f))
+- Adjust `setup` execution order ([058d5dc](https://github.com/kikiutils/nuxt/commit/058d5dc))
+
+### 📖 Documentation
+
+- Update README badges urls ([499bc71](https://github.com/kikiutils/nuxt/commit/499bc71))
+- Replace `%2F` with `/` in badge URLs in README ([4aaf916](https://github.com/kikiutils/nuxt/commit/4aaf916))
+- Update README ([f8e5067](https://github.com/kikiutils/nuxt/commit/f8e5067))
+
+### 📦 Build
+
+- Add build config ([2078d79](https://github.com/kikiutils/nuxt/commit/2078d79))
+
+### 🏡 Chore
+
+- Format script ([16ca049](https://github.com/kikiutils/nuxt/commit/16ca049))
+- Update file permissions after installing or updating dependencies ([d141f76](https://github.com/kikiutils/nuxt/commit/d141f76))
+- Add `--hideAuthorEmail` flag to bumplog command ([382091b](https://github.com/kikiutils/nuxt/commit/382091b))
+- Add typecheck command to package.json scripts ([2a1f7e0](https://github.com/kikiutils/nuxt/commit/2a1f7e0))
+- Rename `jest.config.js` to `jest.config.mjs` ([76371a1](https://github.com/kikiutils/nuxt/commit/76371a1))
+- Reorder lint, test, and build steps in release command ([b63dcb4](https://github.com/kikiutils/nuxt/commit/b63dcb4))
+- Disable `isolatedDeclarations` in tsconfig ([ed1636f](https://github.com/kikiutils/nuxt/commit/ed1636f))
+- Update `modify-files-permissions.sh` ([89f72e3](https://github.com/kikiutils/nuxt/commit/89f72e3))
+- Add option to `upgrade-dependencies.sh` to clean `node_modules` and `pnpm-lock.yaml` before upgrading ([e542b14](https://github.com/kikiutils/nuxt/commit/e542b14))
+- Upgrade dependencies ([d3ee5a7](https://github.com/kikiutils/nuxt/commit/d3ee5a7))
+- Ensure all scripts change to their own directory before execution ([9be5fbf](https://github.com/kikiutils/nuxt/commit/9be5fbf))
+- Update ignore files ([c81c294](https://github.com/kikiutils/nuxt/commit/c81c294))
+- Upgrade dependencies ([32e724d](https://github.com/kikiutils/nuxt/commit/32e724d))
+- Add Stylelint and update related configurations ([5d7cb27](https://github.com/kikiutils/nuxt/commit/5d7cb27))
+- Lint code ([fb80eb7](https://github.com/kikiutils/nuxt/commit/fb80eb7))
+- ⚠️ Remove all source files ([8cb9043](https://github.com/kikiutils/nuxt/commit/8cb9043))
+- Tidy up dependencies ([fc0fe25](https://github.com/kikiutils/nuxt/commit/fc0fe25))
+- Tidy up dependencies ([ab519c4](https://github.com/kikiutils/nuxt/commit/ab519c4))
+- Remove some empty lines ([0669d9c](https://github.com/kikiutils/nuxt/commit/0669d9c))
+- Modify comments ([138244c](https://github.com/kikiutils/nuxt/commit/138244c))
+- Update playground `nuxt.config` to use full module options ([5d35d30](https://github.com/kikiutils/nuxt/commit/5d35d30))
+- Tidy up dependencies ([c6d3927](https://github.com/kikiutils/nuxt/commit/c6d3927))
+- Move `type-fest` to devDependencies ([7fb0181](https://github.com/kikiutils/nuxt/commit/7fb0181))
+- Add duration to module loaded log message ([67d27d7](https://github.com/kikiutils/nuxt/commit/67d27d7))
+- Playground add `@kikiutils/types` devDependencies ([dc31898](https://github.com/kikiutils/nuxt/commit/dc31898))
+
+### ✅ Tests
+
+- Add pass test unit ([d7b98bd](https://github.com/kikiutils/nuxt/commit/d7b98bd))
+
+### 🤖 CI
+
+- Add test github workflow config file ([dd421d1](https://github.com/kikiutils/nuxt/commit/dd421d1))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Remove all source files ([8cb9043](https://github.com/kikiutils/nuxt/commit/8cb9043))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v6.0.4
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.3...v6.0.4)
