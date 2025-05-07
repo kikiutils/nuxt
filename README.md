@@ -22,7 +22,7 @@ Description
 Using [pnpm](https://pnpm.io):
 
 ```bash
-pnpm add @kikiutils/nuxt
+pnpm add @kikiutils/nuxt @kikiutils/shared @kikiutils/types @nuxtjs/robots @unocss/nuxt @vueuse/nuxt unplugin-fonts
 ```
 
 You can also use `yarn`, `npm`, or `bun`.
