@@ -1,5 +1,17 @@
 # Changelog
 
+## v7.1.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.0...v7.1.1)
+
+### 🏡 Chore
+
+- Add `sass-embedded` dependencies ([5967aec](https://github.com/kikiutils/nuxt/commit/5967aec))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.0.0...v7.1.0)
