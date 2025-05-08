@@ -18,6 +18,7 @@ async function setupKikiutilsShared(
     const imports = [];
     if (options.clipboard) imports.push('@kikiutils/shared/clipboard');
     if (options.datetime) imports.push('@kikiutils/shared/datetime');
+    if (options.elementPlus) imports.push('@kikiutils/shared/element-plus');
     if (options.enhancedLocalStorage) imports.push('@kikiutils/shared/storage/enhanced/local');
     if (options.enum) imports.push('@kikiutils/shared/enum');
     if (options.general) imports.push('@kikiutils/shared/general');

@@ -5,6 +5,7 @@ export default defineNuxtConfig({
             '@kikiutils/shared': {
                 clipboard: true,
                 datetime: true,
+                elementPlus: true,
                 enhancedLocalStorage: true,
                 enum: true,
                 general: true,

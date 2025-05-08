@@ -23,6 +23,7 @@ export default defineNuxtModule<UserModuleOptions>({
             '@kikiutils/shared': {
                 clipboard: true,
                 datetime: false,
+                elementPlus: false,
                 enhancedLocalStorage: false,
                 enum: false,
                 general: true,

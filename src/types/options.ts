@@ -24,6 +24,10 @@ export interface UserModuleOptions {
                 /**
                  * @default false
                  */
+                elementPlus?: boolean;
+                /**
+                 * @default false
+                 */
                 enhancedLocalStorage?: boolean;
                 /**
                  * @default false
