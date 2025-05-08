@@ -1,5 +1,21 @@
 # Changelog
 
+## v7.1.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.0.0...v7.1.0)
+
+### 🚀 Enhancements
+
+- Add `elementPlus` option to `autoImportUtils['@kikiutils/shared']` and implement related functionality ([bc87d90](https://github.com/kikiutils/nuxt/commit/bc87d90))
+
+### 🏡 Chore
+
+- Upgrade dependencies ([f89d5c0](https://github.com/kikiutils/nuxt/commit/f89d5c0))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v6.0.4...v7.0.0)
