@@ -41,6 +41,7 @@
     "@nuxt/kit": "^3.17.2",
     "defu": "^6.1.4",
     "mlly": "^1.7.4",
+    "sass-embedded": "^1.87.0",
     "vue-tsc": "^2.2.10"
   },
   "devDependencies": {
