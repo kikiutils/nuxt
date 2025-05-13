@@ -1,5 +1,25 @@
 # Changelog
 
+## v7.1.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.1...v7.1.2)
+
+### 🏡 Chore
+
+- **scripts:** Ensure all scripts `cd` to their current directory correctly ([5362c3b](https://github.com/kikiutils/nuxt/commit/5362c3b))
+- Set `--max-warnings=0` for `lint` and `lint:fix` ([bffe476](https://github.com/kikiutils/nuxt/commit/bffe476))
+- Upgrade dependencies ([d6be7e6](https://github.com/kikiutils/nuxt/commit/d6be7e6))
+- Set default `colorMode` storage to `cookie` ([529d6ab](https://github.com/kikiutils/nuxt/commit/529d6ab))
+
+### 🤖 CI
+
+- Update test workflow ([1519e46](https://github.com/kikiutils/nuxt/commit/1519e46))
+- Update condition for uploading to Codecov in workflow job ([39851ac](https://github.com/kikiutils/nuxt/commit/39851ac))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.0...v7.1.1)
