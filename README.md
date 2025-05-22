@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-<!-- [![codecov][codecov-src]][codecov-href] -->
+[![codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
@@ -40,8 +40,8 @@ You can also use `yarn`, `npm`, or `bun`.
 [npm-downloads-href]: https://npmjs.com/package/@kikiutils/nuxt
 [npm-downloads-src]: https://img.shields.io/npm/dm/@kikiutils/nuxt.svg?colorA=18181b&colorB=28cf8d&style=flat
 
-<!-- [codecov-href]: https://codecov.io/gh/kikiutils/nuxt
-[codecov-src]: https://codecov.io/gh/kikiutils/nuxt/graph/badge.svg?token= -->
+[codecov-href]: https://codecov.io/gh/kikiutils/nuxt
+[codecov-src]: https://codecov.io/gh/kikiutils/nuxt/graph/badge.svg?token=4FFWT4TFFH
 
 [license-href]: https://github.com/kikiutils/nuxt/blob/main/LICENSE
 [license-src]: https://img.shields.io/github/license/kikiutils/nuxt?colorA=18181b&colorB=28cf8d&style=flat
