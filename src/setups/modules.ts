@@ -27,6 +27,22 @@ async function setupElementPlus(nuxt: Nuxt) {
     await installModule('@element-plus/nuxt', {}, nuxt);
 }
 
+export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
+    if (!resolvedModuleOptions.enabledModules) return;
+    const promises = [];
+    if (resolvedModuleOptions.enabledModules.colorMode) promises.push(setupColorMode(nuxt));
+    if (resolvedModuleOptions.enabledModules.elementPlus) promises.push(setupElementPlus(nuxt));
+    if (resolvedModuleOptions.enabledModules.robots) promises.push(setupRobots(nuxt));
+    if (resolvedModuleOptions.enabledModules.security) promises.push(setupSecurity(nuxt));
+    if (resolvedModuleOptions.enabledModules.unoCss) promises.push(setupUnoCss(resolvedModuleOptions, nuxt));
+    if (resolvedModuleOptions.enabledModules.unpluginFonts) {
+        promises.push(setupUnpluginFonts(resolvedModuleOptions, nuxt));
+    }
+
+    if (resolvedModuleOptions.enabledModules.vueUse) promises.push(setupVueUse(nuxt));
+    await Promise.all(promises);
+}
+
 async function setupRobots(nuxt: Nuxt) {
     await installModule('@nuxtjs/robots', {}, nuxt);
 }
@@ -80,20 +96,4 @@ async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, 
 
 async function setupVueUse(nuxt: Nuxt) {
     await installModule('@vueuse/nuxt', {}, nuxt);
-}
-
-export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
-    if (!resolvedModuleOptions.enabledModules) return;
-    const promises = [];
-    if (resolvedModuleOptions.enabledModules.colorMode) promises.push(setupColorMode(nuxt));
-    if (resolvedModuleOptions.enabledModules.elementPlus) promises.push(setupElementPlus(nuxt));
-    if (resolvedModuleOptions.enabledModules.robots) promises.push(setupRobots(nuxt));
-    if (resolvedModuleOptions.enabledModules.security) promises.push(setupSecurity(nuxt));
-    if (resolvedModuleOptions.enabledModules.unoCss) promises.push(setupUnoCss(resolvedModuleOptions, nuxt));
-    if (resolvedModuleOptions.enabledModules.unpluginFonts) {
-        promises.push(setupUnpluginFonts(resolvedModuleOptions, nuxt));
-    }
-
-    if (resolvedModuleOptions.enabledModules.vueUse) promises.push(setupVueUse(nuxt));
-    await Promise.all(promises);
 }

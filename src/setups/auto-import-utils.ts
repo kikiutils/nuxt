@@ -12,6 +12,16 @@ async function scanExportsAndAddImportsSources(moduleId: string) {
     });
 }
 
+export async function setupAutoImportUtils(resolvedModuleOptions: ResolvedModuleOptions) {
+    if (!resolvedModuleOptions.autoImportUtils) return;
+    const promises = [];
+    if (resolvedModuleOptions.autoImportUtils['@kikiutils/shared']) {
+        promises.push(setupKikiutilsShared(resolvedModuleOptions.autoImportUtils['@kikiutils/shared']));
+    }
+
+    await Promise.all(promises);
+}
+
 async function setupKikiutilsShared(
     options: Exclude<Exclude<ResolvedModuleOptions['autoImportUtils'], boolean>['@kikiutils/shared'], boolean>,
 ) {
@@ -31,14 +41,4 @@ async function setupKikiutilsShared(
     if (options.vue) imports.push('@kikiutils/shared/vue');
     if (options.web) imports.push('@kikiutils/shared/web');
     await Promise.all(imports.map(scanExportsAndAddImportsSources));
-}
-
-export async function setupAutoImportUtils(resolvedModuleOptions: ResolvedModuleOptions) {
-    if (!resolvedModuleOptions.autoImportUtils) return;
-    const promises = [];
-    if (resolvedModuleOptions.autoImportUtils['@kikiutils/shared']) {
-        promises.push(setupKikiutilsShared(resolvedModuleOptions.autoImportUtils['@kikiutils/shared']));
-    }
-
-    await Promise.all(promises);
 }
