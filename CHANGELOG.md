@@ -1,5 +1,31 @@
 # Changelog
 
+## v7.1.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.2...v7.1.3)
+
+### 📖 Documentation
+
+- Update README ([0c19ed4](https://github.com/kikiutils/nuxt/commit/0c19ed4))
+
+### 🏡 Chore
+
+- Set eslint config to enable `lib` mode ([59e03e4](https://github.com/kikiutils/nuxt/commit/59e03e4))
+- Disable `ts/explicit-function-return-type` eslint rule ([5190f6b](https://github.com/kikiutils/nuxt/commit/5190f6b))
+- Lint code ([f8f0974](https://github.com/kikiutils/nuxt/commit/f8f0974))
+- **test:** Migrate from `jest` to `vitest` ([9a9d869](https://github.com/kikiutils/nuxt/commit/9a9d869))
+- Split `tsconfig` and create build-specific config for production builds ([564b6d2](https://github.com/kikiutils/nuxt/commit/564b6d2))
+- **vitest:** Configure coverage to collect files only under `src/` ([e2c7f65](https://github.com/kikiutils/nuxt/commit/e2c7f65))
+- Lint code ([2cd6a35](https://github.com/kikiutils/nuxt/commit/2cd6a35))
+
+### 🤖 CI
+
+- Add workflow yaml ([546c02d](https://github.com/kikiutils/nuxt/commit/546c02d))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.1...v7.1.2)
