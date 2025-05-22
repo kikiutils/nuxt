@@ -36,7 +36,7 @@ jobs:
           version: latest
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: pnpm i --frozen-lockfile --prod=false
 
       - name: Run typecheck
         run: pnpm run typecheck
