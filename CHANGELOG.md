@@ -1,5 +1,27 @@
 # Changelog
 
+## v7.1.4
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.3...v7.1.4)
+
+### 💅 Refactors
+
+- Change Nuxt base directory from `rootDir` to `srcDir` in `setupDeepScanAutoImports` ([fae7cd0](https://github.com/kikiutils/nuxt/commit/fae7cd0))
+
+### 🏡 Chore
+
+- Upgrade dependencies and remove `@types/node` ([32aaf31](https://github.com/kikiutils/nuxt/commit/32aaf31))
+- Wrap all variable expansions in scripts with `${}` ([82c47c9](https://github.com/kikiutils/nuxt/commit/82c47c9))
+
+### 🤖 CI
+
+- Set `--prod=false` when install dependencies ([93d7945](https://github.com/kikiutils/nuxt/commit/93d7945))
+- Remove `--prod=false` flag when install dependencies ([249def0](https://github.com/kikiutils/nuxt/commit/249def0))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.2...v7.1.3)
