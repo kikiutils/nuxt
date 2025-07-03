@@ -1,5 +1,22 @@
 # Changelog
 
+## v7.1.5
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.4...v7.1.5)
+
+### 🏡 Chore
+
+- Upgrade dependencies ([2a20964](https://github.com/kikiutils/nuxt/commit/2a20964))
+- Add blank lines in `src/types/options.ts` for readability ([aceefcc](https://github.com/kikiutils/nuxt/commit/aceefcc))
+
+### ✅ Tests
+
+- Change vitest config file to mjs ([5c3bc1f](https://github.com/kikiutils/nuxt/commit/5c3bc1f))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.4
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.3...v7.1.4)
