@@ -17,54 +17,67 @@ export interface UserModuleOptions {
                  * @default true
                  */
                 clipboard?: boolean;
+
                 /**
                  * @default false
                  */
                 datetime?: boolean;
+
                 /**
                  * @default false
                  */
                 elementPlus?: boolean;
+
                 /**
                  * @default false
                  */
                 enhancedLocalStorage?: boolean;
+
                 /**
                  * @default false
                  */
                 enum?: boolean;
+
                 /**
                  * @default true
                  */
                 general?: boolean;
+
                 /**
                  * @default false
                  */
                 hash?: boolean;
+
                 /**
                  * @default false
                  */
                 math?: boolean;
+
                 /**
                  * @default false
                  */
                 number?: boolean;
+
                 /**
                  * @default false
                  */
                 random?: boolean;
+
                 /**
                  * @default false
                  */
                 string?: boolean;
+
                 /**
                  * @default true
                  */
                 url?: boolean;
+
                 /**
                  * @default true
                  */
                 vue?: boolean;
+
                 /**
                  * @default true
                  */
@@ -82,10 +95,12 @@ export interface UserModuleOptions {
            * @default true
            */
           composables?: boolean;
+
           /**
            * @default true
            */
           globals?: boolean;
+
           /**
            * @default true
            */
@@ -103,26 +118,32 @@ export interface UserModuleOptions {
            * @default false
            */
           colorMode?: boolean;
+
           /**
            * @default false
            */
           elementPlus?: boolean;
+
           /**
            * @default true
            */
           robots?: boolean;
+
           /**
            * @default false
            */
           security?: boolean;
+
           /**
            * @default true
            */
           unoCss?: boolean;
+
           /**
            * @default true
            */
           unpluginFonts?: boolean;
+
           /**
            * @default true
            */
@@ -174,6 +195,7 @@ export interface UserModuleOptions {
              * @default true
              */
             addPreconnectLink?: boolean;
+
             /**
              * @default true
              */
