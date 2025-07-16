@@ -1,5 +1,19 @@
 # Changelog
 
+## v7.1.6
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.5...v7.1.6)
+
+### 🏡 Chore
+
+- Update dependencies and modify scripts ([374cc56](https://github.com/kikiutils/nuxt/commit/374cc56))
+- Upgrade dependencies and migrate nuxt to v4 ([8311ac9](https://github.com/kikiutils/nuxt/commit/8311ac9))
+- Tidy up devDependencies ([e1c52b9](https://github.com/kikiutils/nuxt/commit/e1c52b9))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.5
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.4...v7.1.5)
