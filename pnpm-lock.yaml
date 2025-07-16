@@ -78,6 +78,9 @@ importers:
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
+      unbuild:
+        specifier: ^3.5.0
+        version: 3.5.0(typescript@5.8.3)(vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.17)(esbuild@0.25.6)(vue@3.5.17(typescript@5.8.3)))(vue-tsc@3.0.1(typescript@5.8.3))(vue@3.5.17(typescript@5.8.3))
       unplugin-fonts:
         specifier: ^1.3.1
         version: 1.3.1(@nuxt/kit@4.0.0(magicast@0.3.5))(vite@7.0.4(@types/node@24.0.14)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.43.1)(yaml@2.8.0))
