@@ -19,6 +19,11 @@ export default defineNuxtConfig({
                 web: true,
             },
         },
+        deepScanAutoImportDirs: {
+            composables: true,
+            globals: true,
+            utils: true,
+        },
         enabled: true,
         enabledModules: {
             colorMode: true,
@@ -31,6 +36,7 @@ export default defineNuxtConfig({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
+        globalTypeImports: { '@kikiutils/types/vue': true },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
             google: {
