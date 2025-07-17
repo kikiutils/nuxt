@@ -3,6 +3,18 @@ import { defu } from 'defu';
 
 import type { ResolvedModuleOptions } from '../types/options';
 
+// Constants
+const defaultTsConfigCompilerOptions = {
+    allowSyntheticDefaultImports: false,
+    esModuleInterop: false,
+    noImplicitOverride: true,
+    noUncheckedIndexedAccess: true,
+    noUncheckedSideEffectImports: true,
+    noUnusedLocals: true,
+    noUnusedParameters: true,
+} as const;
+
+// Functions
 function extractPackageName(id: string) {
     const parts = id.split('node_modules/').pop()?.split('/');
     if (!parts) return;
@@ -28,19 +40,7 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
         {
             compressPublicAssets: true,
             minify: true,
-            typescript: {
-                tsConfig: {
-                    compilerOptions: {
-                        allowSyntheticDefaultImports: false,
-                        esModuleInterop: false,
-                        noImplicitOverride: true,
-                        noUncheckedIndexedAccess: true,
-                        noUncheckedSideEffectImports: true,
-                        noUnusedLocals: true,
-                        noUnusedParameters: true,
-                    },
-                },
-            },
+            typescript: { tsConfig: { compilerOptions: defaultTsConfigCompilerOptions } },
         },
         nuxt.options.nitro,
     );
@@ -48,17 +48,9 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
     nuxt.options.typescript = defu(
         resolvedModuleOptions.nuxtConfigOverrides?.typescript,
         {
-            tsConfig: {
-                compilerOptions: {
-                    allowSyntheticDefaultImports: false,
-                    esModuleInterop: false,
-                    noImplicitOverride: true,
-                    noUncheckedIndexedAccess: true,
-                    noUncheckedSideEffectImports: true,
-                    noUnusedLocals: true,
-                    noUnusedParameters: true,
-                },
-            },
+            nodeTsConfig: { compilerOptions: defaultTsConfigCompilerOptions },
+            strict: true,
+            tsConfig: { compilerOptions: defaultTsConfigCompilerOptions },
             typeCheck: true,
         },
         nuxt.options.typescript,
