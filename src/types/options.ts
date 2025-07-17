@@ -197,9 +197,14 @@ export interface UserModuleOptions {
             addPreconnectLink?: boolean;
 
             /**
+             * @default false
+             */
+            addPreloadLink?: boolean;
+
+            /**
              * @default true
              */
-            disableDeferAndAutoAddPreloadLink?: boolean;
+            noDefer?: boolean;
         };
     };
 }

@@ -70,15 +70,11 @@ async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, 
         });
     }
 
-    if (
-        resolvedModuleOptions.unpluginFonts.google.disableDeferAndAutoAddPreloadLink
-        && nuxt.options.unfonts?.google?.families.length
-    ) {
+    if (resolvedModuleOptions.unpluginFonts.google.addPreloadLink) {
         const urlSearchParams = new URLSearchParams({ display: 'swap' });
-        nuxt.options.unfonts.google.families.forEach((family) => {
+        nuxt.options.unfonts?.google?.families.forEach((family) => {
             if (typeof family === 'string') urlSearchParams.append('family', family);
             else {
-                family.defer = false;
                 if (family.styles) urlSearchParams.append('family', `${family.name}:${family.styles}`);
                 else urlSearchParams.append('family', family.name);
             }
@@ -88,6 +84,12 @@ async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, 
             as: 'style',
             href: `https://fonts.googleapis.com/css2?${decodeURIComponent(urlSearchParams.toString())}`,
             rel: 'preload',
+        });
+    }
+
+    if (resolvedModuleOptions.unpluginFonts.google.noDefer) {
+        nuxt.options.unfonts?.google?.families.forEach((family) => {
+            if (typeof family !== 'string') family.defer = false;
         });
     }
 

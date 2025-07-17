@@ -59,7 +59,8 @@ export default defineNuxtModule<UserModuleOptions>({
         unpluginFonts: {
             google: {
                 addPreconnectLink: true,
-                disableDeferAndAutoAddPreloadLink: true,
+                addPreloadLink: false,
+                noDefer: true,
             },
         },
     } satisfies ResolvedModuleOptions,

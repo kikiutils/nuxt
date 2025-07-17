@@ -35,7 +35,8 @@ export default defineNuxtConfig({
         unpluginFonts: {
             google: {
                 addPreconnectLink: true,
-                disableDeferAndAutoAddPreloadLink: true,
+                addPreloadLink: false,
+                noDefer: true,
             },
         },
     },
