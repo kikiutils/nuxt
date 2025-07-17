@@ -50,7 +50,7 @@
     "@element-plus/nuxt": "^1.1.4",
     "@kikiutils/changelogen": "^0.8.1",
     "@kikiutils/eslint-config": "^1.2.7",
-    "@kikiutils/shared": "^10.3.0",
+    "@kikiutils/shared": "^11.0.0",
     "@kikiutils/stylelint-config": "^0.2.0",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^4.0.0",
