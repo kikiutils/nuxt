@@ -7,16 +7,6 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "nuxt": "^4.0.0",
-    "nuxt-security": "^2.2.0"
-  },
-  "devDependencies": {
-    "@kikiutils/types": "^5.3.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild"
-    ]
+    "nuxt": "latest"
   }
 }
