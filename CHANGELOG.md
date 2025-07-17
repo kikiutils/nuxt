@@ -1,5 +1,34 @@
 # Changelog
 
+## v8.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.6...v8.0.0)
+
+### 💅 Refactors
+
+- ⚠️ Split `unpluginFonts.google.disableDeferAndAutoAddPreloadLink` into `addPreloadLink` and `noDefer` options ([d26626a](https://github.com/kikiutils/nuxt/commit/d26626a))
+
+### 📖 Documentation
+
+- Update README ([edd9d36](https://github.com/kikiutils/nuxt/commit/edd9d36))
+
+### 🏡 Chore
+
+- ⚠️ Drop support for Node.js 18.12.1, set minimum supported version to 20 ([32c6ad3](https://github.com/kikiutils/nuxt/commit/32c6ad3))
+- Upgrade dependencies ([a95f9a6](https://github.com/kikiutils/nuxt/commit/a95f9a6))
+- Update typecheck script ([594d86c](https://github.com/kikiutils/nuxt/commit/594d86c))
+- Remove files that are no longer needed ([89fdc37](https://github.com/kikiutils/nuxt/commit/89fdc37))
+- Set default nuxt options `typescript.nodeTsConfig` ([6de2209](https://github.com/kikiutils/nuxt/commit/6de2209))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Split `unpluginFonts.google.disableDeferAndAutoAddPreloadLink` into `addPreloadLink` and `noDefer` options ([d26626a](https://github.com/kikiutils/nuxt/commit/d26626a))
+- ⚠️ Drop support for Node.js 18.12.1, set minimum supported version to 20 ([32c6ad3](https://github.com/kikiutils/nuxt/commit/32c6ad3))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v7.1.6
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.5...v7.1.6)
