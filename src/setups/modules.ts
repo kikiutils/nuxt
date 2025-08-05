@@ -87,9 +87,17 @@ async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, 
         });
     }
 
-    if (resolvedModuleOptions.unpluginFonts.google.noDefer) {
-        nuxt.options.unfonts?.google?.families.forEach((family) => {
-            if (typeof family !== 'string') family.defer = false;
+    if (resolvedModuleOptions.unpluginFonts.google.noDefer && nuxt.options.unfonts?.google?.families) {
+        nuxt.options.unfonts.google.families = nuxt.options.unfonts.google.families.map((family) => {
+            if (typeof family === 'string') {
+                return {
+                    defer: false,
+                    name: family,
+                };
+            }
+
+            family.defer = false;
+            return family;
         });
     }
 
