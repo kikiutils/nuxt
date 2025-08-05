@@ -1,5 +1,26 @@
 # Changelog
 
+## v8.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v8.0.0...v8.0.1)
+
+### 🩹 Fixes
+
+- Set `NuxtCustomSchema.unfonts` type ([3be64cd](https://github.com/kikiutils/nuxt/commit/3be64cd))
+- Handle `unpluginFonts` google families correctly when `noDefer` is true and family is a string ([587687f](https://github.com/kikiutils/nuxt/commit/587687f))
+
+### 🏡 Chore
+
+- Update typecheck script ([285b752](https://github.com/kikiutils/nuxt/commit/285b752))
+- Remove pnpm-lock from playground and simplify package.json ([53019d4](https://github.com/kikiutils/nuxt/commit/53019d4))
+- Tidy up dependencies ([4536cf7](https://github.com/kikiutils/nuxt/commit/4536cf7))
+- Update playground nuxt config ([75e3cfe](https://github.com/kikiutils/nuxt/commit/75e3cfe))
+- Upgrade dependencies ([e47a7d7](https://github.com/kikiutils/nuxt/commit/e47a7d7))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v8.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v7.1.6...v8.0.0)
