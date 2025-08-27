@@ -1,5 +1,26 @@
 # Changelog
 
+## v8.1.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v8.0.1...v8.1.0)
+
+### 🚀 Enhancements
+
+- Add `object` into `autoImportUtils.'@kikiutils/shared'` option ([f91128f](https://github.com/kikiutils/nuxt/commit/f91128f))
+
+### 🏡 Chore
+
+- Bump tsconfig target to es2023 ([b9185b7](https://github.com/kikiutils/nuxt/commit/b9185b7))
+- Update `.gitignore` ([1465997](https://github.com/kikiutils/nuxt/commit/1465997))
+- **ci:** Configure pnpm cache in workflow ([79e2264](https://github.com/kikiutils/nuxt/commit/79e2264))
+- Upgrade dependencies ([a4c3a0f](https://github.com/kikiutils/nuxt/commit/a4c3a0f))
+- Align Node.js version requirement with nuxt package.json ([085b069](https://github.com/kikiutils/nuxt/commit/085b069))
+- Set `peerDependencies` and `peerDependenciesMeta` in `package.json` ([11bb4a9](https://github.com/kikiutils/nuxt/commit/11bb4a9))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v8.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v8.0.0...v8.0.1)
