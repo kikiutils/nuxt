@@ -61,6 +61,11 @@ export interface UserModuleOptions {
                 /**
                  * @default false
                  */
+                object?: boolean;
+
+                /**
+                 * @default false
+                 */
                 random?: boolean;
 
                 /**

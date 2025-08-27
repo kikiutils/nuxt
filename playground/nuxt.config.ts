@@ -12,6 +12,7 @@ export default defineNuxtConfig({
                 hash: true,
                 math: true,
                 number: true,
+                object: true,
                 random: true,
                 string: true,
                 url: true,

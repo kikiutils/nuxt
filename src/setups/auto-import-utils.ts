@@ -35,6 +35,7 @@ async function setupKikiutilsShared(
     if (options.hash) imports.push('@kikiutils/shared/hash');
     if (options.math) imports.push('@kikiutils/shared/math');
     if (options.number) imports.push('@kikiutils/shared/number');
+    if (options.object) imports.push('@kikiutils/shared/object');
     if (options.random) imports.push('@kikiutils/shared/random');
     if (options.string) imports.push('@kikiutils/shared/string');
     if (options.url) imports.push('@kikiutils/shared/url');

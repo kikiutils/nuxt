@@ -30,6 +30,7 @@ export default defineNuxtModule<UserModuleOptions>({
                 hash: false,
                 math: false,
                 number: false,
+                object: false,
                 random: false,
                 string: false,
                 url: true,
