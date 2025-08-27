@@ -39,6 +39,52 @@
     "typecheck": "pnpm run dev:prepare && nuxt typecheck && cd ./playground && nuxt typecheck",
     "unused-exports": "ts-unused-exports ./tsconfig.json"
   },
+  "peerDependencies": {
+    "@element-plus/nuxt": "^1.1.4",
+    "@kikiutils/shared": "^12.0.0",
+    "@kikiutils/types": "^6.0.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/robots": "^5.5.1",
+    "@unocss/nuxt": "^66.4.2",
+    "@vueuse/nuxt": "^13.7.0",
+    "nuxt": "^4.0.3",
+    "nuxt-security": "^2.4.0",
+    "type-fest": "^4.41.0",
+    "unplugin-fonts": "^1.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@element-plus/nuxt": {
+      "optional": true
+    },
+    "@kikiutils/shared": {
+      "optional": true
+    },
+    "@kikiutils/types": {
+      "optional": true
+    },
+    "@nuxtjs/color-mode": {
+      "optional": true
+    },
+    "@nuxtjs/robots": {
+      "optional": true
+    },
+    "@unocss/nuxt": {
+      "optional": true
+    },
+    "@vueuse/nuxt": {
+      "optional": true
+    },
+    "nuxt": {
+      "optional": true
+    },
+    "nuxt-security": {
+      "optional": true
+    },
+    "type-fest": {
+      "optional": true
+    },
+    "unplugin-fonts": { "optional": true }
+  },
   "dependencies": {
     "@nuxt/kit": "^4.0.3",
     "defu": "^6.1.4",
