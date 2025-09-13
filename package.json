@@ -1,5 +1,6 @@
 {
   "name": "package-template",
+  "type": "module",
   "version": "0.1.0",
   "description": "",
   "author": "",
@@ -20,7 +21,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "build": "ts-project-builder ./src/index.ts --clean --preserve-modules --sourcemaps",
+    "build": "tsdown",
     "bumplog": "changelogen --bump --hideAuthorEmail",
     "depcheck": "depcheck",
     "lint": "eslint --max-warnings 0",
@@ -39,8 +40,8 @@
     "@kikiutils/tsconfigs": "^5.0.4",
     "@vitest/coverage-v8": "^3.2.4",
     "depcheck": "^1.4.7",
-    "ts-project-builder": "^5.0.2",
     "ts-unused-exports": "^11.0.1",
+    "tsdown": "^0.15.1",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
