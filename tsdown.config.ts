@@ -4,7 +4,12 @@ export default defineConfig({
     alias: { '@/': './src' },
     clean: true,
     dts: true,
-    entry: ['./src/index.ts'],
+    entry: [
+        './src/index.ts',
+        '!./src/**/_internals.ts',
+        '!./src/**/internals/**',
+        '!./src/**/_internals/**',
+    ],
     exports: true,
     format: 'esm',
     publint: true,
