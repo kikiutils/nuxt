@@ -1,11 +1,7 @@
 {
-  "extends": "@kikiutils/tsconfigs/esnext/es2023.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "noEmit": true,
     "isolatedDeclarations": true
   },
   "include": ["./src"]

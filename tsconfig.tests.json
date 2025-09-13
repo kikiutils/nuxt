@@ -1,7 +1,6 @@
 {
-  "extends": "@kikiutils/tsconfigs/esnext/es2023.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "noEmit": true,
     "isolatedDeclarations": false
   },
   "include": ["./tests"]
