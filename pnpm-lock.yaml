@@ -29,6 +29,9 @@ importers:
       ts-unused-exports:
         specifier: ^11.0.1
         version: 11.0.1(typescript@5.9.2)
+      tsconfck:
+        specifier: ^3.1.6
+        version: 3.1.6(typescript@5.9.2)
       tsdown:
         specifier: ^0.15.1
         version: 0.15.1(publint@0.3.12)(typescript@5.9.2)(unplugin-unused@0.5.3)
@@ -2374,6 +2377,16 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: '>=3.8.3'
+
+  tsconfck@3.1.6:
+    resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
@@ -5135,6 +5148,10 @@ snapshots:
     dependencies:
       chalk: 4.1.2
       tsconfig-paths: 3.15.0
+      typescript: 5.9.2
+
+  tsconfck@3.1.6(typescript@5.9.2):
+    optionalDependencies:
       typescript: 5.9.2
 
   tsconfig-paths@3.15.0:

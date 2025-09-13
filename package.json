@@ -38,6 +38,8 @@
     "typecheck": "tsc --noEmit",
     "unused-exports": "ts-unused-exports ./tsconfig.json"
   },
+  "peerDependencies": {},
+  "peerDependenciesMeta": {},
   "dependencies": {},
   "devDependencies": {
     "@kikiutils/changelogen": "^0.9.0",
@@ -47,6 +49,7 @@
     "depcheck": "^1.4.7",
     "publint": "^0.3.12",
     "ts-unused-exports": "^11.0.1",
+    "tsconfck": "^3.1.6",
     "tsdown": "^0.15.1",
     "typescript": "^5.9.2",
     "unplugin-unused": "^0.5.3",
