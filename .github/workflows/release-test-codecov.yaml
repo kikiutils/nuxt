@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 20.0.0
           - 22.0.0
           - 24.0.0
         os:

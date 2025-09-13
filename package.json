@@ -17,7 +17,7 @@
     "./src"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "build": "ts-project-builder ./src/index.ts --clean --preserve-modules --sourcemaps",
