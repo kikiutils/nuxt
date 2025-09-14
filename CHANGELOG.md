@@ -1,5 +1,36 @@
 # Changelog
 
+## v8.2.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v8.1.0...v8.2.0)
+
+Drop support for Node.js 20.
+
+### 🚀 Enhancements
+
+- Add `update-peer-dependencies-meta.ts` ([643c006](https://github.com/kikiutils/nuxt/commit/643c006))
+
+### 📖 Documentation
+
+- Update README ([63ba464](https://github.com/kikiutils/nuxt/commit/63ba464))
+
+### 🏡 Chore
+
+- **ci:** Remove pnpm cache configure in workflow ([abc0801](https://github.com/kikiutils/nuxt/commit/abc0801))
+- Upgrade devDependencies ([57244a0](https://github.com/kikiutils/nuxt/commit/57244a0))
+- Update eslint config ([99cd82e](https://github.com/kikiutils/nuxt/commit/99cd82e))
+- Update eslint config ([09d584b](https://github.com/kikiutils/nuxt/commit/09d584b))
+- Update all scripts ([fa5e797](https://github.com/kikiutils/nuxt/commit/fa5e797))
+- Set minimum supported version to 22.12.0 ([76e8cc1](https://github.com/kikiutils/nuxt/commit/76e8cc1))
+
+### ✅ Tests
+
+- Fix vitest config to correctly load tsconfig and aliases ([0522f79](https://github.com/kikiutils/nuxt/commit/0522f79))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v8.1.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v8.0.1...v8.1.0)
