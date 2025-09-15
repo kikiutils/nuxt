@@ -19,7 +19,8 @@ export default defineConfig({
     exports: {
         customExports(exports) {
             Object.entries(exports).forEach(([key, value]: [string, string]) => {
-                if (value.startsWith('./dist/types')) exports[key] = { types: value.replace(/\.js$/, '.d.ts') };
+                if (value.includes('internals')) delete exports[key];
+                else if (value.startsWith('./dist/types')) exports[key] = { types: value.replace(/\.js$/, '.d.ts') };
             });
 
             return exports;
