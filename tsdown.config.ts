@@ -25,6 +25,7 @@ export default defineConfig({
             return exports;
         },
     },
+    external: [/.*/],
     format: 'esm',
     plugins: [
         {
