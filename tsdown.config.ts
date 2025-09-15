@@ -10,12 +10,7 @@ export default defineConfig({
     alias: { '@': resolve(import.meta.dirname, 'src') },
     clean: true,
     dts: true,
-    entry: [
-        './src/index.ts',
-        '!./src/**/_internals.ts',
-        '!./src/**/_internals/**',
-        '!./src/**/internals/**',
-    ],
+    entry: ['./src/index.ts'],
     exports: {
         customExports(exports) {
             Object.entries(exports).forEach(([key, value]: [string, string]) => {
