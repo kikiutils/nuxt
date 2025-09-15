@@ -6,6 +6,8 @@ import { resolve } from 'node:path';
 
 import { defineConfig } from 'tsdown';
 
+import packageJson from './package.json' with { type: 'json' };
+
 export default defineConfig({
     alias: { '@': resolve(import.meta.dirname, 'src') },
     clean: true,
@@ -21,7 +23,13 @@ export default defineConfig({
             return exports;
         },
     },
-    external: [/.*/],
+    external: [
+        ...new Set([
+            ...Object.keys(packageJson.dependencies || {}),
+            ...Object.keys(packageJson.devDependencies || {}),
+            ...Object.keys(packageJson.peerDependencies || {}),
+        ]),
+    ],
     format: 'esm',
     plugins: [
         {
