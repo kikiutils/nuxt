@@ -17,7 +17,7 @@ export default defineConfig({
         customExports(exports) {
             Object.entries(exports).forEach(([key, value]: [string, string]) => {
                 if (!value.endsWith('.js')) return;
-                if (value.includes('internals')) delete exports[key];
+                if (value.includes('internals')) return delete exports[key];
                 exports[key] = {
                     /* eslint-disable perfectionist/sort-objects */
                     types: value.replace(/\.js$/, '.d.ts'),
