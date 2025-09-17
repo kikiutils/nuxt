@@ -16,8 +16,17 @@ export default defineConfig({
     exports: {
         customExports(exports) {
             Object.entries(exports).forEach(([key, value]: [string, string]) => {
+                if (!value.endsWith('.js')) return;
                 if (value.includes('internals')) delete exports[key];
-                else if (value.startsWith('./dist/types')) exports[key] = { types: value.replace(/\.js$/, '.d.ts') };
+                exports[key] = {
+                    /* eslint-disable perfectionist/sort-objects */
+                    types: value.replace(/\.js$/, '.d.ts'),
+                    import: null,
+                    require: null,
+                    /* eslint-enable perfectionist/sort-objects */
+                };
+
+                if (!value.startsWith('./dist/types')) exports[key].import = value;
             });
 
             return exports;
@@ -25,8 +34,12 @@ export default defineConfig({
     },
     external: [
         ...new Set([
+            // eslint-disable-next-line ts/ban-ts-comment
+            // @ts-ignore
             ...Object.keys(packageJson.dependencies || {}),
             ...Object.keys(packageJson.devDependencies || {}),
+            // eslint-disable-next-line ts/ban-ts-comment
+            // @ts-ignore
             ...Object.keys(packageJson.peerDependencies || {}),
         ]),
     ],
