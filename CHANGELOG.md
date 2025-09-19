@@ -1,5 +1,41 @@
 # Changelog
 
+## v9.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v8.2.0...v9.0.0)
+
+### 🩹 Fixes
+
+- Ensure tsdown `customExports` returns after deleting keys containing internals ([7324bab](https://github.com/kikiutils/nuxt/commit/7324bab))
+
+### 💅 Refactors
+
+- ⚠️ Remove `setupGlobalTypeImports` and related codes ([85c8fdf](https://github.com/kikiutils/nuxt/commit/85c8fdf))
+
+### 📦 Build
+
+- Update tsdown config to treat all dependencies as external ([f5e4f7a](https://github.com/kikiutils/nuxt/commit/f5e4f7a))
+- Update tsdown customExports to remove entries with keys containing "internals" ([59b1622](https://github.com/kikiutils/nuxt/commit/59b1622))
+- Update tsdown entry ([2e67d6b](https://github.com/kikiutils/nuxt/commit/2e67d6b))
+- Set tsdown external from package.json instead of using wildcard * ([7dc5f28](https://github.com/kikiutils/nuxt/commit/7dc5f28))
+- Update `customExports` rules to enable IDE import hints for package usage ([e4111c0](https://github.com/kikiutils/nuxt/commit/e4111c0))
+- Update `customExports` rules to enable IDE import hints for package usage ([fa88888](https://github.com/kikiutils/nuxt/commit/fa88888))
+
+### 🏡 Chore
+
+- Remove alias config ([e353604](https://github.com/kikiutils/nuxt/commit/e353604))
+- Change `update-peer-dependencies-meta.ts` to non-executable permission file ([62a7690](https://github.com/kikiutils/nuxt/commit/62a7690))
+- Update base tsconfig ([26f4158](https://github.com/kikiutils/nuxt/commit/26f4158))
+- Upgrade dependencies ([68ab61b](https://github.com/kikiutils/nuxt/commit/68ab61b))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️ Remove `setupGlobalTypeImports` and related codes ([85c8fdf](https://github.com/kikiutils/nuxt/commit/85c8fdf))
+
+### ❤️ Contributors
+
+- kiki-kanri
+
 ## v8.2.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v8.1.0...v8.2.0)
