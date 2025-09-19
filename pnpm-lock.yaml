@@ -39,9 +39,6 @@ importers:
       '@kikiutils/stylelint-config':
         specifier: ^0.2.0
         version: 0.2.0(postcss-html@1.8.0)(postcss@8.5.6)(typescript@5.9.2)
-      '@kikiutils/types':
-        specifier: ^8.0.0
-        version: 8.0.0
       '@nuxt/module-builder':
         specifier: ^1.0.2
         version: 1.0.2(@nuxt/cli@3.28.0(magicast@0.3.5))(@vue/compiler-core@3.5.21)(esbuild@0.25.10)(sass@1.92.1)(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
@@ -749,9 +746,6 @@ packages:
   '@kikiutils/stylelint-config@0.2.0':
     resolution: {integrity: sha512-RQIIRnraSfGB3acYmblCJjj2WbNJZVLF3EuBrUpBDDYoyI8gatmvEs4BUC8CTyojS1TBU/lXQC4xnqKyd/Tl3A==}
     engines: {node: '>=18.12.1'}
-
-  '@kikiutils/types@8.0.0':
-    resolution: {integrity: sha512-w/aBnwEIpRn/eAdEDSdtDYfqZyjzgVLziR048gCQ0FdXUb1cuILSsawCWwv6WMr01xoHAPJZEZSxMYUC41dTtQ==}
 
   '@kwsites/file-exists@1.1.1':
     resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
@@ -2120,10 +2114,6 @@ packages:
     resolution: {integrity: sha512-ECFzp6uFOSB+dcZ5BK/IBaGWssbSYBHvuMeMt3MMFyhI0Z8SqGgEkBLARgpRH3hutIgPVsALcMwbDrJqPxQ65A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
-
-  bson@6.10.4:
-    resolution: {integrity: sha512-WIsKqkSC0ABoBJuT1LEX+2HEvNmNKKgnTAyd0fL8qzK4SH2i9NXg+t08YtdZp/V9IZ33cxe3iV4yM0qg8lMQng==}
-    engines: {node: '>=16.20.1'}
 
   buffer-builder@0.2.0:
     resolution: {integrity: sha512-7VPMEPuYznPSoR21NE1zvd2Xna6c/CloiZCfcMXR1Jny6PjX0N4Nsa38zcBFo/FMK+BlA+FLKbJCQ0i2yxp+Xg==}
@@ -6308,11 +6298,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@kikiutils/types@8.0.0':
-    dependencies:
-      '@types/node': 24.5.2
-      bson: 6.10.4
-
   '@kwsites/file-exists@1.1.1':
     dependencies:
       debug: 4.4.3
@@ -7961,8 +7946,6 @@ snapshots:
       electron-to-chromium: 1.5.222
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
-
-  bson@6.10.4: {}
 
   buffer-builder@0.2.0: {}
 

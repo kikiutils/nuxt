@@ -37,7 +37,6 @@ export default defineNuxtConfig({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
-        globalTypeImports: { '@kikiutils/types/vue': true },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
             google: {
