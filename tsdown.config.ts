@@ -62,9 +62,9 @@ export default defineConfig({
         {
             name: 'remove-types-js',
             async writeBundle() {
-                const files = [];
-                for await (const file of glob('./dist/types/**/*.js')) files.push(file);
-                await Promise.all(files.map((item) => rm(item, { force: true })));
+                const filePaths = [];
+                for await (const filePath of glob('./dist/types/**/*.js')) filePaths.push(filePath);
+                await Promise.all(filePaths.map((filePath) => rm(filePath, { force: true })));
             },
         },
     ],
