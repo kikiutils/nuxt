@@ -39,6 +39,7 @@ export default defineConfig({
                 exports[key] = newExports;
             });
 
+            // TODO: automatically add `./dist/*.js` from entry
             exports['./*'] = './dist/*.js';
             const sortedExports: Record<string, PackageJsonExportEntry> = {};
             Object.entries(exports).sort().forEach(([key, value]) => sortedExports[key] = value);
@@ -63,7 +64,7 @@ export default defineConfig({
             async writeBundle() {
                 const files = [];
                 for await (const file of glob('./dist/types/**/*.js')) files.push(file);
-                await Promise.all(files.map((file) => rm(file, { force: true })));
+                await Promise.all(files.map((item) => rm(item, { force: true })));
             },
         },
     ],
