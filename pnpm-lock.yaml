@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@kikiutils/changelogen':
-        specifier: ^0.9.1
-        version: 0.9.1(magicast@0.3.5)
       '@kikiutils/eslint-config':
         specifier: ^4.0.0
         version: 4.0.0(@vue/compiler-sfc@3.5.22)(eslint-flat-config-utils@2.1.4)(eslint@9.37.0(jiti@1.21.7))(tailwindcss@3.4.18(yaml@2.8.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@1.21.7)(yaml@2.8.1))(vue-eslint-parser@10.2.0(eslint@9.37.0(jiti@1.21.7)))
@@ -23,6 +20,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@1.21.7)(yaml@2.8.1))
+      changelogen:
+        specifier: ^0.6.2
+        version: 0.6.2(magicast@0.3.5)
       depcheck:
         specifier: ^1.4.7
         version: 1.4.7
@@ -446,10 +446,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@kikiutils/changelogen@0.9.1':
-    resolution: {integrity: sha512-PbJREwg7h0tsUy5cXsI4tFn7/iKE99V63iMO4S+QdzXnUi9qWMeCszywJii+C5YtJ6CjxT5Xnzw1HezHl3i6+w==}
-    hasBin: true
 
   '@kikiutils/eslint-config@4.0.0':
     resolution: {integrity: sha512-1Lad+aqsl7VyiCDg0CCTicCt+/CNirWqzzZ6n7IEmA6+dYKBaSqM8lnhwsOG5u0Eh079oQ6EGfWaaiB/jGtUyA==}
@@ -1038,6 +1034,10 @@ packages:
 
   change-case@5.4.4:
     resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
+
+  changelogen@0.6.2:
+    resolution: {integrity: sha512-QtC7+r9BxoUm+XDAwhLbz3CgU134J1ytfE3iCpLpA4KFzX2P1e6s21RrWDwUBzfx66b1Rv+6lOA2nS2btprd+A==}
+    hasBin: true
 
   character-entities@2.0.2:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
@@ -3121,24 +3121,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kikiutils/changelogen@0.9.1(magicast@0.3.5)':
-    dependencies:
-      c12: 3.3.0(magicast@0.3.5)
-      confbox: 0.2.2
-      consola: 3.4.2
-      convert-gitmoji: 0.1.5
-      mri: 1.2.0
-      node-fetch-native: 1.6.7
-      ofetch: 1.4.1
-      open: 10.2.0
-      pathe: 2.0.3
-      pkg-types: 2.3.0
-      scule: 1.3.0
-      semver: 7.7.2
-      std-env: 3.9.0
-    transitivePeerDependencies:
-      - magicast
-
   '@kikiutils/eslint-config@4.0.0(@vue/compiler-sfc@3.5.22)(eslint-flat-config-utils@2.1.4)(eslint@9.37.0(jiti@1.21.7))(tailwindcss@3.4.18(yaml@2.8.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@1.21.7)(yaml@2.8.1))(vue-eslint-parser@10.2.0(eslint@9.37.0(jiti@1.21.7)))':
     dependencies:
       '@antfu/eslint-config': 5.4.1(@vue/compiler-sfc@3.5.22)(eslint-plugin-format@1.0.2(eslint@9.37.0(jiti@1.21.7)))(eslint@9.37.0(jiti@1.21.7))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.6.2)(jiti@1.21.7)(yaml@2.8.1))
@@ -3726,6 +3708,24 @@ snapshots:
       supports-color: 7.2.0
 
   change-case@5.4.4: {}
+
+  changelogen@0.6.2(magicast@0.3.5):
+    dependencies:
+      c12: 3.3.0(magicast@0.3.5)
+      confbox: 0.2.2
+      consola: 3.4.2
+      convert-gitmoji: 0.1.5
+      mri: 1.2.0
+      node-fetch-native: 1.6.7
+      ofetch: 1.4.1
+      open: 10.2.0
+      pathe: 2.0.3
+      pkg-types: 2.3.0
+      scule: 1.3.0
+      semver: 7.7.2
+      std-env: 3.9.0
+    transitivePeerDependencies:
+      - magicast
 
   character-entities@2.0.2: {}
 
