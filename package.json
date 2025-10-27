@@ -92,7 +92,6 @@
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.1.4",
-    "@kikiutils/changelogen": "^0.9.1",
     "@kikiutils/eslint-config": "^4.0.1",
     "@kikiutils/shared": "^13.5.2",
     "@kikiutils/stylelint-config": "^0.2.0",
@@ -105,6 +104,7 @@
     "@unocss/nuxt": "^66.5.4",
     "@vitest/coverage-v8": "^4.0.3",
     "@vueuse/nuxt": "^14.0.0",
+    "changelogen": "^0.6.2",
     "depcheck": "^1.4.7",
     "nuxt": "^4.2.0",
     "nuxt-security": "^2.4.0",
