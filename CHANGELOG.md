@@ -1,5 +1,33 @@
 # Changelog
 
+## v9.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.0...v9.0.1)
+
+### 💅 Refactors
+
+- Rename func parameters in `arr.map` and similar methods to `item` for consistency ([c5768ac](https://github.com/kikiutils/nuxt/commit/c5768ac))
+- Tidy up code ([1a92f2c](https://github.com/kikiutils/nuxt/commit/1a92f2c))
+
+### 🏡 Chore
+
+- Add `.editorconfig` ([11056ce](https://github.com/kikiutils/nuxt/commit/11056ce))
+- Upgrade dependencies ([4aa28e0](https://github.com/kikiutils/nuxt/commit/4aa28e0))
+- Upgrade devDependencies ([aca04e8](https://github.com/kikiutils/nuxt/commit/aca04e8))
+- Replace `@kikiutils/changelogen` with `changelogen` ([8d1d648](https://github.com/kikiutils/nuxt/commit/8d1d648))
+- Update script ([44312fb](https://github.com/kikiutils/nuxt/commit/44312fb))
+- Update `pnpm.onlyBuiltDependencies` ([9788a78](https://github.com/kikiutils/nuxt/commit/9788a78))
+- Upgrade dependencies ([225bf46](https://github.com/kikiutils/nuxt/commit/225bf46))
+- Replace `@kikiutils/changelogen` with `changelogen` ([0771b20](https://github.com/kikiutils/nuxt/commit/0771b20))
+
+### 🤖 CI
+
+- Update config file ([cfba23c](https://github.com/kikiutils/nuxt/commit/cfba23c))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v8.2.0...v9.0.0)
