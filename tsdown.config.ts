@@ -30,9 +30,9 @@ export default defineConfig({
                 };
 
                 if (!value.includes('internals')) {
-                    if (!value.endsWith('index.mjs')) return delete exports[key];
+                    if (!value.endsWith('index.js')) return delete exports[key];
                     exports[`${key}/index`] = { ...newExports };
-                    newExports.types = value.replace(/\.mjs$/, '.d.mts');
+                    newExports.types = value.replace(/\.js$/, '.d.ts');
                     if (!value.startsWith('./dist/types')) newExports.import = value;
                 }
 
@@ -40,7 +40,7 @@ export default defineConfig({
             });
 
             // TODO: automatically add `./dist/*.js` from entry
-            exports['./*'] = './dist/*.mjs';
+            exports['./*'] = './dist/*.js';
             const sortedExports: Record<string, PackageJsonExportEntry> = {};
             Object.entries(exports).sort().forEach(([key, value]) => sortedExports[key] = value);
             return sortedExports;
@@ -57,7 +57,7 @@ export default defineConfig({
             ...Object.keys(packageJson.peerDependencies || {}),
         ]),
     ],
-    fixedExtension: true,
+    fixedExtension: false,
     format: 'esm',
     plugins: [
         {
