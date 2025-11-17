@@ -92,6 +92,7 @@
     "vue-tsc": "^3.1.4"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
     "@element-plus/nuxt": "^1.1.4",
     "@kikiutils/eslint-config": "^5.0.0",
     "@kikiutils/eslint-plugin-tailwindcss": "^3.19.0",

@@ -30,6 +30,9 @@ importers:
         specifier: ^3.1.4
         version: 3.1.4(typescript@5.9.3)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^6.2.0
+        version: 6.2.0(@vue/compiler-sfc@3.5.24)(eslint-plugin-format@1.0.2(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.9(@types/debug@4.1.12)(@types/node@24.10.1)(jiti@2.6.1)(sass-embedded@1.93.3)(sass@1.94.0)(terser@5.44.1)(yaml@2.8.1))
       '@element-plus/nuxt':
         specifier: ^1.1.4
         version: 1.1.4(@element-plus/icons-vue@2.3.2(vue@3.5.24(typescript@5.9.3)))(element-plus@2.11.8(vue@3.5.24(typescript@5.9.3)))(magicast@0.5.1)
