@@ -1,5 +1,20 @@
 # Changelog
 
+## v9.0.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.1...v9.0.2)
+
+### 🏡 Chore
+
+- Update tsdown config ([59407a9](https://github.com/kikiutils/nuxt/commit/59407a9))
+- Disable tsdown `fixedExtension` config ([9039405](https://github.com/kikiutils/nuxt/commit/9039405))
+- Update eslint config ([e75c3d7](https://github.com/kikiutils/nuxt/commit/e75c3d7))
+- Add missing dev deps ([a243d91](https://github.com/kikiutils/nuxt/commit/a243d91))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.0...v9.0.1)
