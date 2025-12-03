@@ -1,5 +1,23 @@
 # Changelog
 
+## v9.0.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.2...v9.0.3)
+
+### 🔥 Performance
+
+- Optimize `manualChunks` configuration to split more modules ([3c47ed8](https://github.com/kikiutils/nuxt/commit/3c47ed8))
+
+### 🏡 Chore
+
+- Upgrade deps ([fbbd690](https://github.com/kikiutils/nuxt/commit/fbbd690))
+- Remove `build.config.ts` ([8b3bfb5](https://github.com/kikiutils/nuxt/commit/8b3bfb5))
+- Lint css file ([376b03d](https://github.com/kikiutils/nuxt/commit/376b03d))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.1...v9.0.2)
