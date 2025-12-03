@@ -6,16 +6,16 @@
 
 body {
     touch-action: manipulation;
-    text-size-adjust: 100%;
-
     font-synthesis: none;
+    text-size-adjust: 100%;
 }
 
 html {
     scroll-behavior: smooth;
+    text-rendering: optimizelegibility;
+
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
 }
 
 input:-webkit-autofill,
