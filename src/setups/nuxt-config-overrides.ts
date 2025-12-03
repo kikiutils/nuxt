@@ -24,12 +24,6 @@ function extractPackageName(id: string) {
     return parts[0];
 }
 
-function getPackageRelativePath(id: string, packageName: string) {
-    const idx = id.lastIndexOf(`${packageName}/`);
-    if (idx === -1) return '';
-    return id.slice(idx + packageName.length + 1);
-}
-
 export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     nuxt.options.devtools = defu(
         resolvedModuleOptions.nuxtConfigOverrides?.devtools,
@@ -82,12 +76,8 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
 
                             if (packageName === 'nuxt') return;
 
-                            const packageRelativePath = getPackageRelativePath(id, packageName);
-                            if (!packageRelativePath) return packageName;
-                            const parts = packageRelativePath.split('/');
-                            if (parts.length === 1) return packageName;
-                            else if (parts.length < 4) return `${packageName}/${parts[0]}`;
-                            else return `${packageName}/${parts[0]}/${parts[1]}`;
+                            // TODO
+                            return packageName;
                         },
                     },
                 },
