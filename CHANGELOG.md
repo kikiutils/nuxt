@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.4
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.3...v9.0.4)
+
+### 🩹 Fixes
+
+- Revert `manualChunks` logic for non-style files to previous behavior ([669bcfa](https://github.com/kikiutils/nuxt/commit/669bcfa))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.2...v9.0.3)
