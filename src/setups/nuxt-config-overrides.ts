@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs';
+
 import type { Nuxt } from '@nuxt/schema';
 import { defu } from 'defu';
 
@@ -20,6 +22,12 @@ function extractPackageName(id: string) {
     if (!parts) return;
     if (parts[0]?.startsWith('@')) return `${parts[0]}/${parts[1]}`;
     return parts[0];
+}
+
+function getPackageRelativePath(id: string, packageName: string) {
+    const idx = id.lastIndexOf(`${packageName}/`);
+    if (idx === -1) return '';
+    return id.slice(idx + packageName.length + 1);
 }
 
 export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
@@ -64,10 +72,22 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
                 rollupOptions: {
                     output: {
                         manualChunks(id: string) {
-                            if (!id.includes('node_modules') || id.endsWith('.css')) return;
+                            if (!id.includes('node_modules') || !existsSync(id)) return;
+
                             const packageName = extractPackageName(id);
                             if (!packageName) return;
-                            return packageName?.includes('nuxt') ? 'nuxt' : packageName;
+
+                            // eslint-disable-next-line regexp/no-unused-capturing-group
+                            if (/\.(css|sass|scss)/.test(id)) return `${packageName}/${id.split('/').pop()}`;
+
+                            if (packageName === 'nuxt') return;
+
+                            const packageRelativePath = getPackageRelativePath(id, packageName);
+                            if (!packageRelativePath) return packageName;
+                            const parts = packageRelativePath.split('/');
+                            if (parts.length === 1) return packageName;
+                            else if (parts.length < 4) return `${packageName}/${parts[0]}`;
+                            else return `${packageName}/${parts[0]}/${parts[1]}`;
                         },
                     },
                 },
