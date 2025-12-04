@@ -1,6 +1,10 @@
 import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 
-import type { Nuxt } from '@nuxt/schema';
+import type {
+    Nuxt,
+    ViteConfig,
+} from '@nuxt/schema';
 import { defu } from 'defu';
 
 import type { ResolvedModuleOptions } from '../types/options';
@@ -58,14 +62,15 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
         nuxt.options.typescript,
     );
 
-    nuxt.options.vite = defu(
+    nuxt.options.vite = defu<ViteConfig, ViteConfig[]>(
         resolvedModuleOptions.nuxtConfigOverrides?.vite,
         {
             build: {
                 assetsInlineLimit: 0,
                 rollupOptions: {
                     output: {
-                        manualChunks(id: string) {
+                        assetFileNames: join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, ''),
+                        manualChunks(id) {
                             if (!id.includes('node_modules') || !existsSync(id)) return;
 
                             const packageName = extractPackageName(id);
