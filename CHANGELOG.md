@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.6
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.5...v9.0.6)
+
+### 🏡 Chore
+
+- Update deps and remove `autoImportUtils.@kikiutils/shared.enhancedLocalStorage` option ([b114898](https://github.com/kikiutils/nuxt/commit/b114898))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.5
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.4...v9.0.5)
