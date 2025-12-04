@@ -31,11 +31,6 @@ export interface UserModuleOptions {
                 /**
                  * @default false
                  */
-                enhancedLocalStorage?: boolean;
-
-                /**
-                 * @default false
-                 */
                 enum?: boolean;
 
                 /**

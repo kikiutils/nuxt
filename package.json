@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@element-plus/nuxt": "^1.1.4",
-    "@kikiutils/shared": "^13.6.0",
+    "@kikiutils/shared": "^14.0.0",
     "@nuxtjs/color-mode": "^4.0.0",
     "@nuxtjs/robots": "^5.6.0",
     "@unocss/nuxt": "^66.5.10",
@@ -97,7 +97,7 @@
     "@kikiutils/eslint-config": "^5.0.0",
     "@kikiutils/eslint-plugin-tailwindcss": "^3.19.0",
     "@kikiutils/eslint-plugin-vue": "^10.2.2",
-    "@kikiutils/shared": "^13.6.0",
+    "@kikiutils/shared": "^14.0.0",
     "@kikiutils/stylelint-config": "^0.3.1",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.2.1",

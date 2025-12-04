@@ -6,7 +6,6 @@ export default defineNuxtConfig({
                 clipboard: true,
                 datetime: true,
                 elementPlus: true,
-                enhancedLocalStorage: true,
                 enum: true,
                 general: true,
                 hash: true,

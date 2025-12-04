@@ -23,7 +23,6 @@ export default defineNuxtModule<UserModuleOptions>({
                 clipboard: true,
                 datetime: false,
                 elementPlus: false,
-                enhancedLocalStorage: false,
                 enum: false,
                 general: true,
                 hash: false,
