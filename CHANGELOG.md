@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.5
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.4...v9.0.5)
+
+### 🏡 Chore
+
+- Set `assetFileNames` to remove original source filenames from output in nuxt config overrides `rollupOptions` ([ff6c1b0](https://github.com/kikiutils/nuxt/commit/ff6c1b0))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.4
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.3...v9.0.4)
