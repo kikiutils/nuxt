@@ -1,4 +1,3 @@
-import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type {
@@ -70,19 +69,27 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
                 rollupOptions: {
                     output: {
                         assetFileNames: join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, ''),
-                        manualChunks(id) {
-                            if (!id.includes('node_modules') || !existsSync(id)) return;
+                        manualChunks(id, { getModuleInfo }) {
+                            if (!id.includes('node_modules') || id.startsWith('virtual:')) return;
 
                             const packageName = extractPackageName(id);
                             if (!packageName) return;
 
                             // eslint-disable-next-line regexp/no-unused-capturing-group
-                            if (/\.(css|sass|scss)/.test(id)) return `${packageName}/${id.split('/').pop()}`;
+                            if (/\.(css|sass|scss)/.test(id)) return id.substring(id.lastIndexOf(packageName));
 
-                            if (packageName === 'nuxt') return;
+                            const moduleInfo = getModuleInfo(id);
+                            if (!moduleInfo) return;
 
-                            // TODO
-                            return packageName;
+                            const importerPackageNames = new Set(
+                                moduleInfo
+                                    .importers
+                                    .filter((id) => id.includes('node_modules') && !id.startsWith('virtual:'))
+                                    .map(extractPackageName),
+                            );
+
+                            if (importerPackageNames.has(packageName)) return packageName;
+                            return id.substring(id.lastIndexOf(packageName));
                         },
                     },
                 },
