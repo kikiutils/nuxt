@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.7
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.6...v9.0.7)
+
+### 🔥 Performance
+
+- Optimize manualChunks configuration to split more modules ([2980c19](https://github.com/kikiutils/nuxt/commit/2980c19))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.6
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.5...v9.0.6)
