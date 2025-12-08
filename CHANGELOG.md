@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.9
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.8...v9.0.9)
+
+### 🏡 Chore
+
+- Selectively enable styles chunk splitting for some packages ([a69ecef](https://github.com/kikiutils/nuxt/commit/a69ecef))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.8
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.7...v9.0.8)
