@@ -1,7 +1,7 @@
 {
   "name": "@kikiutils/nuxt",
   "type": "module",
-  "version": "9.0.7",
+  "version": "9.0.8",
   "description": "Nuxt module.",
   "author": "kiki-kanri",
   "license": "MIT",
@@ -89,10 +89,10 @@
     "mlly": "^1.8.0",
     "sass": "^1.94.2",
     "sass-embedded": "^1.93.3",
-    "vue-tsc": "^3.1.5"
+    "vue-tsc": "^3.1.7"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.4.1",
+    "@antfu/eslint-config": "^6.4.2",
     "@element-plus/nuxt": "^1.1.4",
     "@kikiutils/eslint-config": "^5.0.0",
     "@kikiutils/eslint-plugin-tailwindcss": "^3.19.0",
@@ -115,7 +115,7 @@
     "nuxt": "^4.2.1",
     "nuxt-security": "^2.5.0",
     "ts-unused-exports": "^11.0.1",
-    "type-fest": "^5.3.0",
+    "type-fest": "^5.3.1",
     "typescript": "^5.9.3",
     "unplugin-fonts": "^1.4.0",
     "vitest": "^4.0.15"

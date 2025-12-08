@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.8
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.7...v9.0.8)
+
+### 🩹 Fixes
+
+- Remove `assetFileNames` to resolve CSS loading order issues ([5334570](https://github.com/kikiutils/nuxt/commit/5334570))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.7
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.6...v9.0.7)
