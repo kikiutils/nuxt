@@ -1,5 +1,3 @@
-import { join } from 'node:path';
-
 import type {
     Nuxt,
     ViteConfig,
@@ -68,7 +66,6 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
                 assetsInlineLimit: 0,
                 rollupOptions: {
                     output: {
-                        assetFileNames: join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, ''),
                         manualChunks(id, { getModuleInfo }) {
                             if (!id.includes('node_modules') || id.startsWith('virtual:')) return;
 
