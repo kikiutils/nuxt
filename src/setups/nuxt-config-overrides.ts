@@ -1,3 +1,5 @@
+import { join } from 'node:path';
+
 import type {
     Nuxt,
     ViteConfig,
@@ -16,6 +18,23 @@ const defaultTsConfigCompilerOptions = {
     noUnusedLocals: true,
     noUnusedParameters: true,
 } as const;
+
+const packagesAllowedForStylesChunking = new Set([
+    '@fortawesome/fontawesome-free',
+    '@kikiutils/nuxt',
+    'animate.css',
+    'ant-design-vue',
+    'antd',
+    'bootstrap',
+    'element-plus',
+    'ionicons',
+    'material-icons',
+    'primevue',
+    'quasar',
+    'remixicon',
+    'vue3-marquee',
+    'vuetify',
+]);
 
 // Functions
 function extractPackageName(id: string) {
@@ -66,6 +85,7 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
                 assetsInlineLimit: 0,
                 rollupOptions: {
                     output: {
+                        assetFileNames: join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, ''),
                         manualChunks(id, { getModuleInfo }) {
                             if (!id.includes('node_modules') || id.startsWith('virtual:')) return;
 
@@ -73,7 +93,11 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
                             if (!packageName) return;
 
                             // eslint-disable-next-line regexp/no-unused-capturing-group
-                            if (/\.(css|sass|scss)/.test(id)) return id.substring(id.lastIndexOf(packageName));
+                            if (/\.(css|sass|scss)/.test(id)) {
+                                // Only allow some packages to split their styles into dedicated chunks
+                                if (!packagesAllowedForStylesChunking.has(packageName)) return;
+                                return id.substring(id.lastIndexOf(packageName));
+                            }
 
                             const moduleInfo = getModuleInfo(id);
                             if (!moduleInfo) return;
