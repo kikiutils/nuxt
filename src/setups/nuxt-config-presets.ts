@@ -1,3 +1,4 @@
+import { statSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type { Nuxt } from '@nuxt/schema';
@@ -5,6 +6,7 @@ import type { Nuxt } from '@nuxt/schema';
 import type { ResolvedModuleOptions } from '../types/options';
 
 // Constants
+const packageFileSizes: Record<string, Record<string, number>> = {};
 const packagesAllowedForStylesChunking = new Set([
     '@fortawesome/fontawesome-free',
     '@kikiutils/nuxt',
@@ -28,6 +30,15 @@ function extractPackageName(id: string) {
     if (!parts) return;
     if (parts[0]?.startsWith('@')) return `${parts[0]}/${parts[1]}`;
     return parts[0];
+}
+
+function getSizeBasedPackageChunkName(id: string, packageName: string) {
+    const fileSizes = packageFileSizes[packageName] ||= {};
+    const filePath = id.substring(id.lastIndexOf(`node_modules/${packageName}`));
+    if (!fileSizes[filePath]) fileSizes[filePath] = statSync(id).size;
+    const totalSize = Object.values(fileSizes).reduce((a, b) => a + b);
+    const chunkIndex = Math.trunc(totalSize / (192 * 1024));
+    return `${packageName}-${chunkIndex}`;
 }
 
 export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
@@ -55,7 +66,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                 if (/\.(css|sass|scss)/.test(id)) {
                     // Only allow some packages to split their styles into dedicated chunks
                     if (!packagesAllowedForStylesChunking.has(packageName)) return;
-                    return id.substring(id.lastIndexOf(packageName));
+                    return getSizeBasedPackageChunkName(id, packageName);
                 }
 
                 const moduleInfo = getModuleInfo(id);
@@ -69,7 +80,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                 );
 
                 if (importerPackageNames.has(packageName)) return packageName;
-                return id.substring(id.lastIndexOf(packageName));
+                return getSizeBasedPackageChunkName(id, packageName);
             };
         });
     }
