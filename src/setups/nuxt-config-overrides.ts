@@ -32,8 +32,8 @@ const packagesAllowedForStylesChunking = new Set([
     'primevue',
     'quasar',
     'remixicon',
+    'vue3-carousel',
     'vue3-marquee',
-    'vuetify',
 ]);
 
 // Functions
