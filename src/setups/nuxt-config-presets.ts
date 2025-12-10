@@ -71,6 +71,8 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                     return getSizeBasedPackageChunkName(id, packageName);
                 }
 
+                if (packageName === 'nuxt') return;
+
                 const moduleInfo = getModuleInfo(id);
                 if (!moduleInfo) return;
 
