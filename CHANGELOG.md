@@ -1,5 +1,31 @@
 # Changelog
 
+## v10.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.9...v10.0.0)
+
+### 🔥 Performance
+
+- Update Vite `manualChunks` to auto-group chunks by size to avoid excessive fragmentation ([a82d57f](https://github.com/kikiutils/nuxt/commit/a82d57f))
+
+### 💅 Refactors
+
+- ⚠️  Control Vite Rollup `assetFileNames` and `manualChunks` via `nuxtConfigPresets` option ([ef4aae0](https://github.com/kikiutils/nuxt/commit/ef4aae0))
+
+### 🏡 Chore
+
+- Update `packagesAllowedForStylesChunking` list ([b237eda](https://github.com/kikiutils/nuxt/commit/b237eda))
+- Tidy up logger messages ([ab40d2d](https://github.com/kikiutils/nuxt/commit/ab40d2d))
+- Upgrade deps ([b88fdc9](https://github.com/kikiutils/nuxt/commit/b88fdc9))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Control Vite Rollup `assetFileNames` and `manualChunks` via `nuxtConfigPresets` option ([ef4aae0](https://github.com/kikiutils/nuxt/commit/ef4aae0))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v9.0.9
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.8...v9.0.9)
