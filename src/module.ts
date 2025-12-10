@@ -8,6 +8,7 @@ import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupDeepScanAutoImports } from './setups/deep-scan-auto-imports';
 import { setupModules } from './setups/modules';
 import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
+import { setupNuxtConfigPresets } from './setups/nuxt-config-presets';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
 import type {
@@ -53,6 +54,10 @@ export default defineNuxtModule<UserModuleOptions>({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
+        nuxtConfigPresets: {
+            viteAssetFileNames: true,
+            viteManualChunks: true,
+        },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
             google: {
@@ -77,6 +82,7 @@ export default defineNuxtModule<UserModuleOptions>({
 
         // Setups
         setupNuxtConfigOverrides(options, nuxt);
+        setupNuxtConfigPresets(options, nuxt);
         await setupAutoImportUtils(options);
         setupDeepScanAutoImports(options, nuxt);
         await setupModules(options, nuxt);

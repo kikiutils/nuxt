@@ -1,5 +1,3 @@
-import { join } from 'node:path';
-
 import type {
     Nuxt,
     ViteConfig,
@@ -19,31 +17,7 @@ const defaultTsConfigCompilerOptions = {
     noUnusedParameters: true,
 } as const;
 
-const packagesAllowedForStylesChunking = new Set([
-    '@fortawesome/fontawesome-free',
-    '@kikiutils/nuxt',
-    'animate.css',
-    'ant-design-vue',
-    'antd',
-    'bootstrap',
-    'element-plus',
-    'ionicons',
-    'material-icons',
-    'primevue',
-    'quasar',
-    'remixicon',
-    'vue3-carousel',
-    'vue3-marquee',
-]);
-
 // Functions
-function extractPackageName(id: string) {
-    const parts = id.split('node_modules/').pop()?.split('/');
-    if (!parts) return;
-    if (parts[0]?.startsWith('@')) return `${parts[0]}/${parts[1]}`;
-    return parts[0];
-}
-
 export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     nuxt.options.devtools = defu(
         resolvedModuleOptions.nuxtConfigOverrides?.devtools,
@@ -80,42 +54,7 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
 
     nuxt.options.vite = defu<ViteConfig, ViteConfig[]>(
         resolvedModuleOptions.nuxtConfigOverrides?.vite,
-        {
-            build: {
-                assetsInlineLimit: 0,
-                rollupOptions: {
-                    output: {
-                        assetFileNames: join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, ''),
-                        manualChunks(id, { getModuleInfo }) {
-                            if (!id.includes('node_modules') || id.startsWith('virtual:')) return;
-
-                            const packageName = extractPackageName(id);
-                            if (!packageName) return;
-
-                            // eslint-disable-next-line regexp/no-unused-capturing-group
-                            if (/\.(css|sass|scss)/.test(id)) {
-                                // Only allow some packages to split their styles into dedicated chunks
-                                if (!packagesAllowedForStylesChunking.has(packageName)) return;
-                                return id.substring(id.lastIndexOf(packageName));
-                            }
-
-                            const moduleInfo = getModuleInfo(id);
-                            if (!moduleInfo) return;
-
-                            const importerPackageNames = new Set(
-                                moduleInfo
-                                    .importers
-                                    .filter((id) => id.includes('node_modules') && !id.startsWith('virtual:'))
-                                    .map(extractPackageName),
-                            );
-
-                            if (importerPackageNames.has(packageName)) return packageName;
-                            return id.substring(id.lastIndexOf(packageName));
-                        },
-                    },
-                },
-            },
-        },
+        { build: { assetsInlineLimit: 0 } },
         nuxt.options.vite,
     );
 }
