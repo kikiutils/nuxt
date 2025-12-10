@@ -24,6 +24,8 @@ const packagesAllowedForStylesChunking = new Set([
     'vue3-marquee',
 ]);
 
+const packagesKnownNoCircularImport = new Set(['@kikiutils/shared']);
+
 // Functions
 function extractPackageName(id: string) {
     const parts = id.split('node_modules/').pop()?.split('/');
@@ -33,8 +35,8 @@ function extractPackageName(id: string) {
 }
 
 function getSizeBasedPackageChunkName(id: string, packageName: string) {
-    const fileSizes = packageFileSizes[packageName] ||= {};
     const filePath = id.substring(id.lastIndexOf(`node_modules/${packageName}`));
+    const fileSizes = packageFileSizes[packageName] ||= {};
     if (!fileSizes[filePath]) fileSizes[filePath] = statSync(id).size;
     const totalSize = Object.values(fileSizes).reduce((a, b) => a + b);
     const chunkIndex = Math.trunc(totalSize / (192 * 1024));
@@ -57,7 +59,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
         nuxt.options.vite.build.rollupOptions.output ||= {};
         [nuxt.options.vite.build.rollupOptions.output].flat().forEach((output) => {
             output.manualChunks ||= (id, { getModuleInfo }) => {
-                if (!id.includes('node_modules') || id.startsWith('virtual:')) return;
+                if (!id.includes('node_modules') || id.startsWith('\x00') || id.startsWith('virtual:')) return;
 
                 const packageName = extractPackageName(id);
                 if (!packageName) return;
@@ -72,14 +74,17 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                 const moduleInfo = getModuleInfo(id);
                 if (!moduleInfo) return;
 
-                const importerPackageNames = new Set(
-                    moduleInfo
-                        .importers
-                        .filter((id) => id.includes('node_modules') && !id.startsWith('virtual:'))
-                        .map(extractPackageName),
-                );
+                if (!packagesKnownNoCircularImport.has(packageName)) {
+                    const importerPackageNames = new Set(
+                        moduleInfo
+                            .importers
+                            .filter((id) => id.includes('node_modules') && !id.startsWith('virtual:'))
+                            .map(extractPackageName),
+                    );
 
-                if (importerPackageNames.has(packageName)) return packageName;
+                    if (importerPackageNames.has(packageName)) return packageName;
+                }
+
                 return getSizeBasedPackageChunkName(id, packageName);
             };
         });
