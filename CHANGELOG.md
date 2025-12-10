@@ -1,5 +1,21 @@
 # Changelog
 
+## v10.0.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.1...v10.0.2)
+
+### 🩹 Fixes
+
+- Skip `nuxt` package in `manualChunks` to let Rollup handle it automatically ([f7ded62](https://github.com/kikiutils/nuxt/commit/f7ded62))
+
+### 💅 Refactors
+
+- Remove `packagesKnownNoCircularImport` check from `manualChunks` ([d3bef17](https://github.com/kikiutils/nuxt/commit/d3bef17))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.0...v10.0.1)
