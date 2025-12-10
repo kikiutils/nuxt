@@ -24,8 +24,6 @@ const packagesAllowedForStylesChunking = new Set([
     'vue3-marquee',
 ]);
 
-const packagesKnownNoCircularImport = new Set(['@kikiutils/shared']);
-
 // Functions
 function extractPackageName(id: string) {
     const parts = id.split('node_modules/').pop()?.split('/');
@@ -41,6 +39,10 @@ function getSizeBasedPackageChunkName(id: string, packageName: string) {
     const totalSize = Object.values(fileSizes).reduce((a, b) => a + b);
     const chunkIndex = Math.trunc(totalSize / (192 * 1024));
     return `${packageName}-${chunkIndex}`;
+}
+
+function isSkippableModuleId(id: string) {
+    return !id.includes('node_modules') || id.startsWith('\x00') || id.startsWith('virtual:');
 }
 
 export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
@@ -59,7 +61,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
         nuxt.options.vite.build.rollupOptions.output ||= {};
         [nuxt.options.vite.build.rollupOptions.output].flat().forEach((output) => {
             output.manualChunks ||= (id, { getModuleInfo }) => {
-                if (!id.includes('node_modules') || id.startsWith('\x00') || id.startsWith('virtual:')) return;
+                if (isSkippableModuleId(id)) return;
 
                 const packageName = extractPackageName(id);
                 if (!packageName) return;
@@ -76,16 +78,11 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                 const moduleInfo = getModuleInfo(id);
                 if (!moduleInfo) return;
 
-                if (!packagesKnownNoCircularImport.has(packageName)) {
-                    const importerPackageNames = new Set(
-                        moduleInfo
-                            .importers
-                            .filter((id) => id.includes('node_modules') && !id.startsWith('virtual:'))
-                            .map(extractPackageName),
-                    );
+                const importerPackageNames = new Set(
+                    moduleInfo.importers.filter((id) => !isSkippableModuleId(id)).map(extractPackageName),
+                );
 
-                    if (importerPackageNames.has(packageName)) return packageName;
-                }
+                if (importerPackageNames.has(packageName)) return packageName;
 
                 return getSizeBasedPackageChunkName(id, packageName);
             };
