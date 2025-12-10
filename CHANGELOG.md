@@ -1,5 +1,17 @@
 # Changelog
 
+## v10.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.0...v10.0.1)
+
+### 🩹 Fixes
+
+- Address `manualChunks` issues ([d2ab07b](https://github.com/kikiutils/nuxt/commit/d2ab07b))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v9.0.9...v10.0.0)
