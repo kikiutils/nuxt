@@ -1,5 +1,17 @@
 # Changelog
 
+## v10.0.4
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.3...v10.0.4)
+
+### 🩹 Fixes
+
+- In `manualChunks.getSizeBasedPackageChunkName`, remove query from `id` before `stat` check and wrap logic in try/catch to prevent build crashes ([fc2e39f](https://github.com/kikiutils/nuxt/commit/fc2e39f))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.0.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.2...v10.0.3)
