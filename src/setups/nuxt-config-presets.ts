@@ -7,6 +7,21 @@ import type { Nuxt } from '@nuxt/schema';
 import type { ResolvedModuleOptions } from '../types/options';
 
 // Constants
+const defaultPackagesDisallowedForManualChunking = new Set([
+    '@nuxt/image',
+    '@vue/devtools-api',
+    'devalue',
+    'html5-qrcode',
+    'nanoid',
+    'node-mock-http',
+    'nuxt',
+    'ohash',
+    'query-string',
+    'uncrypto',
+    'vue',
+    'vue-i18n',
+]);
+
 const packageFileSizes: Record<string, Record<string, number>> = {};
 const packagesAllowedForStylesChunking = new Set([
     '@fortawesome/fontawesome-free',
@@ -23,20 +38,6 @@ const packagesAllowedForStylesChunking = new Set([
     'remixicon',
     'vue3-carousel',
     'vue3-marquee',
-]);
-
-const packagesDisallowedForManualChunking = new Set([
-    '@vue/devtools-api',
-    'devalue',
-    'html5-qrcode',
-    'nanoid',
-    'node-mock-http',
-    'nuxt',
-    'ohash',
-    'query-string',
-    'uncrypto',
-    'vue',
-    'vue-i18n',
 ]);
 
 // Functions
@@ -76,6 +77,11 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
     }
 
     if (resolvedModuleOptions.nuxtConfigPresets.viteManualChunks) {
+        const packagesDisallowedForManualChunking = new Set([
+            ...defaultPackagesDisallowedForManualChunking,
+            ...resolvedModuleOptions.nuxtConfigPresets.viteManualChunks.packagesDisallowedForManualChunking,
+        ]);
+
         nuxt.options.vite.build ||= {};
         nuxt.options.vite.build.rollupOptions ||= {};
         nuxt.options.vite.build.rollupOptions.output ||= {};

@@ -171,14 +171,16 @@ export interface UserModuleOptions {
     nuxtConfigOverrides?: Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>>;
     nuxtConfigPresets?: {
         viteAssetFileNames?: boolean;
-
-        /**
-         * Apply the recommended Vite manualChunks preset
-         * only if the user has not configured manualChunks.
-         *
-         * @default true
-         */
-        viteManualChunks?: boolean;
+        viteManualChunks?: {
+            /**
+             * Apply the recommended Vite manualChunks preset
+             * only if the user has not configured manualChunks.
+             *
+             * @default true
+             */
+            enabled?: boolean;
+            packagesDisallowedForManualChunking?: Set<string>;
+        };
     };
 
     unoCss?: {

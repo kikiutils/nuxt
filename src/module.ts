@@ -56,7 +56,10 @@ export default defineNuxtModule<UserModuleOptions>({
         enabledStyles: { reboot: true },
         nuxtConfigPresets: {
             viteAssetFileNames: true,
-            viteManualChunks: true,
+            viteManualChunks: {
+                enabled: true,
+                packagesDisallowedForManualChunking: new Set(),
+            },
         },
         unoCss: { enabledResets: { tailwind: true } },
         unpluginFonts: {
