@@ -1,5 +1,17 @@
 # Changelog
 
+## v10.1.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.4...v10.1.0)
+
+### 🚀 Enhancements
+
+- Rename `packagesDisallowedForManualChunking` to `defaultPackagesDisallowedForManualChunking` and add `@nuxt/image` to set, add `nuxtConfigPresets.viteManualChunks.packagesDisallowedForManualChunking` to allow extend packages set ([eb776cc](https://github.com/kikiutils/nuxt/commit/eb776cc))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.0.4
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.3...v10.0.4)
