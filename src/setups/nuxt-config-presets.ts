@@ -1,6 +1,7 @@
 import { statSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { useLogger } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
 
 import type { ResolvedModuleOptions } from '../types/options';
@@ -49,7 +50,12 @@ function extractPackageName(id: string) {
 function getSizeBasedPackageChunkName(id: string, packageName: string) {
     const filePath = id.substring(id.lastIndexOf(`node_modules/${packageName}`));
     const fileSizes = packageFileSizes[packageName] ||= {};
-    if (!fileSizes[filePath]) fileSizes[filePath] = statSync(id).size;
+    try {
+        if (!fileSizes[filePath]) fileSizes[filePath] = statSync(id.split('?')[0]!).size;
+    } catch (error) {
+        useLogger().error(`Vite rollup manual chunks failed to get file size for ${id}: ${error}`);
+    }
+
     const totalSize = Object.values(fileSizes).reduce((a, b) => a + b);
     const chunkIndex = Math.trunc(totalSize / (192 * 1024));
     return `${packageName}-${chunkIndex}`;
