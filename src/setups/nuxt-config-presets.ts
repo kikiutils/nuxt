@@ -24,6 +24,20 @@ const packagesAllowedForStylesChunking = new Set([
     'vue3-marquee',
 ]);
 
+const packagesDisallowedForManualChunking = new Set([
+    '@vue/devtools-api',
+    'devalue',
+    'html5-qrcode',
+    'nanoid',
+    'node-mock-http',
+    'nuxt',
+    'ohash',
+    'query-string',
+    'uncrypto',
+    'vue',
+    'vue-i18n',
+]);
+
 // Functions
 function extractPackageName(id: string) {
     const parts = id.split('node_modules/').pop()?.split('/');
@@ -73,7 +87,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
                     return getSizeBasedPackageChunkName(id, packageName);
                 }
 
-                if (packageName === 'nuxt') return;
+                if (packagesDisallowedForManualChunking.has(packageName)) return;
 
                 const moduleInfo = getModuleInfo(id);
                 if (!moduleInfo) return;
