@@ -1,5 +1,17 @@
 # Changelog
 
+## v10.0.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.2...v10.0.3)
+
+### 🏡 Chore
+
+- Skip processing for certain packages in `manualChunks` ([5ff3f62](https://github.com/kikiutils/nuxt/commit/5ff3f62))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.0.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.1...v10.0.2)
