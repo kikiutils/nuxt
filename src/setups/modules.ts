@@ -11,7 +11,7 @@ async function setupColorMode(nuxt: Nuxt) {
         {
             classSuffix: '',
             preference: 'dark',
-            storage: 'cookie' as const,
+            storage: nuxt.options.ssr ? 'cookie' as const : 'localStorage' as const,
         },
     );
 
