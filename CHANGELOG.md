@@ -1,5 +1,21 @@
 # Changelog
 
+## v10.2.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.1.0...v10.2.0)
+
+### 🚀 Enhancements
+
+- Auto-select `cookie` or `localStorage` storage for `colorMode` based on SSR mode ([3452c4d](https://github.com/kikiutils/nuxt/commit/3452c4d))
+
+### 🏡 Chore
+
+- Upgrade deps ([41495ad](https://github.com/kikiutils/nuxt/commit/41495ad))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.1.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.0.4...v10.1.0)
