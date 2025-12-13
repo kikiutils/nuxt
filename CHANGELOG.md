@@ -1,5 +1,23 @@
 # Changelog
 
+## v10.3.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.2.0...v10.3.0)
+
+### 🚀 Enhancements
+
+- Add `nuxt-vite-plugin-webfont-dl` module and disable `unpluginFonts` by default ([953cb6e](https://github.com/kikiutils/nuxt/commit/953cb6e))
+
+### 🏡 Chore
+
+- Remove playground pnpm lock and update package.json ([850f57a](https://github.com/kikiutils/nuxt/commit/850f57a))
+- Upgrade deps ([9695f6f](https://github.com/kikiutils/nuxt/commit/9695f6f))
+- Enable all module in playground ([ca4c417](https://github.com/kikiutils/nuxt/commit/ca4c417))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.2.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.1.0...v10.2.0)
