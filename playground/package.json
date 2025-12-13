@@ -8,14 +8,5 @@
   },
   "dependencies": {
     "nuxt": "latest"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "esbuild"
-    ],
-    "overrides": {
-      "tailwindcss": "^3.4.18"
-    }
   }
 }
