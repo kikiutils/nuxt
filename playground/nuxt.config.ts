@@ -31,7 +31,7 @@ export default defineNuxtConfig({
             robots: true,
             security: true,
             unoCss: true,
-            unpluginFonts: false,
+            unpluginFonts: true,
             vitePluginWebfontDl: true,
             vueUse: true,
         },
