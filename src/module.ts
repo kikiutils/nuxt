@@ -79,9 +79,9 @@ export default defineNuxtModule<UserModuleOptions>({
     async setup(_options, nuxt) {
         const options = _options as ResolvedModuleOptions;
         const logger = useLogger();
-        if (!options.enabled) return logger.info('@kikiutils/nuxt is disabled');
+        if (!options.enabled) return logger.info('[@kikiutils/nuxt] Disabled');
         const startAt = performance.now();
-        logger.info('Initializing @kikiutils/nuxt...');
+        logger.info('[@kikiutils/nuxt] Initializing...');
         const resolver = createResolver(import.meta.url);
 
         // Setups
@@ -93,6 +93,6 @@ export default defineNuxtModule<UserModuleOptions>({
         setupPlugins(options, resolver);
         setupStyles(options, nuxt, resolver);
 
-        logger.success(`@kikiutils/nuxt initialized successfully in ${(performance.now() - startAt).toFixed(2)}ms`);
+        logger.success(`[@kikiutils/nuxt] Initialized successfully in ${(performance.now() - startAt).toFixed(2)}ms`);
     },
 });
