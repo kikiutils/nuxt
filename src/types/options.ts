@@ -140,9 +140,14 @@ export interface UserModuleOptions {
           unoCss?: boolean;
 
           /**
-           * @default true
+           * @default false
            */
           unpluginFonts?: boolean;
+
+          /**
+           * @default true
+           */
+          vitePluginWebfontDl?: boolean;
 
           /**
            * @default true

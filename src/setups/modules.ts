@@ -39,6 +39,10 @@ export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions,
         promises.push(setupUnpluginFonts(resolvedModuleOptions, nuxt));
     }
 
+    if (resolvedModuleOptions.enabledModules.vitePluginWebfontDl) {
+        promises.push(setupVitePluginWebfontDl(nuxt));
+    }
+
     if (resolvedModuleOptions.enabledModules.vueUse) promises.push(setupVueUse(nuxt));
     await Promise.all(promises);
 }
@@ -102,6 +106,10 @@ async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, 
     }
 
     await installModule('unplugin-fonts/nuxt', {}, nuxt);
+}
+
+async function setupVitePluginWebfontDl(nuxt: Nuxt) {
+    await installModule('nuxt-vite-plugin-webfont-dl', {}, nuxt);
 }
 
 async function setupVueUse(nuxt: Nuxt) {
