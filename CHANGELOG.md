@@ -1,5 +1,23 @@
 # Changelog
 
+## v10.3.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.0...v10.3.1)
+
+### 🩹 Fixes
+
+- Adjust `customExports` order in `tsdown.config` to move wildcard (`*`) exports to the end ([0b3f357](https://github.com/kikiutils/nuxt/commit/0b3f357))
+
+### 🏡 Chore
+
+- Update logger message ([bac06d3](https://github.com/kikiutils/nuxt/commit/bac06d3))
+- Update deps ([9a89edd](https://github.com/kikiutils/nuxt/commit/9a89edd))
+- Enable `nitro.compressPublicAssets` and `nitro.minify` only when `NODE_ENV` is `production` ([8fffbbb](https://github.com/kikiutils/nuxt/commit/8fffbbb))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.3.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.2.0...v10.3.0)
