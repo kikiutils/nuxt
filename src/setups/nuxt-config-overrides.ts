@@ -34,8 +34,8 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
     nuxt.options.nitro = defu(
         resolvedModuleOptions.nuxtConfigOverrides?.nitro,
         {
-            compressPublicAssets: true,
-            minify: true,
+            compressPublicAssets: process.env.NODE_ENV === 'production',
+            minify: process.env.NODE_ENV === 'production',
             typescript: { tsConfig: { compilerOptions: defaultTsConfigCompilerOptions } },
         },
         nuxt.options.nitro,
