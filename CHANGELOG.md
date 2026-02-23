@@ -1,5 +1,21 @@
 # Changelog
 
+## v10.3.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.1...v10.3.2)
+
+### 🩹 Fixes
+
+- Resolve type errors ([7f72828](https://github.com/kikiutils/nuxt/commit/7f72828))
+
+### 🏡 Chore
+
+- Update deps ([babd86e](https://github.com/kikiutils/nuxt/commit/babd86e))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.3.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.0...v10.3.1)
