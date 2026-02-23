@@ -64,6 +64,7 @@ async function setupUnoCss(resolvedModuleOptions: ResolvedModuleOptions, nuxt: N
 }
 
 async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
+    if (nuxt.options.unfonts === false) return await installModule('unplugin-fonts/nuxt', {}, nuxt);
     nuxt.options.app.head.link ??= [];
 
     if (resolvedModuleOptions.unpluginFonts.google.addPreconnectLink) {
