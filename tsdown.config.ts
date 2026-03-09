@@ -15,6 +15,19 @@ interface PackageJsonExportEntry {
 
 export default defineConfig({
     clean: true,
+    deps: {
+        neverBundle: [
+            ...new Set([
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
+                ...Object.keys(packageJson.dependencies || {}),
+                ...Object.keys(packageJson.devDependencies || {}),
+                // eslint-disable-next-line ts/ban-ts-comment
+                // @ts-ignore
+                ...Object.keys(packageJson.peerDependencies || {}),
+            ]),
+        ],
+    },
     dts: true,
     entry: ['./src/index.ts'],
     exports: {
@@ -32,6 +45,7 @@ export default defineConfig({
                 if (!value.includes('internals')) {
                     if (!value.endsWith('index.js')) return delete exports[key];
                     exports[`${key}/index`] = { ...newExports };
+                    // eslint-disable-next-line e18e/prefer-static-regex
                     newExports.types = value.replace(/\.js$/, '.d.ts');
                     if (!value.startsWith('./dist/types')) newExports.import = value;
                 }
@@ -51,17 +65,6 @@ export default defineConfig({
             };
         },
     },
-    external: [
-        ...new Set([
-            // eslint-disable-next-line ts/ban-ts-comment
-            // @ts-ignore
-            ...Object.keys(packageJson.dependencies || {}),
-            ...Object.keys(packageJson.devDependencies || {}),
-            // eslint-disable-next-line ts/ban-ts-comment
-            // @ts-ignore
-            ...Object.keys(packageJson.peerDependencies || {}),
-        ]),
-    ],
     fixedExtension: false,
     format: 'esm',
     plugins: [
