@@ -51,7 +51,7 @@
   "dependencies": {},
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.0",
-    "@kikiutils/eslint-config": "^6.0.0",
+    "@kikiutils/eslint-config": "^7.0.0",
     "@kikiutils/tsconfigs": "^5.1.0",
     "@types/node": "^25.3.5",
     "@vitest/coverage-v8": "^4.0.18",

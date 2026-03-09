@@ -12,8 +12,8 @@ importers:
         specifier: ^7.7.0
         version: 7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))
       '@kikiutils/eslint-config':
-        specifier: ^6.0.0
-        version: 6.0.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-flat-config-utils@3.0.1)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))
+        specifier: ^7.0.0
+        version: 7.0.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))
       '@kikiutils/tsconfigs':
         specifier: ^5.1.0
         version: 5.1.0
@@ -447,14 +447,13 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@kikiutils/eslint-config@6.0.0':
-    resolution: {integrity: sha512-jzk4e4Spo4TJ8k6HBW3JHIh4h9lWAaSkuhuikT9c+0yoJOGyqFQ7MGGferRYOcy/qqWQZ8oWOxwEfVuqn3pl5A==}
+  '@kikiutils/eslint-config@7.0.0':
+    resolution: {integrity: sha512-oKDM1ihgNVLunzTk2Dstv/7NINOiJFEBiMfMzPnCST+zFvMDzphrotoAOSTRjKDQbHVisFZFuJFZmSJMOfb4Dg==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
       '@kikiutils/eslint-plugin-tailwindcss': ^3.19.0
       '@kikiutils/eslint-plugin-vue': ^10.2.2
       eslint: '>= 9.0.0'
-      eslint-flat-config-utils: '>= 2.0.0'
       eslint-plugin-format: '>= 1.0.0'
       eslint-plugin-tailwindcss: ^3.18.2
     peerDependenciesMeta:
@@ -462,7 +461,7 @@ packages:
         optional: true
       '@kikiutils/eslint-plugin-vue':
         optional: true
-      eslint-flat-config-utils:
+      eslint:
         optional: true
       eslint-plugin-format:
         optional: true
@@ -2827,13 +2826,12 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kikiutils/eslint-config@6.0.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint-flat-config-utils@3.0.1)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))':
+  '@kikiutils/eslint-config@7.0.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))':
     dependencies:
       '@antfu/eslint-config': 7.7.0(@typescript-eslint/rule-tester@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.56.1(typescript@5.9.3))(@typescript-eslint/utils@8.56.1(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.29)(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@25.3.5)(jiti@2.6.1)(yaml@2.8.2))
-      eslint: 9.39.4(jiti@2.6.1)
       eslint-plugin-promise: 7.2.1(eslint@9.39.4(jiti@2.6.1))
     optionalDependencies:
-      eslint-flat-config-utils: 3.0.1
+      eslint: 9.39.4(jiti@2.6.1)
     transitivePeerDependencies:
       - '@angular-eslint/eslint-plugin'
       - '@angular-eslint/eslint-plugin-template'
