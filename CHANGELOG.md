@@ -1,5 +1,20 @@
 # Changelog
 
+## v10.3.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.2...v10.3.3)
+
+### 🏡 Chore
+
+- Update vscode settings ([7b2f6f9](https://github.com/kikiutils/nuxt/commit/7b2f6f9))
+- Update eslint config ([77a5f00](https://github.com/kikiutils/nuxt/commit/77a5f00))
+- Update deps, tsdown config and package scripts ([5ada952](https://github.com/kikiutils/nuxt/commit/5ada952))
+- Update deps and configs ([6082b0e](https://github.com/kikiutils/nuxt/commit/6082b0e))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.3.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.1...v10.3.2)
