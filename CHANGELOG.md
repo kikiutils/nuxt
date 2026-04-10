@@ -1,5 +1,18 @@
 # Changelog
 
+## v10.3.4
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.3...v10.3.4)
+
+### 🏡 Chore
+
+- Upgrade deps ([b4f4723](https://github.com/kikiutils/nuxt/commit/b4f4723))
+- Remove deprecated tsconfig options ([3373f11](https://github.com/kikiutils/nuxt/commit/3373f11))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.3.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.2...v10.3.3)
