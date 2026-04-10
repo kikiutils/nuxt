@@ -8,8 +8,6 @@ import type { ResolvedModuleOptions } from '../types/options';
 
 // Constants
 const defaultTsConfigCompilerOptions = {
-    allowSyntheticDefaultImports: false,
-    esModuleInterop: false,
     noImplicitOverride: true,
     noUncheckedIndexedAccess: true,
     noUncheckedSideEffectImports: true,
