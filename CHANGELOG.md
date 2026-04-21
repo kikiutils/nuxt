@@ -1,5 +1,30 @@
 # Changelog
 
+## v11.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.4...v11.0.0)
+
+### 💅 Refactors
+
+- ⚠️  Remove `vitePluginWebfontDl` and enable `unpluginFonts` without options ([e6a03fd](https://github.com/kikiutils/nuxt/commit/e6a03fd))
+- Pass corresponding types to all `defu` calls in `nuxt-config-overrides.ts` ([043a3fb](https://github.com/kikiutils/nuxt/commit/043a3fb))
+
+### 📦 Build
+
+- Temporarily disable `declaration` generation to prevent build failures due to internal type issues ([1a40e0b](https://github.com/kikiutils/nuxt/commit/1a40e0b))
+
+### 🏡 Chore
+
+- Upgrade deps ([da43d48](https://github.com/kikiutils/nuxt/commit/da43d48))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove `vitePluginWebfontDl` and enable `unpluginFonts` without options ([e6a03fd](https://github.com/kikiutils/nuxt/commit/e6a03fd))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v10.3.4
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.3...v10.3.4)
