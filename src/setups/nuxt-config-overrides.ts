@@ -1,8 +1,11 @@
+import type { ModuleOptions as DevtoolsModuleOptions } from '@nuxt/devtools';
 import type {
     Nuxt,
     ViteConfig,
 } from '@nuxt/schema';
 import { defu } from 'defu';
+import type { NitroConfig } from 'nitropack/types';
+import type { NuxtOptions } from 'nuxt/schema';
 
 import type { ResolvedModuleOptions } from '../types/options';
 
@@ -17,19 +20,21 @@ const defaultTsConfigCompilerOptions = {
 
 // Functions
 export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
-    nuxt.options.devtools = defu(
-        resolvedModuleOptions.nuxtConfigOverrides?.devtools,
-        { enabled: false },
-        nuxt.options.devtools,
-    );
+    if (nuxt.options.devtools !== false) {
+        nuxt.options.devtools = defu<DevtoolsModuleOptions, Partial<DevtoolsModuleOptions>[]>(
+            resolvedModuleOptions.nuxtConfigOverrides?.devtools,
+            { enabled: false },
+            nuxt.options.devtools,
+        );
+    }
 
-    nuxt.options.experimental = defu(
+    nuxt.options.experimental = defu<NuxtOptions['experimental'], Partial<NuxtOptions['experimental']>[]>(
         resolvedModuleOptions.nuxtConfigOverrides?.experimental,
         { headNext: true },
         nuxt.options.experimental,
     );
 
-    nuxt.options.nitro = defu(
+    nuxt.options.nitro = defu<NitroConfig, Partial<NitroConfig>[]>(
         resolvedModuleOptions.nuxtConfigOverrides?.nitro,
         {
             compressPublicAssets: process.env.NODE_ENV === 'production',
@@ -39,7 +44,7 @@ export function setupNuxtConfigOverrides(resolvedModuleOptions: ResolvedModuleOp
         nuxt.options.nitro,
     );
 
-    nuxt.options.typescript = defu(
+    nuxt.options.typescript = defu<NuxtOptions['typescript'], Partial<NuxtOptions['typescript']>[]>(
         resolvedModuleOptions.nuxtConfigOverrides?.typescript,
         {
             nodeTsConfig: { compilerOptions: defaultTsConfigCompilerOptions },
