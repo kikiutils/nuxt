@@ -49,8 +49,7 @@ export default defineNuxtModule<UserModuleOptions>({
             robots: true,
             security: false,
             unoCss: true,
-            unpluginFonts: false,
-            vitePluginWebfontDl: true,
+            unpluginFonts: true,
             vueUse: true,
         },
         enabledPlugins: { preventDragFileDrop: true },
@@ -63,13 +62,6 @@ export default defineNuxtModule<UserModuleOptions>({
             },
         },
         unoCss: { enabledResets: { tailwind: true } },
-        unpluginFonts: {
-            google: {
-                addPreconnectLink: true,
-                addPreloadLink: false,
-                noDefer: true,
-            },
-        },
     } satisfies ResolvedModuleOptions,
     meta: {
         compatibility: { nuxt: '>=3.13.0' },

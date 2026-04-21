@@ -32,19 +32,11 @@ export default defineNuxtConfig({
             security: true,
             unoCss: true,
             unpluginFonts: true,
-            vitePluginWebfontDl: true,
             vueUse: true,
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
         unoCss: { enabledResets: { tailwind: true } },
-        unpluginFonts: {
-            google: {
-                addPreconnectLink: true,
-                addPreloadLink: false,
-                noDefer: true,
-            },
-        },
     },
     modules: ['../src/module'],
 });

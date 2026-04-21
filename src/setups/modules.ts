@@ -35,14 +35,7 @@ export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions,
     if (resolvedModuleOptions.enabledModules.robots) promises.push(setupRobots(nuxt));
     if (resolvedModuleOptions.enabledModules.security) promises.push(setupSecurity(nuxt));
     if (resolvedModuleOptions.enabledModules.unoCss) promises.push(setupUnoCss(resolvedModuleOptions, nuxt));
-    if (resolvedModuleOptions.enabledModules.unpluginFonts) {
-        promises.push(setupUnpluginFonts(resolvedModuleOptions, nuxt));
-    }
-
-    if (resolvedModuleOptions.enabledModules.vitePluginWebfontDl) {
-        promises.push(setupVitePluginWebfontDl(nuxt));
-    }
-
+    if (resolvedModuleOptions.enabledModules.unpluginFonts) promises.push(setupUnpluginFonts(nuxt));
     if (resolvedModuleOptions.enabledModules.vueUse) promises.push(setupVueUse(nuxt));
     await Promise.all(promises);
 }
@@ -63,54 +56,8 @@ async function setupUnoCss(resolvedModuleOptions: ResolvedModuleOptions, nuxt: N
     await installModule('@unocss/nuxt', {}, nuxt);
 }
 
-async function setupUnpluginFonts(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
-    if (nuxt.options.unfonts === false) return await installModule('unplugin-fonts/nuxt', {}, nuxt);
-    nuxt.options.app.head.link ??= [];
-
-    if (resolvedModuleOptions.unpluginFonts.google.addPreconnectLink) {
-        nuxt.options.app.head.link.push({
-            crossorigin: '',
-            href: 'https://fonts.googleapis.com',
-            rel: 'preconnect',
-        });
-    }
-
-    if (resolvedModuleOptions.unpluginFonts.google.addPreloadLink) {
-        const urlSearchParams = new URLSearchParams({ display: 'swap' });
-        nuxt.options.unfonts?.google?.families.forEach((family) => {
-            if (typeof family === 'string') urlSearchParams.append('family', family);
-            else {
-                if (family.styles) urlSearchParams.append('family', `${family.name}:${family.styles}`);
-                else urlSearchParams.append('family', family.name);
-            }
-        });
-
-        nuxt.options.app.head.link.push({
-            as: 'style',
-            href: `https://fonts.googleapis.com/css2?${decodeURIComponent(urlSearchParams.toString())}`,
-            rel: 'preload',
-        });
-    }
-
-    if (resolvedModuleOptions.unpluginFonts.google.noDefer && nuxt.options.unfonts?.google?.families) {
-        nuxt.options.unfonts.google.families = nuxt.options.unfonts.google.families.map((family) => {
-            if (typeof family === 'string') {
-                return {
-                    defer: false,
-                    name: family,
-                };
-            }
-
-            family.defer = false;
-            return family;
-        });
-    }
-
+async function setupUnpluginFonts(nuxt: Nuxt) {
     await installModule('unplugin-fonts/nuxt', {}, nuxt);
-}
-
-async function setupVitePluginWebfontDl(nuxt: Nuxt) {
-    await installModule('nuxt-vite-plugin-webfont-dl', {}, nuxt);
 }
 
 async function setupVueUse(nuxt: Nuxt) {

@@ -1,4 +1,5 @@
 import type { NuxtOptions } from '@nuxt/schema';
+import type { NitroConfig } from 'nitropack/types';
 import type { RequiredDeep } from 'type-fest';
 
 export type ResolvedModuleOptions =
@@ -140,14 +141,9 @@ export interface UserModuleOptions {
           unoCss?: boolean;
 
           /**
-           * @default false
-           */
-          unpluginFonts?: boolean;
-
-          /**
            * @default true
            */
-          vitePluginWebfontDl?: boolean;
+          unpluginFonts?: boolean;
 
           /**
            * @default true
@@ -173,7 +169,10 @@ export interface UserModuleOptions {
           reboot?: boolean;
       };
 
-    nuxtConfigOverrides?: Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'nitro' | 'typescript' | 'vite'>>;
+    nuxtConfigOverrides?:
+      & Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'typescript' | 'vite'>>
+      & { nitro?: NitroConfig };
+
     nuxtConfigPresets?: {
         viteAssetFileNames?: boolean;
         viteManualChunks?: {
@@ -197,24 +196,5 @@ export interface UserModuleOptions {
                */
               tailwind?: boolean;
           };
-    };
-
-    unpluginFonts?: {
-        google?: {
-            /**
-             * @default true
-             */
-            addPreconnectLink?: boolean;
-
-            /**
-             * @default false
-             */
-            addPreloadLink?: boolean;
-
-            /**
-             * @default true
-             */
-            noDefer?: boolean;
-        };
     };
 }
