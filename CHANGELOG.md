@@ -1,5 +1,22 @@
 # Changelog
 
+## v11.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.0...v11.0.1)
+
+### 🩹 Fixes
+
+- Use `enabled` property to check `viteManualChunks` status in `nuxt-config-presets.ts` ([fa71c91](https://github.com/kikiutils/nuxt/commit/fa71c91))
+
+### 🏡 Chore
+
+- Upgrade deps ([7cd716b](https://github.com/kikiutils/nuxt/commit/7cd716b))
+- Add `element-plus` to `defaultPackagesDisallowedForManualChunking` ([8dddb39](https://github.com/kikiutils/nuxt/commit/8dddb39))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v11.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v10.3.4...v11.0.0)
