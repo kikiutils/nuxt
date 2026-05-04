@@ -11,6 +11,7 @@ const defaultPackagesDisallowedForManualChunking = new Set([
     '@nuxt/image',
     '@vue/devtools-api',
     'devalue',
+    'element-plus',
     'html5-qrcode',
     'nanoid',
     'node-mock-http',
