@@ -76,7 +76,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
         });
     }
 
-    if (resolvedModuleOptions.nuxtConfigPresets.viteManualChunks) {
+    if (resolvedModuleOptions.nuxtConfigPresets.viteManualChunks.enabled) {
         const packagesDisallowedForManualChunking = new Set([
             ...defaultPackagesDisallowedForManualChunking,
             ...resolvedModuleOptions.nuxtConfigPresets.viteManualChunks.packagesDisallowedForManualChunking,
