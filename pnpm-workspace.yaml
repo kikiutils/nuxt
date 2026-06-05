@@ -1,0 +1,14 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - '@kikiutils/eslint-config@9.1.3'
+
+shamefullyHoist: true
+shellEmulator: true
+strictPeerDependencies: true
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - semver@6.3.1
