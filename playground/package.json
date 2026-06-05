@@ -1,12 +1,14 @@
 {
-  "type": "module",
   "private": true,
+  "name": "my-module-playground",
+  "type": "module",
   "scripts": {
-    "build": "nuxi build",
-    "dev": "nuxi dev",
-    "generate": "nuxi generate"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "latest"
+    "my-module": "latest",
+    "nuxt": "^4.4.7"
   }
 }

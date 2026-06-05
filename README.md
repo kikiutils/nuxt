@@ -1,51 +1,84 @@
-# @kikiutils/nuxt
+<!--
+Get your module up and running quickly.
+
+Find and replace all on all files (CMD+SHIFT+F):
+- Name: My Module
+- Package name: my-module
+- Description: My new Nuxt module
+-->
+
+# My Module
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Description
+My new Nuxt module for doing amazing things.
 
-- [✨ Release Notes](./CHANGELOG.md)
+- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
+<!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
-## Requirements
+<!-- Highlight some of the features your module provide here -->
+- ⛰ &nbsp;Foo
+- 🚠 &nbsp;Bar
+- 🌲 &nbsp;Baz
 
-- **Node.js** `>=22.12.0`
-- **Nuxt** `>=3.13.0`
+## Quick Setup
 
-## Installation
-
-Using [pnpm](https://pnpm.io):
+Install the module to your Nuxt application with one command:
 
 ```bash
-pnpm add @kikiutils/nuxt @kikiutils/shared @nuxtjs/robots @vueuse/nuxt
-pnpm add -D @unocss/nuxt unplugin-fonts
+npx nuxt module add my-module
 ```
 
-You can also use `yarn`, `npm`, or `bun`.
+That's it! You can now use My Module in your Nuxt app ✨
 
-## Usage
 
-## License
+## Contribution
 
-[MIT License](./LICENSE)
+<details>
+  <summary>Local development</summary>
+  
+  ```bash
+  # Install dependencies
+  npm install
+  
+  # Generate type stubs
+  npm run dev:prepare
+  
+  # Develop with the playground
+  npm run dev
+  
+  # Build the playground
+  npm run dev:build
+  
+  # Run ESLint
+  npm run lint
+  
+  # Run Vitest
+  npm run test
+  npm run test:watch
+  
+  # Release new version
+  npm run release
+  ```
+
+</details>
+
 
 <!-- Badges -->
-[npm-version-href]: https://npmjs.com/package/@kikiutils/nuxt
-[npm-version-src]: https://img.shields.io/npm/v/@kikiutils/nuxt/latest.svg?colorA=18181b&colorB=28cf8d&style=flat
+[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/my-module
 
-[npm-downloads-href]: https://npmjs.com/package/@kikiutils/nuxt
-[npm-downloads-src]: https://img.shields.io/npm/dm/@kikiutils/nuxt.svg?colorA=18181b&colorB=28cf8d&style=flat
+[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/my-module
 
-[codecov-href]: https://codecov.io/gh/kikiutils/nuxt
-[codecov-src]: https://codecov.io/gh/kikiutils/nuxt/graph/badge.svg?token=4FFWT4TFFH
+[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/my-module
 
-[license-href]: https://github.com/kikiutils/nuxt/blob/main/LICENSE
-[license-src]: https://img.shields.io/github/license/kikiutils/nuxt?colorA=18181b&colorB=28cf8d&style=flat
-
+[nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt
 [nuxt-href]: https://nuxt.com
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181b?logo=nuxt.js

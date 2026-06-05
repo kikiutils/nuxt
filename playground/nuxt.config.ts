@@ -1,42 +1,6 @@
 export default defineNuxtConfig({
-    compatibilityDate: '2100-01-01',
-    kikiutilsNuxt: {
-        autoImportUtils: {
-            '@kikiutils/shared': {
-                clipboard: true,
-                datetime: true,
-                elementPlus: true,
-                enum: true,
-                general: true,
-                hash: true,
-                math: true,
-                number: true,
-                object: true,
-                random: true,
-                string: true,
-                url: true,
-                vue: true,
-                web: true,
-            },
-        },
-        deepScanAutoImportDirs: {
-            composables: true,
-            globals: true,
-            utils: true,
-        },
-        enabled: true,
-        enabledModules: {
-            colorMode: true,
-            elementPlus: true,
-            robots: true,
-            security: true,
-            unoCss: true,
-            unpluginFonts: true,
-            vueUse: true,
-        },
-        enabledPlugins: { preventDragFileDrop: true },
-        enabledStyles: { reboot: true },
-        unoCss: { enabledResets: { tailwind: true } },
-    },
-    modules: ['../src/module'],
-});
+  modules: ['my-module'],
+  devtools: { enabled: true },
+  compatibilityDate: 'latest',
+  myModule: {},
+})
