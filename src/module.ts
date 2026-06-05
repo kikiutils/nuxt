@@ -56,7 +56,7 @@ export default defineNuxtModule<ModuleOptions>({
         nuxtConfigPresets: {
             viteAssetFileNames: true,
             viteManualChunks: {
-                enabled: true,
+                enabled: false,
                 packagesDisallowedForManualChunking: new Set(),
             },
         },

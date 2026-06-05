@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         nuxtConfigPresets: {
             viteAssetFileNames: true,
             viteManualChunks: {
-                enabled: true,
+                enabled: false,
                 packagesDisallowedForManualChunking: new Set(),
             },
         },
