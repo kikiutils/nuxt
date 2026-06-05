@@ -1,5 +1,28 @@
 # Changelog
 
+## v11.0.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.1...v11.0.2)
+
+### 🏡 Chore
+
+- Update pnpm config and migrate .npmrc into pnpm config ([20be95f](https://github.com/kikiutils/nuxt/commit/20be95f))
+- Add `.gitattributes` ([4645112](https://github.com/kikiutils/nuxt/commit/4645112))
+- Remove all files and add base files ([84cf81f](https://github.com/kikiutils/nuxt/commit/84cf81f))
+- Add and update base files ([c8d758c](https://github.com/kikiutils/nuxt/commit/c8d758c))
+- Restore files and configs ([5c81c6f](https://github.com/kikiutils/nuxt/commit/5c81c6f))
+- Temp set `nuxtConfigPresets.viteManualChunks` default value to false ([23a10d2](https://github.com/kikiutils/nuxt/commit/23a10d2))
+- Update base files ([b9b1e53](https://github.com/kikiutils/nuxt/commit/b9b1e53))
+- Add `.omx/` to `.gitignore` ([a9a8cfa](https://github.com/kikiutils/nuxt/commit/a9a8cfa))
+
+### 🤖 CI
+
+- Update node versions ([8f4edfd](https://github.com/kikiutils/nuxt/commit/8f4edfd))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v11.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.0...v11.0.1)
