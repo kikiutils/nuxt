@@ -168,9 +168,13 @@ export interface ModuleOptions {
           reboot?: boolean;
       };
 
-    nuxtConfigOverrides?:
-      & Partial<Pick<NuxtOptions, 'devtools' | 'experimental' | 'typescript' | 'vite'>>
-      & { nitro?: NuxtOptions['nitro'] };
+    nuxtConfigOverrides?: {
+        devtools?: Partial<NuxtOptions['devtools']>;
+        experimental?: Partial<NuxtOptions['experimental']>;
+        nitro?: Partial<NuxtOptions['nitro']>;
+        typescript?: Partial<NuxtOptions['typescript']>;
+        vite?: Partial<NuxtOptions['vite']>;
+    };
 
     nuxtConfigPresets?: {
         viteAssetFileNames?: boolean;
