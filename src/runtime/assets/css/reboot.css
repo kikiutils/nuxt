@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    touch-action: manipulation;
+    font-synthesis: none;
+    text-size-adjust: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizelegibility;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus {
+    transition:
+        background-color 600000s,
+        color 600000s;
+}
