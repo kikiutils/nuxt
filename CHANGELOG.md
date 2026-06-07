@@ -1,5 +1,21 @@
 # Changelog
 
+## v11.0.3
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.2...v11.0.3)
+
+### 🩹 Fixes
+
+- Resolve an issue where not every option in `nuxtConfigOverrides` was a type wrapped by `Partial` ([89aaf62](https://github.com/kikiutils/nuxt/commit/89aaf62))
+
+### 🏡 Chore
+
+- Upgrade deps ([9f26c54](https://github.com/kikiutils/nuxt/commit/9f26c54))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v11.0.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.1...v11.0.2)
