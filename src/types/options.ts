@@ -182,10 +182,9 @@ export interface ModuleOptions {
             /**
              * Apply the recommended Vite manualChunks preset only if the user has not configured manualChunks.
              *
-             * @default false
+             * @default true
              */
             enabled?: boolean;
-            packagesDisallowedForManualChunking?: Set<string>;
         };
     };
 
