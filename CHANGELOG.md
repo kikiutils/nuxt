@@ -1,5 +1,30 @@
 # Changelog
 
+## v12.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.3...v12.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Enable cycle-safe manual chunks preset ([67de91a](https://github.com/kikiutils/nuxt/commit/67de91a))
+
+### 🏡 Chore
+
+- Update scripts ([723523c](https://github.com/kikiutils/nuxt/commit/723523c))
+- Upgrade deps ([479c8a2](https://github.com/kikiutils/nuxt/commit/479c8a2))
+
+### 🎨 Styles
+
+- Remove global smooth scrolling ([bcaa5fd](https://github.com/kikiutils/nuxt/commit/bcaa5fd))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Enable cycle-safe manual chunks preset ([67de91a](https://github.com/kikiutils/nuxt/commit/67de91a))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v11.0.3
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.2...v11.0.3)
