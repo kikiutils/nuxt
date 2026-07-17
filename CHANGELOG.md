@@ -1,5 +1,22 @@
 # Changelog
 
+## v12.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v12.0.0...v12.0.1)
+
+### 🩹 Fixes
+
+- **vite:** Use posix asset filename paths ([3dcb91f](https://github.com/kikiutils/nuxt/commit/3dcb91f))
+
+### 🏡 Chore
+
+- Upgrade deps ([7738cc0](https://github.com/kikiutils/nuxt/commit/7738cc0))
+- Add `.codegraph/` into .gitignore ([bff1074](https://github.com/kikiutils/nuxt/commit/bff1074))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v12.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v11.0.3...v12.0.0)
