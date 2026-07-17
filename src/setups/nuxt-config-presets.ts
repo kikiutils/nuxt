@@ -1,4 +1,4 @@
-import { join } from 'node:path';
+import { posix } from 'node:path';
 
 import type { Nuxt } from '@nuxt/schema';
 
@@ -13,7 +13,7 @@ export function setupNuxtConfigPresets(resolvedModuleOptions: ResolvedModuleOpti
         nuxt.options.vite.build.rollupOptions ||= {};
         nuxt.options.vite.build.rollupOptions.output ||= {};
         [nuxt.options.vite.build.rollupOptions.output].flat().forEach((output) => {
-            output.assetFileNames ??= join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, '');
+            output.assetFileNames ??= posix.join(nuxt.options.app.buildAssetsDir, '[hash].[ext]').replace(/^\//, '');
         });
     }
 
