@@ -53,14 +53,11 @@ export default defineNuxtModule<ModuleOptions>({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
-        nuxtConfigPresets: {
-            viteAssetFileNames: true,
-            viteManualChunks: { enabled: true },
-        },
+        nuxtConfigPresets: { viteAssetFileNames: true },
         unoCss: { enabledResets: { tailwind: true } },
     } satisfies ResolvedModuleOptions,
     meta: {
-        compatibility: { nuxt: '>=3.13.0' },
+        compatibility: { nuxt: '>=4.5.0' },
         configKey: 'kikiutilsNuxt',
         name: '@kikiutils/nuxt',
     },

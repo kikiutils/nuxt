@@ -36,10 +36,7 @@ export default defineNuxtConfig({
         },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: { reboot: true },
-        nuxtConfigPresets: {
-            viteAssetFileNames: true,
-            viteManualChunks: { enabled: true },
-        },
+        nuxtConfigPresets: { viteAssetFileNames: true },
         unoCss: { enabledResets: { tailwind: true } },
     },
     modules: ['@kikiutils/nuxt'],

@@ -176,18 +176,7 @@ export interface ModuleOptions {
         vite?: Partial<NuxtOptions['vite']>;
     };
 
-    nuxtConfigPresets?: {
-        viteAssetFileNames?: boolean;
-        viteManualChunks?: {
-            /**
-             * Apply the recommended Vite manualChunks preset only if the user has not configured manualChunks.
-             *
-             * @default true
-             */
-            enabled?: boolean;
-        };
-    };
-
+    nuxtConfigPresets?: { viteAssetFileNames?: boolean };
     unoCss?: {
         enabledResets?:
           | false
