@@ -157,6 +157,7 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 # Local AI agent and code-indexing files
+.omo/
 .omx/
 .codegraph/
 .aider*
