@@ -1,5 +1,30 @@
 # Changelog
 
+## v13.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v12.0.1...v13.0.0)
+
+### 💅 Refactors
+
+- **nuxt:** ⚠️  Remove custom manual chunk strategy ([e6ef038](https://github.com/kikiutils/nuxt/commit/e6ef038))
+
+### 🏡 Chore
+
+- Ignore local AI tooling artifacts ([7cf272b](https://github.com/kikiutils/nuxt/commit/7cf272b))
+- Update `modify-files-permissions.sh` ([c56f31f](https://github.com/kikiutils/nuxt/commit/c56f31f))
+- Update `modify-files-permissions.sh` ([249c4c8](https://github.com/kikiutils/nuxt/commit/249c4c8))
+- Update `modify-files-permissions.sh` ([4c193c3](https://github.com/kikiutils/nuxt/commit/4c193c3))
+- Update `.gitignore` ([5d5bbc5](https://github.com/kikiutils/nuxt/commit/5d5bbc5))
+- Upgrade deps ([0ad2e77](https://github.com/kikiutils/nuxt/commit/0ad2e77))
+
+#### ⚠️ Breaking Changes
+
+- **nuxt:** ⚠️  Remove custom manual chunk strategy ([e6ef038](https://github.com/kikiutils/nuxt/commit/e6ef038))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v12.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v12.0.0...v12.0.1)
