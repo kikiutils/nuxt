@@ -1,6 +1,13 @@
+minimumReleaseAge: 1440
 minimumReleaseAgeExcludePrune: true
+# minimumReleaseAgeExclude:
+
+resolutionMode: highest
 trustPolicy: no-downgrade
+strictSsl: true
+preferFrozenLockfile: true
 shellEmulator: true
+updateNotifier: false
 
 overrides:
   '@typescript-eslint/eslint-plugin': 8.71.0
