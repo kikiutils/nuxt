@@ -15,6 +15,9 @@ preferFrozenLockfile: true
 shellEmulator: true
 updateNotifier: false
 
+overrides:
+  typescript: ^6.0.3
+
 allowBuilds:
   '@parcel/watcher': true
   esbuild: true
