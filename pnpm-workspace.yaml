@@ -9,3 +9,6 @@ strictSsl: true
 preferFrozenLockfile: true
 shellEmulator: true
 updateNotifier: false
+
+overrides:
+  typescript: ^6.0.3
