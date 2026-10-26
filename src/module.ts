@@ -1,7 +1,11 @@
-import { defineNuxtModule } from '@nuxt/kit';
+import {
+    createResolver,
+    defineNuxtModule,
+} from '@nuxt/kit';
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupDeepScanAutoImportDirs } from './setups/deep-scan-auto-import-dirs';
+import { setupPlugins } from './setups/plugins';
 import type { ModuleOptions } from './types/options';
 
 export type { ModuleOptions } from './types/options';
@@ -33,6 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
             globals: true,
             utils: true,
         },
+        enabledPlugins: { preventDragFileDrop: true },
     },
     meta: {
         compatibility: { nuxt: '>=4.5.0' },
@@ -43,5 +48,6 @@ export default defineNuxtModule<ModuleOptions>({
     setup(options, nuxt) {
         setupAutoImportUtils(options);
         setupDeepScanAutoImportDirs(options, nuxt);
+        setupPlugins(options, createResolver(import.meta.url));
     },
 });
