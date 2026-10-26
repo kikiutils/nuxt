@@ -3,7 +3,10 @@ import { installModule } from '@nuxt/kit';
 import type { Nuxt } from '@nuxt/schema';
 
 export async function setup(nuxt: Nuxt) {
-    const nuxtOptions: Nuxt['options'] & { elementPlus?: Partial<ElementPlusOptions> } = nuxt.options;
+    const nuxtOptions = nuxt.options as Omit<Nuxt['options'], 'elementPlus'> & {
+        elementPlus?: Partial<ElementPlusOptions>;
+    };
+
     const options: Partial<ElementPlusOptions> = {
         ...nuxtOptions.elementPlus,
         themes: nuxtOptions.elementPlus?.themes ?? ['dark'],

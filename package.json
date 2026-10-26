@@ -55,6 +55,7 @@
     "@unocss/nuxt": "^66.11.0",
     "nuxt": "^4.6.2",
     "nuxt-security": "^2.6.0",
+    "nuxt-site-config": "^5.0.0",
     "type-fest": "^5.10.0",
     "unplugin-fonts": "^2.1.0"
   },
@@ -72,6 +73,9 @@
       "optional": true
     },
     "nuxt-security": {
+      "optional": true
+    },
+    "nuxt-site-config": {
       "optional": true
     },
     "unplugin-fonts": {
@@ -102,9 +106,9 @@
     "knip": "^6.43.0",
     "nuxt": "^4.6.2",
     "nuxt-security": "^2.7.0",
+    "nuxt-site-config": "^5.0.3",
     "stylelint": "^17.16.0",
     "tailwindcss": "^4.3.3",
-    "type-fest": "^5.10.0",
     "typescript": "^6.0.3",
     "unplugin-fonts": "^2.1.0",
     "vitest": "^5.0.5",

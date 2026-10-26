@@ -4,7 +4,10 @@ import type { ModuleOptions as ColorModeOptions } from '@nuxtjs/color-mode';
 import { defu } from 'defu';
 
 export async function setup(nuxt: Nuxt) {
-    const nuxtOptions: Nuxt['options'] & { colorMode?: Partial<ColorModeOptions> } = nuxt.options;
+    const nuxtOptions = nuxt.options as Omit<Nuxt['options'], 'colorMode'> & {
+        colorMode?: Partial<ColorModeOptions>;
+    };
+
     const options = defu(
         nuxtOptions.colorMode,
         {

@@ -1,9 +1,4 @@
 import type { NuxtOptions } from '@nuxt/schema';
-import type { RequiredDeep } from 'type-fest';
-
-export type ResolvedModuleOptions =
-  & Pick<ModuleOptions, 'nuxtConfigOverrides'>
-  & RequiredDeep<Omit<ModuleOptions, 'nuxtConfigOverrides'>>;
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {

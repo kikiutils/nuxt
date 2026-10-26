@@ -40,6 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
             globals: true,
             utils: true,
         },
+        enabled: true,
         enabledModules: {
             colorMode: false,
             elementPlus: false,
@@ -66,6 +67,8 @@ export default defineNuxtModule<ModuleOptions>({
     },
     moduleDependencies: { '@vueuse/nuxt': { version: '>=15.0.0' } },
     async setup(options, nuxt) {
+        if (!options.enabled) return;
+
         const resolver = createResolver(import.meta.url);
 
         setupNuxtConfigOverrides(options, nuxt);
