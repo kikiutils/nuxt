@@ -134,6 +134,4 @@ export interface ModuleOptions {
         typescript?: Partial<NuxtOptions['typescript']>;
         vite?: Partial<NuxtOptions['vite']>;
     };
-
-    nuxtConfigPresets?: { viteAssetFileNames?: boolean };
 }
