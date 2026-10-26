@@ -124,6 +124,9 @@ export interface ModuleOptions {
       | {
           /** @default false */
           colorMode?: boolean;
+
+          /** @default false */
+          elementPlus?: boolean;
       };
 
     enabledPlugins?:

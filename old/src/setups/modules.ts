@@ -5,28 +5,6 @@ import { defu } from 'defu';
 
 import type { ResolvedModuleOptions } from '../types/options';
 
-async function setupColorMode(nuxt: Nuxt) {
-    nuxt.options.colorMode = defu(
-        nuxt.options.colorMode,
-        {
-            classSuffix: '',
-            preference: 'dark',
-            storage: nuxt.options.ssr ? 'cookie' as const : 'localStorage' as const,
-        },
-    );
-
-    await installModule('@nuxtjs/color-mode', {}, nuxt);
-}
-
-async function setupElementPlus(nuxt: Nuxt) {
-    nuxt.options.elementPlus = defu<ElementPlusModuleOptions, Partial<ElementPlusModuleOptions>[]>(
-        nuxt.options.elementPlus,
-        { themes: ['dark'] },
-    );
-
-    await installModule('@element-plus/nuxt', {}, nuxt);
-}
-
 export async function setupModules(resolvedModuleOptions: ResolvedModuleOptions, nuxt: Nuxt) {
     if (!resolvedModuleOptions.enabledModules) return;
     const promises = [];

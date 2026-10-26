@@ -59,6 +59,9 @@
     "unplugin-fonts": "^2.1.0"
   },
   "peerDependenciesMeta": {
+    "@element-plus/nuxt": {
+      "optional": true
+    },
     "@nuxtjs/color-mode": {
       "optional": true
     }

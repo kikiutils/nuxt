@@ -40,7 +40,10 @@ export default defineNuxtModule<ModuleOptions>({
             globals: true,
             utils: true,
         },
-        enabledModules: { colorMode: false },
+        enabledModules: {
+            colorMode: false,
+            elementPlus: false,
+        },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: {
             autofillOverride: true,
