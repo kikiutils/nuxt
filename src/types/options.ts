@@ -16,13 +16,25 @@ export interface ModuleOptions {
                 /** @default true */
                 clipboard?: boolean;
 
-                /** Requires `date-fns`. @default true */
+                /**
+                 * Requires `date-fns`.
+                 *
+                 * @default true
+                 */
                 datetime?: boolean;
 
-                /** Requires Element Plus types. @default false */
+                /**
+                 * Requires Element Plus types.
+                 *
+                 * @default false
+                 */
                 elementPlus?: boolean;
 
-                /** Requires `date-fns`. @default true */
+                /**
+                 * Requires `date-fns`.
+                 *
+                 * @default true
+                 */
                 enhancedDate?: boolean;
 
                 /** @default true */
@@ -31,16 +43,32 @@ export interface ModuleOptions {
                 /** @default true */
                 general?: boolean;
 
-                /** Requires `@noble/hashes`. @default false */
+                /**
+                 * Requires `@noble/hashes`.
+                 *
+                 * @default false
+                 */
                 hash?: boolean;
 
-                /** Requires `decimal.js`. @default false */
+                /**
+                 * Requires `decimal.js`.
+                 *
+                 * @default false
+                 */
                 math?: boolean;
 
-                /** Requires `millify`. @default false */
+                /**
+                 * Requires `millify`.
+                 *
+                 * @default false
+                 */
                 number?: boolean;
 
-                /** Requires `decimal.js`. @default false */
+                /**
+                 * Requires `decimal.js`.
+                 *
+                 * @default false
+                 */
                 precisionNumber?: boolean;
 
                 /** @default true */
@@ -58,7 +86,11 @@ export interface ModuleOptions {
                 /** @default true */
                 vue?: boolean;
 
-                /** Browser-only functions; call on the client. @default true */
+                /**
+                 * Browser-only functions; call on the client.
+                 *
+                 * @default true
+                 */
                 web?: boolean;
             };
       };
@@ -85,9 +117,7 @@ export interface ModuleOptions {
           utils?: boolean;
       };
 
-    /**
-     * @default true
-     */
+    /** @default true */
     enabled?: boolean;
     enabledModules?:
       | false
@@ -99,9 +129,7 @@ export interface ModuleOptions {
     enabledPlugins?:
       | false
       | {
-          /**
-           * @default true
-           */
+          /** @default true */
           preventDragFileDrop?: boolean;
       };
 
@@ -115,9 +143,7 @@ export interface ModuleOptions {
            */
           autofillOverride?: boolean;
 
-          /**
-           * @default true
-           */
+          /** @default true */
           reboot?: boolean;
 
           /**

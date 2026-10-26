@@ -71,10 +71,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
     "@element-plus/nuxt": "^1.1.5",
-    "@eslint/css": "^2.0.1",
-    "@html-eslint/parser": "^0.67.0",
     "@kikiutils/eslint-config": "^9.3.2",
-    "@kikiutils/eslint-plugin-vue": "^10.10.0",
     "@kikiutils/shared": "^19.0.0",
     "@kikiutils/stylelint-config": "^0.6.1",
     "@nuxt/module-builder": "^1.0.3",
@@ -87,19 +84,15 @@
     "@vitest/coverage-v8": "^5.0.5",
     "changelogen": "^0.6.2",
     "eslint": "^10.13.0",
-    "eslint-plugin-better-tailwindcss": "^4.10.0",
-    "eslint-plugin-format": "^2.0.1",
     "knip": "^6.43.0",
     "nuxt": "^4.6.2",
     "nuxt-security": "^2.7.0",
     "stylelint": "^17.16.0",
-    "tailwind-csstree": "^0.4.1",
     "tailwindcss": "^4.3.3",
     "type-fest": "^5.10.0",
     "typescript": "^6.0.3",
     "unplugin-fonts": "^2.1.0",
     "vitest": "^5.0.5",
-    "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.13"
   }
 }
