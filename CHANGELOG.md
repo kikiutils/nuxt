@@ -1,5 +1,72 @@
 # Changelog
 
+## v14.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v13.0.0...v14.0.0)
+
+### 🚀 Enhancements
+
+- Restore recursive auto-import directory scanning ([5b9ee50](https://github.com/kikiutils/nuxt/commit/5b9ee50))
+- Register VueUse as a built-in module dependency ([355b8cd](https://github.com/kikiutils/nuxt/commit/355b8cd))
+- Restore shared v19 utility auto-imports ([c82704c](https://github.com/kikiutils/nuxt/commit/c82704c))
+- Restore client-side file drop protection ([2076a6e](https://github.com/kikiutils/nuxt/commit/2076a6e))
+- Restore configurable global styles with separate presets ([6548a88](https://github.com/kikiutils/nuxt/commit/6548a88))
+- Restore Nuxt configuration presets with consistent override precedence ([c2eac79](https://github.com/kikiutils/nuxt/commit/c2eac79))
+- Restore optional Color Mode integration with lazy setup ([6797729](https://github.com/kikiutils/nuxt/commit/6797729))
+- Restore optional Element Plus integration ([3dc04ad](https://github.com/kikiutils/nuxt/commit/3dc04ad))
+- Restore configurable Unplugin Fonts integration ([eedf9fc](https://github.com/kikiutils/nuxt/commit/eedf9fc))
+- Restore Robots and Security integrations ([290a12c](https://github.com/kikiutils/nuxt/commit/290a12c))
+- Restore UnoCSS integration with native reset configuration ([ffee794](https://github.com/kikiutils/nuxt/commit/ffee794))
+
+### 🩹 Fixes
+
+- **deps:** Pin TypeScript ESLint plugin to avoid false positives ([eadca5a](https://github.com/kikiutils/nuxt/commit/eadca5a))
+- Respect native module disable flags ([33b9b4a](https://github.com/kikiutils/nuxt/commit/33b9b4a))
+
+### 💅 Refactors
+
+- Move all files to old dir ([3dc89b6](https://github.com/kikiutils/nuxt/commit/3dc89b6))
+- Restore module scaffolding and adopt Nuxt 4 playground structure ([7b8a3cc](https://github.com/kikiutils/nuxt/commit/7b8a3cc))
+- Remove the obsolete asset filename preset ([e104602](https://github.com/kikiutils/nuxt/commit/e104602))
+- Finalize module migration and remove legacy sources ([5b89278](https://github.com/kikiutils/nuxt/commit/5b89278))
+- ⚠️  Remove experimental configuration override ([8dcc996](https://github.com/kikiutils/nuxt/commit/8dcc996))
+
+### 📖 Documentation
+
+- ⚠️  Add v13 to v14 migration checklist ([7bdd433](https://github.com/kikiutils/nuxt/commit/7bdd433))
+
+### 📦 Build
+
+- Pin TypeScript override and organize maintenance scripts ([b878c55](https://github.com/kikiutils/nuxt/commit/b878c55))
+
+### 🏡 Chore
+
+- Add `pnpm-workspace.yaml` ([bcd3c17](https://github.com/kikiutils/nuxt/commit/bcd3c17))
+- Update `pnpm-workspace.yaml` ([fe5e43f](https://github.com/kikiutils/nuxt/commit/fe5e43f))
+- Update `pnpm-workspace.yaml` ([5f000dd](https://github.com/kikiutils/nuxt/commit/5f000dd))
+- Upgrade deps ([4f0b8da](https://github.com/kikiutils/nuxt/commit/4f0b8da))
+- Update `.gitignore` ([87bd40c](https://github.com/kikiutils/nuxt/commit/87bd40c))
+- Update ignore files ([d91f81e](https://github.com/kikiutils/nuxt/commit/d91f81e))
+- Update `modify-files-permissions.sh` ([e5d2bee](https://github.com/kikiutils/nuxt/commit/e5d2bee))
+- Update `pnpm-workspace.yaml` ([307ba57](https://github.com/kikiutils/nuxt/commit/307ba57))
+- Remove `@typescript-eslint/eslint-plugin` from `overrides` ([9a7922a](https://github.com/kikiutils/nuxt/commit/9a7922a))
+- Update `minimumReleaseAgeExcludes` ([362ebd7](https://github.com/kikiutils/nuxt/commit/362ebd7))
+- Add base files ([af3be8a](https://github.com/kikiutils/nuxt/commit/af3be8a))
+- Setup packages ([f1faf24](https://github.com/kikiutils/nuxt/commit/f1faf24))
+- Move scripts dir to root ([6e5e266](https://github.com/kikiutils/nuxt/commit/6e5e266))
+- Remove migrated legacy auto-import and plugin files ([1df42f9](https://github.com/kikiutils/nuxt/commit/1df42f9))
+- Remove redundant lint dependencies and schema scaffolding ([7406ac3](https://github.com/kikiutils/nuxt/commit/7406ac3))
+- Clean up peer dependencies and metadata generation ([a75af96](https://github.com/kikiutils/nuxt/commit/a75af96))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove experimental configuration override ([8dcc996](https://github.com/kikiutils/nuxt/commit/8dcc996))
+- ⚠️  Add v13 to v14 migration checklist ([7bdd433](https://github.com/kikiutils/nuxt/commit/7bdd433))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v13.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v12.0.1...v13.0.0)
