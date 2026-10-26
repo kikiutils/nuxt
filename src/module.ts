@@ -5,6 +5,7 @@ import {
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupDeepScanAutoImportDirs } from './setups/deep-scan-auto-import-dirs';
+import { setupModules } from './setups/modules';
 import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
@@ -39,6 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
             globals: true,
             utils: true,
         },
+        enabledModules: { colorMode: false },
         enabledPlugins: { preventDragFileDrop: true },
         enabledStyles: {
             autofillOverride: true,
@@ -56,10 +58,12 @@ export default defineNuxtModule<ModuleOptions>({
         name: '@kikiutils/nuxt',
     },
     moduleDependencies: { '@vueuse/nuxt': { version: '>=15.0.0' } },
-    setup(options, nuxt) {
+    async setup(options, nuxt) {
         const resolver = createResolver(import.meta.url);
 
         setupNuxtConfigOverrides(options, nuxt);
+        await setupModules(options, nuxt);
+
         setupAutoImportUtils(options);
         setupDeepScanAutoImportDirs(options, nuxt);
         setupPlugins(options, resolver);

@@ -92,7 +92,8 @@ export interface ModuleOptions {
     enabledModules?:
       | false
       | {
-
+          /** @default false */
+          colorMode?: boolean;
       };
 
     enabledPlugins?:

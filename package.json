@@ -58,6 +58,11 @@
     "type-fest": "^5.10.0",
     "unplugin-fonts": "^2.1.0"
   },
+  "peerDependenciesMeta": {
+    "@nuxtjs/color-mode": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
     "@vueuse/nuxt": ">=15.0.0",
