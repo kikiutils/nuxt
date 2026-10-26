@@ -1,6 +1,5 @@
 import type { NuxtOptions } from '@nuxt/schema';
 
-// Module options TypeScript interface definition
 export interface ModuleOptions {
     autoImportUtils?:
       | false

@@ -5,8 +5,10 @@ import { defu } from 'defu';
 
 export async function setup(nuxt: Nuxt) {
     const nuxtOptions = nuxt.options as Omit<Nuxt['options'], 'colorMode'> & {
-        colorMode?: Partial<ColorModeOptions>;
+        colorMode?: false | Partial<ColorModeOptions>;
     };
+
+    if (nuxtOptions.colorMode === false) return;
 
     const options = defu(
         nuxtOptions.colorMode,

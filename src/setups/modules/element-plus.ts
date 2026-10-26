@@ -4,8 +4,10 @@ import type { Nuxt } from '@nuxt/schema';
 
 export async function setup(nuxt: Nuxt) {
     const nuxtOptions = nuxt.options as Omit<Nuxt['options'], 'elementPlus'> & {
-        elementPlus?: Partial<ElementPlusOptions>;
+        elementPlus?: false | Partial<ElementPlusOptions>;
     };
+
+    if (nuxtOptions.elementPlus === false) return;
 
     const options: Partial<ElementPlusOptions> = {
         ...nuxtOptions.elementPlus,
