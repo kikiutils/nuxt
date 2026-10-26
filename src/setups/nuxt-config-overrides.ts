@@ -23,15 +23,6 @@ export function setupNuxtConfigOverrides(options: ModuleOptions, nuxt: Nuxt) {
             );
     }
 
-    // experimental
-    // TODO: 最後確定沒有要用才移除
-    if (overrides?.experimental) {
-        nuxt.options.experimental = defu<NuxtOptions['experimental'], Partial<NuxtOptions['experimental']>[]>(
-            overrides.experimental,
-            nuxt.options.experimental,
-        );
-    }
-
     // nitroConfig
     const nitroConfig = defu(
         overrides?.nitro,
