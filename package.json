@@ -65,6 +65,12 @@
     "@nuxtjs/color-mode": {
       "optional": true
     },
+    "@nuxtjs/robots": {
+      "optional": true
+    },
+    "nuxt-security": {
+      "optional": true
+    },
     "unplugin-fonts": {
       "optional": true
     }

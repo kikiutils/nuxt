@@ -129,6 +129,12 @@ export interface ModuleOptions {
           elementPlus?: boolean;
 
           /** @default true */
+          robots?: boolean;
+
+          /** @default false */
+          security?: boolean;
+
+          /** @default true */
           unpluginFonts?: boolean;
       };
 

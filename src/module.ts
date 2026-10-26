@@ -43,6 +43,8 @@ export default defineNuxtModule<ModuleOptions>({
         enabledModules: {
             colorMode: false,
             elementPlus: false,
+            robots: true,
+            security: false,
             unpluginFonts: true,
         },
         enabledPlugins: { preventDragFileDrop: true },
