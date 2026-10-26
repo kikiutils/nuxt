@@ -2,6 +2,7 @@ minimumReleaseAge: 1440
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
   - '@kikiutils/eslint-config' # TODO: remove it
+  - '@kikiutils/shared' # TODO: remove it
 
 resolutionMode: highest
 

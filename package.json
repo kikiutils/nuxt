@@ -45,8 +45,7 @@
     "release": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build && changelogen --hideAuthorEmail --push --release && npm publish",
     "test": "vitest run --coverage",
     "test:watch": "vitest watch --coverage",
-    "test:types": "vue-tsc --noEmit && cd ./playground && vue-tsc --noEmit",
-    "typecheck": "vue-tsc --noEmit && cd ./playground && vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit && nuxt typecheck ./playground"
   },
   "peerDependencies": {
     "@element-plus/nuxt": "^1.1.5",
@@ -70,7 +69,7 @@
     "@html-eslint/parser": "^0.67.0",
     "@kikiutils/eslint-config": "^9.3.1",
     "@kikiutils/eslint-plugin-vue": "^10.10.0",
-    "@kikiutils/shared": "^18.3.0",
+    "@kikiutils/shared": "^19.0.0",
     "@kikiutils/stylelint-config": "^0.6.1",
     "@nuxt/module-builder": "^1.0.3",
     "@nuxt/schema": "^4.6.2",
