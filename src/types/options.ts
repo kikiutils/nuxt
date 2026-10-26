@@ -13,7 +13,53 @@ export interface ModuleOptions {
           '@kikiutils/shared'?:
             | false
             | {
+                /** @default true */
+                clipboard?: boolean;
 
+                /** Requires `date-fns`. @default true */
+                datetime?: boolean;
+
+                /** Requires Element Plus types. @default false */
+                elementPlus?: boolean;
+
+                /** Requires `date-fns`. @default true */
+                enhancedDate?: boolean;
+
+                /** @default true */
+                enum?: boolean;
+
+                /** @default true */
+                general?: boolean;
+
+                /** Requires `@noble/hashes`. @default false */
+                hash?: boolean;
+
+                /** Requires `decimal.js`. @default false */
+                math?: boolean;
+
+                /** Requires `millify`. @default false */
+                number?: boolean;
+
+                /** Requires `decimal.js`. @default false */
+                precisionNumber?: boolean;
+
+                /** @default true */
+                random?: boolean;
+
+                /** @default true */
+                string?: boolean;
+
+                /** @default true */
+                time?: boolean;
+
+                /** @default true */
+                url?: boolean;
+
+                /** @default true */
+                vue?: boolean;
+
+                /** Browser-only functions; call on the client. @default true */
+                web?: boolean;
             };
       };
 
