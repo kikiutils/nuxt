@@ -18,6 +18,7 @@ export default defineNuxtModule<ModuleOptions>({
         configKey: 'kikiutilsNuxt',
         name: '@kikiutils/nuxt',
     },
+    moduleDependencies: { '@vueuse/nuxt': { version: '>=15.0.0' } },
     setup(options, nuxt) {
         setupDeepScanAutoImportDirs(options, nuxt);
     },
