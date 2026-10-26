@@ -60,7 +60,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@vueuse/nuxt": ">=15.0.0"
+    "@vueuse/nuxt": ">=15.0.0",
+    "defu": "^6.1.7"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",

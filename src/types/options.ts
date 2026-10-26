@@ -127,6 +127,10 @@ export interface ModuleOptions {
           visualPreferences?: boolean;
       };
 
+    /**
+     * Override this module's configuration presets.
+     * Priority: explicit overrides > module presets > native Nuxt configuration.
+     */
     nuxtConfigOverrides?: {
         devtools?: Partial<NuxtOptions['devtools']>;
         experimental?: Partial<NuxtOptions['experimental']>;

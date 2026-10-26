@@ -5,6 +5,7 @@ import {
 
 import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupDeepScanAutoImportDirs } from './setups/deep-scan-auto-import-dirs';
+import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
 import type { ModuleOptions } from './types/options';
@@ -44,6 +45,10 @@ export default defineNuxtModule<ModuleOptions>({
             reboot: true,
             visualPreferences: true,
         },
+        nuxtConfigOverrides: {
+            devtools: { enabled: false },
+            typescript: { typeCheck: true },
+        },
     },
     meta: {
         compatibility: { nuxt: '>=4.5.0' },
@@ -54,6 +59,7 @@ export default defineNuxtModule<ModuleOptions>({
     setup(options, nuxt) {
         const resolver = createResolver(import.meta.url);
 
+        setupNuxtConfigOverrides(options, nuxt);
         setupAutoImportUtils(options);
         setupDeepScanAutoImportDirs(options, nuxt);
         setupPlugins(options, resolver);

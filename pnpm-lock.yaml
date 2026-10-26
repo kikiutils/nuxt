@@ -17,6 +17,9 @@ importers:
       '@vueuse/nuxt':
         specifier: '>=15.0.0'
         version: 15.0.0(dcd1365ff813020ce7b407ba1cd5b250)
+      defu:
+        specifier: ^6.1.7
+        version: 6.1.7
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^10.0.0
