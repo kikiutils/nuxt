@@ -108,9 +108,23 @@ export interface ModuleOptions {
       | false
       | {
           /**
+           * Autofill transition workaround.
+           *
+           * @default true
+           */
+          autofillOverride?: boolean;
+
+          /**
            * @default true
            */
           reboot?: boolean;
+
+          /**
+           * Global font rendering and tap highlight preferences.
+           *
+           * @default true
+           */
+          visualPreferences?: boolean;
       };
 
     nuxtConfigOverrides?: {

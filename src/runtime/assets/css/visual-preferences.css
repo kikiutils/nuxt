@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-synthesis: none;
+}
+
+html {
+    text-rendering: optimizelegibility;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}

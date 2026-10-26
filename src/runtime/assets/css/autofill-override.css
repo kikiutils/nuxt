@@ -1,0 +1,5 @@
+:is(input, textarea):is(:autofill, :-webkit-autofill) {
+    transition:
+        background-color 600000s,
+        color 600000s;
+}

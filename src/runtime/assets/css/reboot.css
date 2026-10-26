@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    /* stylelint-disable-next-line property-no-vendor-prefix -- Safari compatibility. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+}
+
+a[href],
+button,
+input:where([type='button'], [type='reset'], [type='submit']),
+summary {
+    touch-action: manipulation;
+}

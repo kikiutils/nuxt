@@ -6,6 +6,7 @@ import {
 import { setupAutoImportUtils } from './setups/auto-import-utils';
 import { setupDeepScanAutoImportDirs } from './setups/deep-scan-auto-import-dirs';
 import { setupPlugins } from './setups/plugins';
+import { setupStyles } from './setups/styles';
 import type { ModuleOptions } from './types/options';
 
 export type { ModuleOptions } from './types/options';
@@ -38,6 +39,11 @@ export default defineNuxtModule<ModuleOptions>({
             utils: true,
         },
         enabledPlugins: { preventDragFileDrop: true },
+        enabledStyles: {
+            autofillOverride: true,
+            reboot: true,
+            visualPreferences: true,
+        },
     },
     meta: {
         compatibility: { nuxt: '>=4.5.0' },
@@ -46,8 +52,11 @@ export default defineNuxtModule<ModuleOptions>({
     },
     moduleDependencies: { '@vueuse/nuxt': { version: '>=15.0.0' } },
     setup(options, nuxt) {
+        const resolver = createResolver(import.meta.url);
+
         setupAutoImportUtils(options);
         setupDeepScanAutoImportDirs(options, nuxt);
-        setupPlugins(options, createResolver(import.meta.url));
+        setupPlugins(options, resolver);
+        setupStyles(options, nuxt, resolver);
     },
 });
