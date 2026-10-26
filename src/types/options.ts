@@ -135,6 +135,9 @@ export interface ModuleOptions {
           security?: boolean;
 
           /** @default true */
+          unoCss?: boolean;
+
+          /** @default true */
           unpluginFonts?: boolean;
       };
 

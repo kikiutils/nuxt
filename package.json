@@ -68,6 +68,9 @@
     "@nuxtjs/robots": {
       "optional": true
     },
+    "@unocss/nuxt": {
+      "optional": true
+    },
     "nuxt-security": {
       "optional": true
     },
