@@ -33,11 +33,3 @@ async function setupUnoCss(resolvedModuleOptions: ResolvedModuleOptions, nuxt: N
 
     await installModule('@unocss/nuxt', {}, nuxt);
 }
-
-async function setupUnpluginFonts(nuxt: Nuxt) {
-    await installModule('unplugin-fonts/nuxt', {}, nuxt);
-}
-
-async function setupVueUse(nuxt: Nuxt) {
-    await installModule('@vueuse/nuxt', {}, nuxt);
-}

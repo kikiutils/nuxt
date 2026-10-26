@@ -127,6 +127,9 @@ export interface ModuleOptions {
 
           /** @default false */
           elementPlus?: boolean;
+
+          /** @default true */
+          unpluginFonts?: boolean;
       };
 
     enabledPlugins?:

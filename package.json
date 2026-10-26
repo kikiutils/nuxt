@@ -64,6 +64,9 @@
     },
     "@nuxtjs/color-mode": {
       "optional": true
+    },
+    "unplugin-fonts": {
+      "optional": true
     }
   },
   "dependencies": {
