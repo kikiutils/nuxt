@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@kikiutils/nuxt": "workspace:@kikiutils/nuxt@*",
+    "nuxt": "^4.4.7"
+  }
+}
