@@ -1,10 +1,15 @@
+blockExoticSubdeps: true
 minimumReleaseAge: 1440
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeStrict: true
+
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
   - '@kikiutils/eslint-config' # TODO: remove it
   - '@kikiutils/shared' # TODO: remove it
 
 resolutionMode: highest
+trustLockfile: false
 
 trustPolicy: no-downgrade
 trustPolicyExclude:
@@ -12,8 +17,12 @@ trustPolicyExclude:
   - semver@6.3.1
 
 strictSsl: true
+strictStorePkgContentCheck: true
+verifyStoreIntegrity: true
 preferFrozenLockfile: true
 shellEmulator: true
+sideEffectsCache: true
+strictDepBuilds: true
 updateNotifier: false
 
 packages:
