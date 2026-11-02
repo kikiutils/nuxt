@@ -32,7 +32,7 @@ export function setupAutoImportUtils(options: ModuleOptions) {
     // @kikiutils/shared
     const kikiutilsSharedOptions = options.autoImportUtils['@kikiutils/shared'];
     if (!kikiutilsSharedOptions) return;
-    for (const key of Object.keys(kikiutilsSharedImportSources) as (keyof KikiutilsSharedAutoImportOptions)[]) {
+    for (const key of Object.keys(kikiutilsSharedImportSources) as Array<keyof KikiutilsSharedAutoImportOptions>) {
         if (kikiutilsSharedOptions[key]) {
             addImportsSources({
                 ignore: ['default'],

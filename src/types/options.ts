@@ -7,83 +7,99 @@ export interface ModuleOptions {
           '@kikiutils/shared'?:
             | false
             | {
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 clipboard?: boolean;
 
                 /**
                  * Requires `date-fns`.
                  *
-                 * @default true
+                 * @defaultValue true
                  */
                 datetime?: boolean;
 
                 /**
                  * Requires Element Plus types.
                  *
-                 * @default false
+                 * @defaultValue false
                  */
                 elementPlus?: boolean;
 
                 /**
                  * Requires `date-fns`.
                  *
-                 * @default true
+                 * @defaultValue true
                  */
                 enhancedDate?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 enum?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 general?: boolean;
 
                 /**
                  * Requires `@noble/hashes`.
                  *
-                 * @default false
+                 * @defaultValue false
                  */
                 hash?: boolean;
 
                 /**
                  * Requires `decimal.js`.
                  *
-                 * @default false
+                 * @defaultValue false
                  */
                 math?: boolean;
 
                 /**
                  * Requires `millify`.
                  *
-                 * @default false
+                 * @defaultValue false
                  */
                 number?: boolean;
 
                 /**
                  * Requires `decimal.js`.
                  *
-                 * @default false
+                 * @defaultValue false
                  */
                 precisionNumber?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 random?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 string?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 time?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 url?: boolean;
 
-                /** @default true */
+                /**
+                 * @defaultValue true
+                 */
                 vue?: boolean;
 
                 /**
                  * Browser-only functions; call on the client.
                  *
-                 * @default true
+                 * @defaultValue true
                  */
                 web?: boolean;
             };
@@ -96,49 +112,65 @@ export interface ModuleOptions {
       | false
       | {
           /**
-           * @default true
+           * @defaultValue true
            */
           composables?: boolean;
 
           /**
-           * @default true
+           * @defaultValue true
            */
           globals?: boolean;
 
           /**
-           * @default true
+           * @defaultValue true
            */
           utils?: boolean;
       };
 
-    /** @default true */
+    /**
+     * @defaultValue true
+     */
     enabled?: boolean;
     enabledModules?:
       | false
       | {
-          /** @default false */
+          /**
+           * @defaultValue false
+           */
           colorMode?: boolean;
 
-          /** @default false */
+          /**
+           * @defaultValue false
+           */
           elementPlus?: boolean;
 
-          /** @default true */
+          /**
+           * @defaultValue true
+           */
           robots?: boolean;
 
-          /** @default false */
+          /**
+           * @defaultValue false
+           */
           security?: boolean;
 
-          /** @default true */
+          /**
+           * @defaultValue true
+           */
           unoCss?: boolean;
 
-          /** @default true */
+          /**
+           * @defaultValue true
+           */
           unpluginFonts?: boolean;
       };
 
     enabledPlugins?:
       | false
       | {
-          /** @default true */
+          /**
+           * @defaultValue true
+           */
           preventDragFileDrop?: boolean;
       };
 
@@ -148,17 +180,19 @@ export interface ModuleOptions {
           /**
            * Autofill transition workaround.
            *
-           * @default true
+           * @defaultValue true
            */
           autofillOverride?: boolean;
 
-          /** @default true */
+          /**
+           * @defaultValue true
+           */
           reboot?: boolean;
 
           /**
            * Global font rendering and tap highlight preferences.
            *
-           * @default true
+           * @defaultValue true
            */
           visualPreferences?: boolean;
       };

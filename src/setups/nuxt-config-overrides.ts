@@ -15,7 +15,7 @@ export function setupNuxtConfigOverrides(options: ModuleOptions, nuxt: Nuxt) {
     if (overrides?.devtools !== undefined) {
         nuxt.options.devtools = typeof overrides.devtools === 'boolean'
             ? overrides.devtools
-            : defu<DevtoolsOptions, Partial<DevtoolsOptions>[]>(
+            : defu<DevtoolsOptions, Array<Partial<DevtoolsOptions>>>(
                 overrides.devtools,
                 typeof nuxt.options.devtools === 'boolean'
                     ? { enabled: nuxt.options.devtools }
@@ -43,7 +43,7 @@ export function setupNuxtConfigOverrides(options: ModuleOptions, nuxt: Nuxt) {
 
     // typescript
     const compilerOverrides = overrides?.typescript?.tsConfig?.compilerOptions;
-    const typescriptConfig = defu<NuxtOptions['typescript'], Partial<NuxtOptions['typescript']>[]>(
+    const typescriptConfig = defu<NuxtOptions['typescript'], Array<Partial<NuxtOptions['typescript']>>>(
         overrides?.typescript,
         {
             nodeTsConfig: {
