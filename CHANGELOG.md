@@ -1,5 +1,34 @@
 # Changelog
 
+## v14.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v14.0.0...v14.0.1)
+
+### 🩹 Fixes
+
+- Resolve lint errors ([3b27f13](https://github.com/kikiutils/nuxt/commit/3b27f13))
+
+### 💅 Refactors
+
+- **scripts:** Rename peer dependency metadata updater to sync ([cc094ef](https://github.com/kikiutils/nuxt/commit/cc094ef))
+
+### 📦 Build
+
+- Simplify tsdown configuration and add type validation ([5ba0dcb](https://github.com/kikiutils/nuxt/commit/5ba0dcb))
+
+### 🏡 Chore
+
+- Update pnpm config ([17fefba](https://github.com/kikiutils/nuxt/commit/17fefba))
+- Refine template export exclusions and script entrypoint ([4ffddaa](https://github.com/kikiutils/nuxt/commit/4ffddaa))
+- Lint code ([95b8512](https://github.com/kikiutils/nuxt/commit/95b8512))
+- Lint code ([1c5c42d](https://github.com/kikiutils/nuxt/commit/1c5c42d))
+- Lint code ([ee81f39](https://github.com/kikiutils/nuxt/commit/ee81f39))
+- Upgrade deps and lint code ([2af8ef8](https://github.com/kikiutils/nuxt/commit/2af8ef8))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v14.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v13.0.0...v14.0.0)
