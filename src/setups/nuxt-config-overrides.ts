@@ -23,6 +23,19 @@ export function setupNuxtConfigOverrides(options: ModuleOptions, nuxt: Nuxt) {
             );
     }
 
+    // experimental
+    Object.assign(
+        nuxt.options.experimental,
+        defu<NuxtOptions['experimental'], Array<Partial<NuxtOptions['experimental']>>>(
+            overrides?.experimental,
+            {
+                asyncContext: true,
+                extractSerializablePageMeta: true,
+                watcher: 'builder',
+            },
+        ),
+    );
+
     // nitroConfig
     const nitroConfig = defu(
         overrides?.nitro,

@@ -9,6 +9,7 @@ import { setupModules } from './setups/modules';
 import { setupNuxtConfigOverrides } from './setups/nuxt-config-overrides';
 import { setupPlugins } from './setups/plugins';
 import { setupStyles } from './setups/styles';
+import { setupTsConfigPaths } from './setups/tsconfig-paths';
 import type { ModuleOptions } from './types/options';
 
 export type { ModuleOptions } from './types/options';
@@ -59,6 +60,7 @@ export default defineNuxtModule<ModuleOptions>({
             devtools: { enabled: false },
             typescript: { typeCheck: true },
         },
+        removeTildeTsConfigPaths: true,
     },
     meta: {
         compatibility: { nuxt: '>=4.5.0' },
@@ -78,5 +80,6 @@ export default defineNuxtModule<ModuleOptions>({
         setupDeepScanAutoImportDirs(options, nuxt);
         setupPlugins(options, resolver);
         setupStyles(options, nuxt, resolver);
+        setupTsConfigPaths(options, nuxt);
     },
 });

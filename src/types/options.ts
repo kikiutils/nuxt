@@ -145,6 +145,8 @@ export interface ModuleOptions {
           elementPlus?: boolean;
 
           /**
+           * Skipped when `@nuxtjs/seo` is installed, which already includes it.
+           *
            * @defaultValue true
            */
           robots?: boolean;
@@ -203,8 +205,16 @@ export interface ModuleOptions {
      */
     nuxtConfigOverrides?: {
         devtools?: Partial<NuxtOptions['devtools']>;
+        experimental?: Partial<NuxtOptions['experimental']>;
         nitro?: Partial<NuxtOptions['nitro']>;
         typescript?: Partial<NuxtOptions['typescript']>;
         vite?: Partial<NuxtOptions['vite']>;
     };
+
+    /**
+     * Remove the `~` and `~/*` paths from the generated app tsconfig.
+     *
+     * @defaultValue true
+     */
+    removeTildeTsConfigPaths?: boolean;
 }
