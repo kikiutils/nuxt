@@ -14,7 +14,6 @@ export default defineNuxtConfig({
                 math: true,
                 number: true,
                 precisionNumber: true,
-                random: true,
                 string: true,
                 time: true,
                 url: true,

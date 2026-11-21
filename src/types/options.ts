@@ -74,11 +74,6 @@ export interface ModuleOptions {
                 /**
                  * @defaultValue true
                  */
-                random?: boolean;
-
-                /**
-                 * @defaultValue true
-                 */
                 string?: boolean;
 
                 /**

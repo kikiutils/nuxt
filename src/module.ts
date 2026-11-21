@@ -28,7 +28,6 @@ export default defineNuxtModule<ModuleOptions>({
                 math: false,
                 number: false,
                 precisionNumber: false,
-                random: true,
                 string: true,
                 time: true,
                 url: true,

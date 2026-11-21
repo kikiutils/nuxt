@@ -18,7 +18,6 @@ const kikiutilsSharedImportSources: Record<keyof KikiutilsSharedAutoImportOption
     math: '@kikiutils/shared/math',
     number: '@kikiutils/shared/number',
     precisionNumber: '@kikiutils/shared/classes/precision-number',
-    random: '@kikiutils/shared/random',
     string: '@kikiutils/shared/string',
     time: '@kikiutils/shared/time',
     url: '@kikiutils/shared/url',
