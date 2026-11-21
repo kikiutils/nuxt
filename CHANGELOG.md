@@ -1,5 +1,25 @@
 # Changelog
 
+## v16.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v15.0.0...v16.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Remove the `random` auto-import group ([d6ef72e](https://github.com/kikiutils/nuxt/commit/d6ef72e))
+
+### 🏡 Chore
+
+- Upgrade deps ([a051d94](https://github.com/kikiutils/nuxt/commit/a051d94))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove the `random` auto-import group ([d6ef72e](https://github.com/kikiutils/nuxt/commit/d6ef72e))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v15.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v14.0.1...v15.0.0)
