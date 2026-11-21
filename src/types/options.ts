@@ -145,6 +145,11 @@ export interface ModuleOptions {
           elementPlus?: boolean;
 
           /**
+           * @defaultValue false
+           */
+          icon?: boolean;
+
+          /**
            * Skipped when `@nuxtjs/seo` is installed, which already includes it.
            *
            * @defaultValue true

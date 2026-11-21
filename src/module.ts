@@ -45,6 +45,7 @@ export default defineNuxtModule<ModuleOptions>({
         enabledModules: {
             colorMode: false,
             elementPlus: false,
+            icon: false,
             robots: true,
             security: false,
             unoCss: true,

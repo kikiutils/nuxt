@@ -31,6 +31,7 @@ export default defineNuxtConfig({
         enabledModules: {
             colorMode: true,
             elementPlus: true,
+            icon: true,
             robots: true,
             security: true,
             unoCss: true,
