@@ -1,5 +1,35 @@
 # Changelog
 
+## v15.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v14.0.1...v15.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Add shared Nuxt config defaults ([b2ab34e](https://github.com/kikiutils/nuxt/commit/b2ab34e))
+- Add optional `@nuxt/icon` module setup ([79f9deb](https://github.com/kikiutils/nuxt/commit/79f9deb))
+
+### 🩹 Fixes
+
+- Resolve lint command errors ([44b39f7](https://github.com/kikiutils/nuxt/commit/44b39f7))
+
+### 📦 Build
+
+- Generate scoped wildcard package exports from entries ([051558a](https://github.com/kikiutils/nuxt/commit/051558a))
+
+### 🏡 Chore
+
+- Update ignore files ([aceb847](https://github.com/kikiutils/nuxt/commit/aceb847))
+- Upgrade deps ([f59e830](https://github.com/kikiutils/nuxt/commit/f59e830))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Add shared Nuxt config defaults ([b2ab34e](https://github.com/kikiutils/nuxt/commit/b2ab34e))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v14.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v14.0.0...v14.0.1)
