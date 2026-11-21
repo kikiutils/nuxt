@@ -1,5 +1,17 @@
 # Changelog
 
+## v16.0.1
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.0...v16.0.1)
+
+### 🏡 Chore
+
+- Upgrade deps ([1b77e90](https://github.com/kikiutils/nuxt/commit/1b77e90))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v16.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v15.0.0...v16.0.0)
