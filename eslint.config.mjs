@@ -14,4 +14,23 @@ export default antfu(
     createStyleFilesConfigs(),
     createVueConfig(),
     { rules: { 'ts/explicit-function-return-type': 'off' } },
+    {
+        files: ['**/*.ts'],
+        ignores: ['**/*.config.?([cm])ts'],
+        rules: {
+            // Module dependencies cannot yet replace every installModule call, e.g. options or conditional installs.
+            'ts/no-deprecated': [
+                'error',
+                {
+                    allow: [
+                        {
+                            from: 'package',
+                            name: 'installModule',
+                            package: '@nuxt/kit',
+                        },
+                    ],
+                },
+            ],
+        },
+    },
 );
