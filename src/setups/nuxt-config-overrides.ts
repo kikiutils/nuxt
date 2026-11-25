@@ -30,6 +30,10 @@ export function setupNuxtConfigOverrides(options: ModuleOptions, nuxt: Nuxt) {
             overrides?.experimental,
             {
                 asyncContext: true,
+                // Modules that scan compiled output for resolveComponent() break when the template compiler
+                // imports components directly, e.g. @element-plus/nuxt loses component styles
+                // (element-plus/element-plus-nuxt#188). Runs before Nuxt's core components module reads it.
+                compilerComponentResolution: false,
                 extractSerializablePageMeta: true,
                 watcher: 'builder',
             },
