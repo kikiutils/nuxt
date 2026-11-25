@@ -89,7 +89,7 @@
     }
   },
   "dependencies": {
-    "@nuxt/kit": "^4.6.4",
+    "@nuxt/kit": "^4.7.0",
     "@vueuse/nuxt": ">=15.0.0",
     "defu": "^6.1.7",
     "ts-extras": "^3.0.0"
@@ -102,7 +102,7 @@
     "@kikiutils/stylelint-config": "^0.7.0",
     "@nuxt/icon": "^2.6.3",
     "@nuxt/module-builder": "^1.0.4",
-    "@nuxt/schema": "^4.6.4",
+    "@nuxt/schema": "^4.7.0",
     "@nuxt/test-utils": "^4.4.0",
     "@nuxtjs/color-mode": "^4.1.0",
     "@nuxtjs/robots": "^7.1.0",
@@ -112,7 +112,7 @@
     "changelogen": "^0.6.2",
     "eslint": "^10.15.0",
     "knip": "^6.48.0",
-    "nuxt": "^4.6.4",
+    "nuxt": "^4.7.0",
     "nuxt-security": "^2.7.0",
     "nuxt-site-config": "^5.0.4",
     "stylelint": "^18.1.0",
