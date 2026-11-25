@@ -1,5 +1,30 @@
 # Changelog
 
+## v16.0.2
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.1...v16.0.2)
+
+### 🩹 Fixes
+
+- Disable Nuxt compiler component resolution by default ([afe8839](https://github.com/kikiutils/nuxt/commit/afe8839))
+
+### 🏡 Chore
+
+- Enable eslint cache and concurrency in lint scripts ([4398cae](https://github.com/kikiutils/nuxt/commit/4398cae))
+- Upgrade deps ([f4148e9](https://github.com/kikiutils/nuxt/commit/f4148e9))
+- Require a clean working tree for release ([3a64221](https://github.com/kikiutils/nuxt/commit/3a64221))
+- Upgrade deps ([6a28607](https://github.com/kikiutils/nuxt/commit/6a28607))
+- **eslint:** Allow the deprecated installModule from @nuxt/kit ([64b566f](https://github.com/kikiutils/nuxt/commit/64b566f))
+- Upgrade deps ([32f21aa](https://github.com/kikiutils/nuxt/commit/32f21aa))
+
+### 🤖 CI
+
+- Rewrite test and coverage workflow ([c74a01e](https://github.com/kikiutils/nuxt/commit/c74a01e))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v16.0.1
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.0...v16.0.1)
