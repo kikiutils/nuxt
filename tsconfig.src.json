@@ -1,8 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
-    "isolatedDeclarations": false
+    "composite": true
   },
   "include": [
     "./scripts/*.ts",

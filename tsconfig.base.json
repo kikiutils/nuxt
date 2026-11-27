@@ -1,5 +1,5 @@
 {
-  "extends": "@kikiutils/tsconfigs/esnext/es2023.json",
+  "extends": "@kikiutils/tsconfigs/esnext/es2025.json",
   "compilerOptions": {
     "noEmit": true
   }
