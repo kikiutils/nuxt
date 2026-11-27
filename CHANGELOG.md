@@ -1,5 +1,34 @@
 # Changelog
 
+## v17.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.2...v17.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Remove `number` auto-import option ([37d2502](https://github.com/kikiutils/nuxt/commit/37d2502))
+
+### 📖 Documentation
+
+- Add v16 to v17 migration guide ([9f3723b](https://github.com/kikiutils/nuxt/commit/9f3723b))
+
+### 📦 Build
+
+- Require Node.js 24.15.0 and target ES2025 ([5563821](https://github.com/kikiutils/nuxt/commit/5563821))
+
+### 🏡 Chore
+
+- Exclude `@kikiutils/tsconfigs` from the minimum release age ([1c89d62](https://github.com/kikiutils/nuxt/commit/1c89d62))
+- Upgrade deps ([c447a6a](https://github.com/kikiutils/nuxt/commit/c447a6a))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove `number` auto-import option ([37d2502](https://github.com/kikiutils/nuxt/commit/37d2502))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v16.0.2
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.1...v16.0.2)
