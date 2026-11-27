@@ -6,6 +6,7 @@ minimumReleaseAgeStrict: true
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
   - '@kikiutils/eslint-config' # TODO: remove it
+  - '@kikiutils/tsconfigs' # TODO: remove it
 
 resolutionMode: highest
 trustLockfile: false
