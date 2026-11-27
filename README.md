@@ -14,7 +14,7 @@ Description
 
 ## Requirements
 
-- **Node.js** `>=22.12.0`
+- **Node.js** `>=24.15.0`
 - **Nuxt** `>=4.5.0`
 
 ## Installation
