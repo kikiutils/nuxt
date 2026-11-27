@@ -12,7 +12,6 @@ export default defineNuxtConfig({
                 general: true,
                 hash: true,
                 math: true,
-                number: true,
                 precisionNumber: true,
                 string: true,
                 time: true,

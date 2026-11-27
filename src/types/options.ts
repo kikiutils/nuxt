@@ -58,13 +58,6 @@ export interface ModuleOptions {
                 math?: boolean;
 
                 /**
-                 * Requires `millify`.
-                 *
-                 * @defaultValue false
-                 */
-                number?: boolean;
-
-                /**
                  * Requires `decimal.js`.
                  *
                  * @defaultValue false

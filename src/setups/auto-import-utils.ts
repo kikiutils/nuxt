@@ -16,7 +16,6 @@ const kikiutilsSharedImportSources: Record<keyof KikiutilsSharedAutoImportOption
     general: '@kikiutils/shared/general',
     hash: '@kikiutils/shared/hash',
     math: '@kikiutils/shared/math',
-    number: '@kikiutils/shared/number',
     precisionNumber: '@kikiutils/shared/classes/precision-number',
     string: '@kikiutils/shared/string',
     time: '@kikiutils/shared/time',

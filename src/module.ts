@@ -26,7 +26,6 @@ export default defineNuxtModule<ModuleOptions>({
                 general: true,
                 hash: false,
                 math: false,
-                number: false,
                 precisionNumber: false,
                 string: true,
                 time: true,
