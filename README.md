@@ -10,12 +10,9 @@ Description
 
 - [✨ Release Notes](./CHANGELOG.md)
 
-## Features
-
 ## Requirements
 
-- **Node.js** `>=24.15.0`
-- **Nuxt** `>=4.5.0`
+- **Node.js**: see `engines` in [package.json](./package.json)
 
 ## Installation
 
