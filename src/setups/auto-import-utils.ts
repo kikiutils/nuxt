@@ -14,7 +14,6 @@ const kikiutilsSharedImportSources: Record<keyof KikiutilsSharedAutoImportOption
     enhancedDate: '@kikiutils/shared/classes/enhanced-date',
     enum: '@kikiutils/shared/enum',
     general: '@kikiutils/shared/general',
-    hash: '@kikiutils/shared/hash',
     math: '@kikiutils/shared/math',
     precisionNumber: '@kikiutils/shared/classes/precision-number',
     string: '@kikiutils/shared/string',

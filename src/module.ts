@@ -24,7 +24,6 @@ export default defineNuxtModule<ModuleOptions>({
                 enhancedDate: true,
                 enum: true,
                 general: true,
-                hash: false,
                 math: false,
                 precisionNumber: false,
                 string: true,

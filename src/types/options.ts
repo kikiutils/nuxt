@@ -44,13 +44,6 @@ export interface ModuleOptions {
                 general?: boolean;
 
                 /**
-                 * Requires `@noble/hashes`.
-                 *
-                 * @defaultValue false
-                 */
-                hash?: boolean;
-
-                /**
                  * Requires `decimal.js`.
                  *
                  * @defaultValue false

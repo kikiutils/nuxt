@@ -10,7 +10,6 @@ export default defineNuxtConfig({
                 enhancedDate: true,
                 enum: true,
                 general: true,
-                hash: true,
                 math: true,
                 precisionNumber: true,
                 string: true,
