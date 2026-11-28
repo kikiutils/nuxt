@@ -13,7 +13,7 @@ Description
 
 ## Requirements
 
-- **Node.js** `>=24.15.0`
+- **Node.js**: see `engines` in [package.json](./package.json)
 
 ## Installation
 
