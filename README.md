@@ -9,8 +9,6 @@ Description
 
 - [✨ Release Notes](./CHANGELOG.md)
 
-## Features
-
 ## Requirements
 
 - **Node.js**: see `engines` in [package.json](./package.json)
