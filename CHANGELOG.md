@@ -1,5 +1,30 @@
 # Changelog
 
+## v18.0.0
+
+[compare changes](https://github.com/kikiutils/nuxt/compare/v17.0.0...v18.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Remove `hash` auto-import option ([f657efd](https://github.com/kikiutils/nuxt/commit/f657efd))
+
+### 📖 Documentation
+
+- Update README ([f926201](https://github.com/kikiutils/nuxt/commit/f926201))
+- Update README ([74ca8af](https://github.com/kikiutils/nuxt/commit/74ca8af))
+
+### 🏡 Chore
+
+- Upgrade deps ([e83eff5](https://github.com/kikiutils/nuxt/commit/e83eff5))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Remove `hash` auto-import option ([f657efd](https://github.com/kikiutils/nuxt/commit/f657efd))
+
+### ❤️ Contributors
+
+- Kiki-kanri
+
 ## v17.0.0
 
 [compare changes](https://github.com/kikiutils/nuxt/compare/v16.0.2...v17.0.0)
