@@ -49,7 +49,7 @@
   },
   "peerDependencies": {
     "@element-plus/nuxt": "^1.2.0",
-    "@kikiutils/shared": "^22.0.0",
+    "@kikiutils/shared": "^23.0.0",
     "@nuxt/icon": "^2.6.3",
     "@nuxtjs/color-mode": "^4.1.0",
     "@nuxtjs/robots": "^7.0.2",
@@ -97,8 +97,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
     "@element-plus/nuxt": "^1.2.0",
-    "@kikiutils/eslint-config": "^11.4.0",
-    "@kikiutils/shared": "^22.0.0",
+    "@kikiutils/eslint-config": "^11.5.0",
+    "@kikiutils/shared": "^23.0.0",
     "@kikiutils/stylelint-config": "^0.7.0",
     "@nuxt/icon": "^2.6.3",
     "@nuxt/module-builder": "^1.0.4",
